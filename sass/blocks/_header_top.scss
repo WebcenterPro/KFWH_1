@@ -1,0 +1,26 @@
+.header_top {
+	font-size: $fs_xs;
+	color: $color_bright;
+	background-color: $color_header;
+	height: 65px;
+	text-align: right;
+
+	&__cont {
+		line-height: 35px;
+		height: 100%;
+		padding: 12px 15px;
+		max-width: 1170px;
+	}
+
+	&__href {
+		margin-right: 30px;
+	}
+
+	&__search {
+		display: inline-block;
+		text-align: center;
+		background : #C1012E;
+		width : 130px;
+		height : 40px;
+	}
+}
