@@ -33,26 +33,20 @@
   font-style: normal;
   font-weight: normal;
 }
-/* COLORS */
-/* FONT SIZE */
+.header_main__link--phone::before, .header_main__link--phone::after, .header_main__link--contacts::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+
 body {
   font-family: SegoeUIRegular, Arial, sans-serif;
   color: #424242;
   font-size: 16px;
 }
 
-a {
-  color: #FFF;
-  text-decoration: none;
-}
-a:hover, a:focus {
-  color: #FFF;
-  text-decoration: none;
-}
-
 .header_top {
   font-size: 14px;
-  color: #FFF;
   background-color: #D82949;
   height: 65px;
   text-align: right;
@@ -65,6 +59,12 @@ a:hover, a:focus {
 }
 .header_top__href {
   margin-right: 30px;
+  color: #FFF;
+  text-decoration: none;
+}
+.header_top__href:hover {
+  color: #FFF;
+  text-decoration: none;
 }
 .header_top__search {
   display: inline-block;
@@ -72,4 +72,78 @@ a:hover, a:focus {
   background: #C1012E;
   width: 130px;
   height: 40px;
+  color: #FFF;
+  text-decoration: none;
+}
+.header_top__search:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.header_main {
+  min-height: 75px;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #ECEEF0;
+}
+.header_main__cont {
+  max-width: 1170px;
+}
+.header_main__toggle {
+  margin-top: 32px;
+}
+.header_main__logo {
+  margin-right: 0;
+}
+.header_main__items_cont {
+  padding: 0;
+}
+.header_main__items {
+  margin: 0;
+}
+.header_main__item {
+  margin: 0;
+}
+.header_main__link {
+  color: #D82949;
+  line-height: 43px;
+}
+.header_main__link--phone {
+  font-size: 23px;
+  margin-left: 21px;
+}
+.header_main__link--phone::before {
+  height: 21px;
+  width: 21px;
+  background: url("../img/phone.png") no-repeat;
+  top: 28px;
+  left: -10px;
+}
+.header_main__link--phone::after {
+  height: 36px;
+  width: 1px;
+  background-color: #D82949;
+  right: 4px;
+  top: 20px;
+}
+.header_main__link--contacts::after {
+  height: 11px;
+  width: 8px;
+  background: url("../img/arrow.png") no-repeat;
+  left: 91px;
+  top: 45%;
+}
+
+@media (min-width: 1172px) {
+  .header_main__logo {
+    margin-right: 50px;
+  }
+  .header_main__item {
+    margin: 0 11px;
+  }
+  .header_main__item--last {
+    margin-right: 0;
+  }
 }

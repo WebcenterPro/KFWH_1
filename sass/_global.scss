@@ -3,14 +3,3 @@ body {
 	color: $color_dark;
 	font-size: $fs_standart;
 }
-
-a {
-	color: $color_bright;
-	text-decoration: none;
-
-	&:hover,
-	&:focus {
-		color: $color_bright;
-		text-decoration: none;
-	}
-}

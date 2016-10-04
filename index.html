@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<script src="js/script.js"></script>
 	<title>Knight Frank</title>
 </head>
@@ -20,9 +20,39 @@
 				<a href="#" class="header_top__search">Поиск</a>
 			</div>
 		</div>
-		<nav class="header_main">
-			<div class="container-fluid">
-				
+		<nav class="header_main navbar navbar-default" role="navigation">
+			<div class="header_main__cont container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="header_main__toggle navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Навигация</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="header_main__logo navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+				</div>
+
+				<div class="header_main__items_cont collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="header_main__items nav navbar-nav">
+						<li class="header_main__item">
+							<a class="header_main__link" href="#">Недвижимость</a>
+						</li>
+						<li class="header_main__item">
+							<a class="header_main__link" href="#">Земельные участки</a>
+						</li>
+						<li class="header_main__item">
+							<a class="header_main__link" href="#">О компании</a>
+						</li>
+					</ul>
+					<ul class="header_main__items nav navbar-nav">
+						<li class="header_main__item hidden-xs">
+							<a class="header_main__link header_main__link--phone" href="#">+7 (812) 363-22-22</a>
+						</li>
+						<li class="header_main__item header_main__item--last">
+							<a class="header_main__link header_main__link--contacts" href="#">Контакты</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 	</header>

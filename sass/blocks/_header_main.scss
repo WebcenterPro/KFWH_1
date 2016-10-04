@@ -1,0 +1,89 @@
+.header_main {
+	min-height: 75px;
+	background: white;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid $color_hr;
+
+	&__cont {
+		max-width: $width_global;
+	}
+
+	&__toggle {
+		margin-top: 32px;
+	}
+
+	&__logo {
+		margin-right: 0;
+	}
+
+	&__items_cont {
+		padding: 0;
+	}
+
+	&__items {
+		margin: 0
+	}
+
+	&__item {
+		margin: 0;
+	}
+
+	&__link {
+		color: $color_header;
+		line-height: 43px;
+
+		&--phone {
+			font-size: 23px;
+			margin-left: 21px;
+
+			&::before {
+				@extend %pseudoelem-param;
+				height: 21px;
+				width: 21px;
+				background: url("../img/phone.png") no-repeat;
+				top: 28px;
+				left: -10px;
+			}
+
+			&::after {
+				@extend %pseudoelem-param;
+				height: 36px;
+				width: 1px;
+				background-color: $color_header;
+				right: 4px;
+				top: 20px;
+			}
+		}
+
+		&--contacts {
+
+			&::after {
+				@extend %pseudoelem-param;
+				height: 11px;
+				width: 8px;
+				background: url("../img/arrow.png") no-repeat;
+				left: 91px;
+				top: 45%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1172px) {
+	.header_main {
+
+		&__logo {
+			margin-right: 50px;
+		}
+
+		&__item {
+			margin: 0 11px;
+
+			&--last {
+				margin-right: 0;
+			}
+		}
+	}
+}

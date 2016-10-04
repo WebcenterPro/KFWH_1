@@ -1,15 +1,24 @@
-/* COLORS */
+// COLORS
 $color_header: #D82949;
 $color_footer: #F7F3E8;
 $color_dark: #424242;
 $color_bright: #FFF;
+$color_hr: #ECEEF0;
 
 $main_font: SegoeUIRegular, Arial, sans-serif;
 
-/* FONT SIZE */
+// FONT SIZE
 $fs_xs: 14px;			//Верхнее меню
 $fs_standart: 16px;	//Размер по умолчанию
 $fs_head: 22px;		//Обычные заголовки
 $fs_sm_block: 30px;	//Маленький блок
 $fs_lg_block: 33px;	//Большой блок
 
+$width_global: 1170px;
+
+// Стандартная настройка для псевдоэлементов
+%pseudoelem-param {
+	content: "";
+	display: inline-block;
+	position: absolute;
+}
