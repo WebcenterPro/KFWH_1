@@ -39,12 +39,30 @@
   position: absolute;
 }
 
+.footer__items, .social {
+  display: inline-block;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: SegoeUIRegular, Arial, sans-serif;
   color: #424242;
   font-size: 16px;
+  margin-bottom: 90px;
 }
 
+@media (max-width: 920px) {
+  body {
+    margin-bottom: 165px;
+  }
+}
 .header_top {
   font-size: 14px;
   background-color: #D82949;
@@ -146,4 +164,108 @@ body {
   .header_main__item--last {
     margin-right: 0;
   }
+}
+.main__cont {
+  max-width: 1170px;
+}
+
+.footer {
+  background-color: #F7F3E8;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.footer__cont {
+  max-width: 1170px;
+}
+.footer__item {
+  display: inline-block;
+  line-height: 90px;
+}
+.footer__item::before {
+  content: "";
+  border-left: 1px solid #424242;
+  margin: 0 15px;
+}
+.footer__link {
+  color: #424242;
+}
+.footer__link:hover, .footer__link:focus {
+  color: #424242;
+}
+.footer__copyright {
+  display: inline-block;
+  line-height: 90px;
+  float: left;
+  margin-left: 33px;
+}
+.footer__social {
+  float: right;
+  margin: 25px 0;
+}
+
+@media (max-width: 920px) {
+  .footer {
+    text-align: center;
+    height: 165px;
+  }
+  .footer__items {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .footer__item {
+    line-height: 50px;
+  }
+  .footer__item:first-child::before {
+    border: none;
+    margin: 0;
+  }
+  .footer__copyright {
+    float: none;
+    margin-left: 0;
+    line-height: 1.42857143;
+  }
+  .footer__social {
+    float: none;
+    margin: 20px 0 0;
+  }
+}
+@media (max-width: 550px) {
+  .footer {
+    font-size: 12px;
+  }
+  .footer__item::before {
+    margin: 0 5px;
+  }
+}
+.social__item {
+  display: inline-block;
+  margin-right: 15px;
+  width: 62px;
+  height: 62px;
+  background-size: cover;
+}
+.social__item:last-child {
+  margin-right: 0;
+}
+.social__item:nth-child(1) {
+  background-image: url("../img/social_fb.png");
+}
+.social__item:nth-child(2) {
+  background-image: url("../img/social_insta.png");
+}
+.social__item--sm {
+  width: 37px;
+  height: 37px;
+  margin-right: 12px;
+}
+.social__item--sm:last-child {
+  margin-right: 0;
+}
+.social__link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }

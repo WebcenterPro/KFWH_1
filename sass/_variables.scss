@@ -14,11 +14,19 @@ $fs_head: 22px;		//Обычные заголовки
 $fs_sm_block: 30px;	//Маленький блок
 $fs_lg_block: 33px;	//Большой блок
 
-$width_global: 1170px;
+$width_global: 1170px; //Ширина контейнера
 
 // Стандартная настройка для псевдоэлементов
 %pseudoelem-param {
 	content: "";
 	display: inline-block;
 	position: absolute;
+}
+
+//Создание строчного списка
+%inline-ul{
+	display: inline-block;
+	list-style-type: none;
+	padding-left: 0;
+	margin-bottom: 0;
 }
