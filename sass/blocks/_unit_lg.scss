@@ -1,0 +1,42 @@
+.unit_lg {
+	color: $color_bright;
+	position: relative;
+	overflow: hidden;
+
+	&__img {
+		width: 100%;
+	}
+
+	&__text_cont {
+		position: absolute;
+		top: 0;
+		margin: 30px 25px;
+	}
+
+	&__head {
+		font-size: $fs_head_xl;
+		font-weight: bold;
+		margin: 0 0 20px;
+	}
+
+	&__descr {
+		font-size: $fs_bigger;
+	}
+}
+
+@media (max-width: 767px) {
+	.unit_lg {
+
+		&__text_cont {
+			margin: 15px;
+		}
+
+		&__head {
+			font-size: $fs_head;
+		}
+
+		&__descr {
+			font-size: $fs_standart;
+		}
+	}
+}

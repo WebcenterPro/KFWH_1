@@ -105,6 +105,7 @@ body {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #ECEEF0;
+  margin: 0;
 }
 .header_main__cont {
   max-width: 1170px;
@@ -168,7 +169,50 @@ body {
 .main__cont {
   max-width: 1170px;
 }
+.main__row {
+  margin: 0;
+}
+.main__col {
+  padding: 0;
+}
 
+.main__cont .row {
+  border: 1px solid #333;
+}
+
+.unit_lg {
+  color: #FFF;
+  position: relative;
+  overflow: hidden;
+}
+.unit_lg__img {
+  width: 100%;
+}
+.unit_lg__text_cont {
+  position: absolute;
+  top: 0;
+  margin: 30px 25px;
+}
+.unit_lg__head {
+  font-size: 33px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.unit_lg__descr {
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .unit_lg__text_cont {
+    margin: 15px;
+  }
+  .unit_lg__head {
+    font-size: 22px;
+  }
+  .unit_lg__descr {
+    font-size: 16px;
+  }
+}
 .footer {
   background-color: #F7F3E8;
   height: 90px;

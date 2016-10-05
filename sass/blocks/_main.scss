@@ -3,4 +3,16 @@
 	&__cont {
 		max-width: $width_global;
 	}
+
+	&__row {
+		margin: 0;
+	}
+
+	&__col {
+		padding: 0;
+	}
+}
+
+.main__cont .row {
+	border: 1px solid #333;
 }
