@@ -18,16 +18,40 @@ $fs_head_xl:  33px;	//Очень большие заголовки
 $width_global: 1170px; //Ширина контейнера
 
 // Стандартная настройка для псевдоэлементов
-%pseudoelem-param {
+%pseudoelem_param {
 	content: "";
 	display: inline-block;
 	position: absolute;
 }
 
 //Создание строчного списка
-%inline-ul{
+%inline_ul{
 	display: inline-block;
 	list-style-type: none;
 	padding-left: 0;
 	margin-bottom: 0;
 }
+
+%clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+//Треугольники
+%triangle_top {
+	top: -60px;
+	left: 40px;
+	border: 20px solid transparent;
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid $color_footer;
+}
+
+%triangle_left {
+	top: 25px;
+	left: -60px;
+	border: 20px solid transparent;
+	border-left: 30px solid transparent;
+	border-right: 30px solid $color_footer;
+}
+//============
