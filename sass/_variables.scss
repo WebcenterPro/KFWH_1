@@ -1,4 +1,4 @@
-// COLORS
+// COLORS //
 $color_header: #D82949;
 $color_footer: #F7F3E8;
 $color_dark: #424242;
@@ -7,7 +7,7 @@ $color_hr: #ECEEF0;
 
 $main_font: SegoeUIRegular, Arial, sans-serif;
 
-// FONT SIZE
+// FONT SIZE //
 $fs_smaller:  14px;	//Маленький размер (верхнее меню)
 $fs_standart: 16px;	//Размер по умолчанию
 $fs_bigger:   18px;	//Размер побольше
@@ -17,14 +17,14 @@ $fs_head_xl:  33px;	//Очень большие заголовки
 
 $width_global: 1170px; //Ширина контейнера
 
-// Стандартная настройка для псевдоэлементов
+// Стандартная настройка для псевдоэлементов //
 %pseudoelem_param {
 	content: "";
 	display: inline-block;
 	position: absolute;
 }
 
-//Создание строчного списка
+// Создание строчного списка //
 %inline_ul{
 	display: inline-block;
 	list-style-type: none;
@@ -38,9 +38,9 @@ $width_global: 1170px; //Ширина контейнера
 	clear: both;
 }
 
-//Треугольники
+// Треугольники //
 %triangle_top {
-	top: -60px;
+	top: -59px;
 	left: 40px;
 	border: 20px solid transparent;
 	border-top: 30px solid transparent;
@@ -54,4 +54,4 @@ $width_global: 1170px; //Ширина контейнера
 	border-left: 30px solid transparent;
 	border-right: 30px solid $color_footer;
 }
-//============
+// ============ //
