@@ -194,10 +194,24 @@ body {
 .main__row {
   margin: 0 0 15px;
 }
+.main__row--flex {
+  display: flex;
+}
 .main__col {
   padding: 0;
 }
+.main__col--flex {
+  display: flex;
+}
 
+@media (max-width: 991px) {
+  .main__row--flex {
+    display: block;
+  }
+  .main__col--flex {
+    display: block;
+  }
+}
 .unit {
   color: #FFF;
   position: relative;
@@ -341,6 +355,7 @@ body {
   padding: 15px 25px;
   position: relative;
   border-right: 1px solid #D3D3D3;
+  width: 100%;
 }
 .last_news__more {
   position: absolute;
@@ -402,7 +417,7 @@ body {
 .social_block {
   background-color: #F7F3E8;
   padding: 15px 25px;
-  height: 217px;
+  width: 100%;
 }
 .social_block__social {
   margin: 15px 0;

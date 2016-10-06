@@ -1,7 +1,7 @@
 .social_block {
 	background-color: $color_footer;
 	padding: 15px 25px;
-	height: 217px;
+	width: 100%;
 
 	&__head {
 		@extend .unit_left__head;
