@@ -1,0 +1,19 @@
+.social_block {
+	background-color: $color_footer;
+	padding: 15px 25px;
+	height: 217px;
+
+	&__head {
+		@extend .unit_left__head;
+	}
+
+	&__social {
+		margin: 15px 0;
+	}
+}
+
+@media (max-width: 992px) {
+	.social_block {
+		text-align: center;
+	}
+}

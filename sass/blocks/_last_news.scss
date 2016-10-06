@@ -2,6 +2,7 @@
 	background-color: $color_footer;
 	padding: 15px 25px;
 	position: relative;
+	border-right: 1px solid $color_hr;
 
 	&__head {
 		@extend .unit_left__head;
@@ -30,5 +31,12 @@
 	&__descr {
 		margin: 0;
 		padding: 10px 0;
+	}
+}
+
+@media (max-width: 992px) {
+	.last_news {
+		border-right: none;
+		border-bottom: 1px solid $color_hr;
 	}
 }
