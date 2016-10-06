@@ -363,7 +363,7 @@ body {
   padding: 10px 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .last_news {
     border-right: none;
     border-bottom: 1px solid #D3D3D3;
@@ -408,7 +408,7 @@ body {
   margin: 15px 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .social_block {
     text-align: center;
   }
