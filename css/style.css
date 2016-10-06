@@ -176,10 +176,44 @@ body {
   padding: 0;
 }
 
-.main__cont .row {
-  border: 1px solid #333;
+.unit {
+  color: #FFF;
+  position: relative;
+  overflow: hidden;
+}
+.unit__img {
+  width: 100%;
+}
+.unit__head {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+.unit__head--mid {
+  margin-top: 13%;
+}
+.unit__head--bottom {
+  bottom: 20px;
+}
+.unit__descr {
+  position: absolute;
+  left: 30px;
+}
+.unit__descr--bottom {
+  bottom: 20px;
 }
 
+@media (max-width: 425px) {
+  .unit__head {
+    font-size: 22px;
+  }
+  .unit__descr {
+    font-size: 16px;
+  }
+}
 .unit_lg {
   color: #FFF;
   position: relative;

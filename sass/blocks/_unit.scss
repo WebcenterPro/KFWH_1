@@ -1,0 +1,49 @@
+.unit {
+	color: $color_bright;
+	position: relative;
+	overflow: hidden;
+
+	&__img {
+		width: 100%;
+	}
+
+	&__head {
+		position: absolute;
+		top: 20px;
+		left: 30px;
+		font-size: $fs_head_lg;
+		font-weight: bold;
+		margin: 0 0 20px;
+
+		&--mid {
+			margin-top: 13%;
+		}
+
+
+		&--bottom {
+			bottom: 20px;
+		}
+	}
+
+	&__descr {
+		position: absolute;
+		left: 30px;
+
+		&--bottom {
+			bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.unit {
+
+		&__head {
+			font-size: $fs_head;
+		}
+
+		&__descr {
+			font-size: $fs_standart;
+		}
+	}
+}
