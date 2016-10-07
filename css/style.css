@@ -141,7 +141,16 @@ body {
   max-width: 1170px;
 }
 .header_main__toggle {
-  margin-top: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.header_main__search {
+  position: absolute;
+  top: 1px;
+  left: -50px;
+  font-size: 30px;
+  color: #D82949;
 }
 .header_main__logo {
   margin-right: 0;
@@ -168,6 +177,12 @@ body {
   background-color: #D82949;
   right: 4px;
   top: 20px;
+}
+.header_main__img_phone {
+  top: 5px;
+}
+.header_main__img_arrow {
+  top: 3px;
 }
 
 @media (min-width: 1172px) {
