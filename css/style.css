@@ -120,6 +120,11 @@ body {
   text-decoration: none;
 }
 
+@media (max-width: 767px) {
+  .header_top {
+    display: none;
+  }
+}
 .header_main {
   min-height: 75px;
   background: white;
