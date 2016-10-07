@@ -237,6 +237,9 @@ body {
   .header_main__item:first-child {
     margin-left: 0;
   }
+  .header_main__item--last {
+    margin-right: 0;
+  }
 }
 @media (max-width: 330px) {
   .header_main__toggle {
