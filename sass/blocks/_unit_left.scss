@@ -2,15 +2,21 @@
 	background-color: $color_footer;
 
 	&__img {
-		width: 50%;
-		float: left;
+		width: 100%;
+
+		&--img_1 {
+			background: url("../img/unit_3.png") center no-repeat;
+			background-size: cover;
+			padding-bottom: 65%;
+		}
 	}
 
 	&__content {
 		display: inline-block;
-		width: 50%;
+		width: 100%;
 		padding: 15px;
 		position: relative;
+		max-height: 247px;
 
 		&::before {
 			@extend %pseudoelem_param;

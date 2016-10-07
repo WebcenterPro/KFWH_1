@@ -35,6 +35,12 @@
 			bottom: 20px;
 		}
 	}
+		
+	&--img_analit {
+		background: url("../img/unit_4.png") center no-repeat;
+		background-size: cover;
+		padding-bottom: 65%;
+	}
 }
 
 @media (max-width: 425px) {

@@ -7,6 +7,10 @@
 	&__row {
 		margin: 0 0 15px;
 
+		&--marg_zero {
+			margin: 0;
+		}
+
 		&--flex {
 			display: flex;
 		}
