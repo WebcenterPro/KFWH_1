@@ -28,6 +28,10 @@
 @media (max-width: 991px) {
 	.main {
 
+		&__cont {
+			padding: 0;
+		}
+
 		&__row {
 
 			&--flex {

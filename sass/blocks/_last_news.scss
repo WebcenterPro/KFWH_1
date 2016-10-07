@@ -11,13 +11,16 @@
 
 	&__more {
 		position: absolute;
-		top: 15px;
+		top: 24px;
 		right: 25px;
+		display: inline-block;
 	}
 
 	&__date {
 		float: left;
 		padding: 10px 0;
+		display: inline-block;
+		font-weight: bold;
 	}
 
 	&__descr_cont {
@@ -39,5 +42,23 @@
 	.last_news {
 		border-right: none;
 		border-bottom: 1px solid $color_hr;
+	}
+}
+
+@media (max-width: 419px) {
+	.last_news {
+
+		&__more {
+			display: none;
+		}
+
+		&__date {
+			float: none;
+			padding: 15px 0 0;
+		}
+
+		&__descr_cont {
+			margin-left: 0;
+		}
 	}
 }

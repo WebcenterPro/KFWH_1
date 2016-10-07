@@ -94,3 +94,23 @@
 		}
 	}
 }
+
+@media (max-width: 419px) {
+	.footer {
+
+		&__item {
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				display: none;
+			}
+
+			&:nth-child(3) {
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+}

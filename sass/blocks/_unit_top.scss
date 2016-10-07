@@ -35,6 +35,7 @@
 			background-color: $color_bright;
 			border: 1px solid $color_hr;
 			border-top: none;
+			text-align: justify;
 
 			&::before {
 				border-bottom-color: $color_bright;
