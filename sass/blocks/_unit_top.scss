@@ -1,13 +1,28 @@
 .unit_top {
-	background-color: $color_footer;
+	display: flex;
+	flex-direction: column;
 
 	&__img {
 		width: 100%;
+
+		&--img_one {
+			background: url("../img/unit_5.png") center no-repeat;
+			background-size: cover;
+			padding-bottom: 65%;
+		}
+
+		&--img_two {
+			background: url("../img/unit_6.png") center no-repeat;
+			background-size: cover;
+			padding-bottom: 40%;
+		}
 	}
 
 	&__content {
+		background-color: $color_footer;
 		display: inline-block;
 		width: 100%;
+		height: 100%;
 		padding: 15px;
 		position: relative;
 
@@ -19,6 +34,7 @@
 		&--wide {
 			background-color: $color_bright;
 			border: 1px solid $color_hr;
+			border-top: none;
 
 			&::before {
 				border-bottom-color: $color_bright;
