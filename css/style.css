@@ -251,6 +251,16 @@ body {
   background-size: cover;
   padding-bottom: 65%;
 }
+.unit--img_sklad_one {
+  background: url("../img/unit_1.png") center no-repeat;
+  background-size: cover;
+  padding-bottom: 65%;
+}
+.unit--img_sklad_two {
+  background: url("../img/unit_2.png") center no-repeat;
+  background-size: cover;
+  padding-bottom: 65%;
+}
 
 @media (max-width: 425px) {
   .unit__head {
@@ -280,6 +290,11 @@ body {
 }
 .unit_lg__descr {
   font-size: 18px;
+}
+.unit_lg--img_one {
+  background: url("../img/unit_lg.png") center no-repeat;
+  background-size: cover;
+  padding-bottom: 65%;
 }
 
 @media (max-width: 767px) {

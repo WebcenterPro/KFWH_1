@@ -41,6 +41,18 @@
 		background-size: cover;
 		padding-bottom: 65%;
 	}
+
+	&--img_sklad_one {
+		background: url("../img/unit_1.png") center no-repeat;
+		background-size: cover;
+		padding-bottom: 65%;
+	}
+
+	&--img_sklad_two {
+		background: url("../img/unit_2.png") center no-repeat;
+		background-size: cover;
+		padding-bottom: 65%;
+	}
 }
 
 @media (max-width: 425px) {
