@@ -22,6 +22,12 @@
 	&__descr {
 		font-size: $fs_bigger;
 	}
+
+	&--img_one {
+		background: url("../img/unit_lg.png") center no-repeat;
+		background-size: cover;
+		padding-bottom: 65%;
+	}
 }
 
 @media (max-width: 767px) {

@@ -6,9 +6,40 @@
 
 	&__row {
 		margin: 0 0 15px;
+
+		&--marg_zero {
+			margin: 0;
+		}
+
+		&--flex {
+			display: flex;
+		}
 	}
 
 	&__col {
 		padding: 0;
+
+		&--flex {
+			display: flex;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.main {
+
+		&__row {
+
+			&--flex {
+				display: block;
+			}
+		}
+
+		&__col {
+
+			&--flex {
+				display: block;
+			}
+		}
 	}
 }
