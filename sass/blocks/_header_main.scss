@@ -4,7 +4,6 @@
 	border-radius: 0;
 	box-shadow: none;
 	border: none;
-	border-bottom: 1px solid $color_hr;
 	margin: 0;
 
 	&__cont {
@@ -44,9 +43,16 @@
 		&::after {
 			display: none;
 		}
+
+		// Переопределение бутстрапа //
+		li {
+			position: static;
+		}
+		// ========================= //
 	}
 
 	&__item {
+		position: static;
 
 		&:first-child {
 			margin-left: -15px;
@@ -61,6 +67,10 @@
 		color: $color_header;
 		line-height: 43px;
 
+		&:hover {
+			border-bottom: 2px solid $color_header;
+		}
+
 		&--phone {
 			font-size: 23px;
 
@@ -72,6 +82,44 @@
 				right: 4px;
 				top: 20px;
 			}
+		}
+	}
+
+	&__subitems_cont {
+		width: 100%;
+		background-color: $color_footer;
+		padding: 10px 0;
+		border: none;
+		border-top: 1px solid $color_hr;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	&__subitems_inner {
+		max-width: $width_global;
+	}
+
+	&__subitems {
+		display: inline-block;
+		padding: 0;
+	}
+
+	&__subitem {
+		list-style-type: none;
+		cursor: pointer;
+		padding: 10px;
+		border: 1px solid $color_footer;
+
+		&:hover {
+			color: $color_header;
+			border-bottom: 1px solid $color_hr;
+		}
+
+		&::before {
+			content: "+";
+			font-weight: bold;
+			font-size: 19px;
+			margin-right: 5px;
 		}
 	}
 
@@ -145,6 +193,11 @@
 		}
 
 		&__item {
+			border-bottom: 2px solid white;
+
+			&.open {
+				background-color: $color_footer;
+			}
 
 			&:first-child {
 				margin-left: 0;
@@ -153,6 +206,22 @@
 			&--last {
 				margin-right: 0;
 			}
+		}
+
+		&__link {
+			border-bottom: 2px solid white;
+		}
+
+		&__subitems_cont {
+			background-color: $color_footer;
+		}
+
+		&__subitems {
+			display: block;
+		}
+
+		&__subitem {
+			border: 1px solid $color_footer;
 		}
 	}
 }

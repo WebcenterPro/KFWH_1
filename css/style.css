@@ -80,6 +80,11 @@ body {
   margin-bottom: 90px;
 }
 
+header {
+  position: relative;
+  border-bottom: 1px solid #D3D3D3;
+}
+
 @media (max-width: 920px) {
   body {
     margin-bottom: 165px;
@@ -134,7 +139,6 @@ body {
   border-radius: 0;
   box-shadow: none;
   border: none;
-  border-bottom: 1px solid #D3D3D3;
   margin: 0;
 }
 .header_main__cont {
@@ -168,6 +172,12 @@ body {
 .header_main__items::before, .header_main__items::after {
   display: none;
 }
+.header_main__items li {
+  position: static;
+}
+.header_main__item {
+  position: static;
+}
 .header_main__item:first-child {
   margin-left: -15px;
 }
@@ -178,6 +188,9 @@ body {
   color: #D82949;
   line-height: 43px;
 }
+.header_main__link:hover {
+  border-bottom: 2px solid #D82949;
+}
 .header_main__link--phone {
   font-size: 23px;
 }
@@ -187,6 +200,38 @@ body {
   background-color: #D82949;
   right: 4px;
   top: 20px;
+}
+.header_main__subitems_cont {
+  width: 100%;
+  background-color: #F7F3E8;
+  padding: 10px 0;
+  border: none;
+  border-top: 1px solid #D3D3D3;
+  border-radius: 0;
+  box-shadow: none;
+}
+.header_main__subitems_inner {
+  max-width: 1170px;
+}
+.header_main__subitems {
+  display: inline-block;
+  padding: 0;
+}
+.header_main__subitem {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #F7F3E8;
+}
+.header_main__subitem:hover {
+  color: #D82949;
+  border-bottom: 1px solid #D3D3D3;
+}
+.header_main__subitem::before {
+  content: "+";
+  font-weight: bold;
+  font-size: 19px;
+  margin-right: 5px;
 }
 .header_main__img_phone {
   top: 5px;
@@ -234,11 +279,29 @@ body {
   .header_main__items::before, .header_main__items::after {
     display: table;
   }
+  .header_main__item {
+    border-bottom: 2px solid white;
+  }
+  .header_main__item.open {
+    background-color: #F7F3E8;
+  }
   .header_main__item:first-child {
     margin-left: 0;
   }
   .header_main__item--last {
     margin-right: 0;
+  }
+  .header_main__link {
+    border-bottom: 2px solid white;
+  }
+  .header_main__subitems_cont {
+    background-color: #F7F3E8;
+  }
+  .header_main__subitems {
+    display: block;
+  }
+  .header_main__subitem {
+    border: 1px solid #F7F3E8;
   }
 }
 @media (max-width: 330px) {

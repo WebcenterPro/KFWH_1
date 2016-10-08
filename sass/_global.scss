@@ -10,6 +10,11 @@ body {
 	margin-bottom: 90px;
 }
 
+header {
+	position: relative;
+	border-bottom: 1px solid $color_hr;
+}
+
 @media (max-width: 920px) {
 	body {
 		margin-bottom: 165px;
