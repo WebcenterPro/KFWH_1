@@ -3,7 +3,8 @@ $(document).ready(function(){
 	$(".owl").owlCarousel({
 		items: 1,
 		navigation: false,
-		autoplay: 10000,
+		autoplay: true,
+		autoplayTimeout: 10000,
 		autoplayHoverPause: true,
 		loop: true,
 		dotsClass: 'owl__dots',
