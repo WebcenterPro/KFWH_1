@@ -66,6 +66,7 @@
 	&__link {
 		color: $color_header;
 		line-height: 43px;
+		cursor: pointer;
 
 		&:hover {
 			border-bottom: 2px solid $color_header;

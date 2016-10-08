@@ -187,6 +187,7 @@ header {
 .header_main__link {
   color: #D82949;
   line-height: 43px;
+  cursor: pointer;
 }
 .header_main__link:hover {
   border-bottom: 2px solid #D82949;
