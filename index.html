@@ -15,10 +15,11 @@
 	<title>Knight Frank</title>
 </head>
 <body>
+
 	<header>
 		<div class="header_top">
 			<div class="header_top__cont container-fluid">
-				<a href="#" class="header_top__href">Оставить заявку</a>
+				<a href="#" class="header_top__href" data-toggle="modal" data-target="#purchaseModal">Оставить заявку</a>
 				<a href="#" class="header_top__search"><span class="header_top__lens glyphicon glyphicon-search"></span> Поиск</a>
 			</div>
 		</div>
@@ -54,7 +55,7 @@
 								<a class="header_main__link header_main__link" href="#">Контакты <span class="header_main__img_arrow glyphicon glyphicon-chevron-right hidden-xs"></span></a>
 							</li>
 							<li class="header_main__item visible-xs">
-								<a class="header_main__link" href="#">Оставить заявку</a>
+								<a class="header_main__link" data-toggle="modal" data-target="#purchaseModal">Оставить заявку</a>
 							</li>
 						</ul>
 					</div>
@@ -227,5 +228,26 @@
 			<span class="footer__copyright">© 2016 Knight Frank</span>
 		</div>
 	</footer>
+
+<!-- END OF VISIBLE CONTENT -->
+
+	<div class="modal fade" id="purchaseModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Оставить заявку</h4>
+				</div>
+				<div class="modal-body">
+					<p>Здесь что-то будет&hellip;</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+					<button type="button" class="btn btn-primary">Отправить заявку</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
