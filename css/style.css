@@ -188,6 +188,7 @@ header {
   color: #D82949;
   line-height: 43px;
   cursor: pointer;
+  position: relative;
 }
 .header_main__link:hover {
   border-bottom: 2px solid #D82949;
@@ -237,8 +238,13 @@ header {
 .header_main__img_phone {
   top: 5px;
 }
-.header_main__img_arrow {
+.header_main__img_arrow_right {
   top: 3px;
+}
+.header_main__img_arrow_down {
+  position: absolute;
+  right: 25px;
+  top: 25px;
 }
 
 @media (max-width: 1060px) {
@@ -269,7 +275,7 @@ header {
   .header_main__img_phone {
     top: 3px;
   }
-  .header_main__img_arrow {
+  .header_main__img_arrow_right {
     top: 2px;
   }
 }

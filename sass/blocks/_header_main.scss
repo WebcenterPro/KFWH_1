@@ -67,6 +67,7 @@
 		color: $color_header;
 		line-height: 43px;
 		cursor: pointer;
+		position: relative;
 
 		&:hover {
 			border-bottom: 2px solid $color_header;
@@ -128,8 +129,14 @@
 		top: 5px;
 	}
 
-	&__img_arrow {
+	&__img_arrow_right {
 		top: 3px;
+	}
+
+	&__img_arrow_down {
+		position: absolute;
+		right: 25px;
+		top: 25px;
 	}
 }
 
@@ -175,7 +182,7 @@
 			top: 3px;
 		}
 
-		&__img_arrow {
+		&__img_arrow_right {
 			top: 2px;
 		}
 	}
