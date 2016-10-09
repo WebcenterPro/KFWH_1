@@ -149,7 +149,7 @@ header {
   margin-bottom: 20px;
   position: relative;
 }
-.header_main__search {
+.header_main__lens {
   position: absolute;
   top: 1px;
   left: -50px;
@@ -238,10 +238,10 @@ header {
 .header_main__img_phone {
   top: 5px;
 }
-.header_main__img_arrow_right {
+.header_main__arrow_right {
   top: 3px;
 }
-.header_main__img_arrow_down {
+.header_main__arrow_down {
   position: absolute;
   right: 25px;
   top: 25px;
@@ -311,9 +311,12 @@ header {
     border: 1px solid #F7F3E8;
   }
 }
-@media (max-width: 330px) {
+@media (max-width: 370px) {
   .header_main__toggle {
     margin-right: 5px;
+  }
+  .header_main__lens {
+    left: -40px;
   }
 }
 .main__cont {
