@@ -25,15 +25,6 @@
 		}
 	}
 
-	&__link {
-		color: $color_dark;
-
-		&:hover,
-		&:focus {
-			color: $color_dark;
-		}
-	}
-
 	&__copyright {
 		display: inline-block;
 		line-height: 90px;

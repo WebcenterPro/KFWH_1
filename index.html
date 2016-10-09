@@ -19,7 +19,7 @@
 	<header>
 		<div class="header_top">
 			<div class="header_top__cont container-fluid">
-				<a href="#" class="header_top__href" data-toggle="modal" data-target="#purchaseModal">Оставить заявку</a>
+				<a href="#" class="header_top__purchase" data-toggle="modal" data-target="#purchaseModal">Оставить заявку</a>
 				<a href="#" class="header_top__search"><span class="header_top__lens glyphicon glyphicon-search"></span> Поиск</a>
 			</div>
 		</div>
@@ -36,23 +36,23 @@
 					<a class="header_main__logo navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
 				</div>
 
-				<div class="header_main__outer_cont collapse navbar-collapse" id="header_main__outer_cont">
-					<div class="header_main__inner_cont">
+				<div class="header_main__outer collapse navbar-collapse" id="header_main__outer_cont">
+					<div class="header_main__inner">
 						<ul class="header_main__items nav navbar-nav">
 							<li class="header_main__item">
 								<a class="header_main__link" data-toggle="dropdown" href="#">Недвижимость<span class="header_main__arrow_down glyphicon glyphicon-chevron-down visible-xs"></span></a>
-								<div class="header_main__subitems_cont dropdown-menu">
-									<div class="header_main__subitems_inner container-fluid">
-										<ul class="header_main__subitems col-sm-4">
-											<li class="header_main__subitem">Складская недвижимость в аренду</li>
-											<li class="header_main__subitem">Складская недвижимость на продажу</li>
+								<div class="subitems dropdown-menu">
+									<div class="subitems__inner container-fluid">
+										<ul class="subitems__items col-sm-4">
+											<li class="subitems__item"><a class="subitems__link" href="#">Складская недвижимость в аренду</a></li>
+											<li class="subitems__item"><a class="subitems__link" href="#">Складская недвижимость на продажу</a></li>
 										</ul>
-										<ul class="header_main__subitems col-sm-4">
-											<li class="header_main__subitem">Производственные помещения в аренду</li>
-											<li class="header_main__subitem">Производственные помещения на продажу</li>
+										<ul class="subitems__items col-sm-4">
+											<li class="subitems__item"><a class="subitems__link" href="#">Производственные помещения в аренду</a></li>
+											<li class="subitems__item"><a class="subitems__link" href="#">Производственные помещения на продажу</a></li>
 										</ul>
-										<ul class="header_main__subitems col-sm-4">
-											<li class="header_main__subitem">Built-to-suit</li>
+										<ul class="subitems__items col-sm-4">
+											<li class="subitems__item"><a class="subitems__link" href="#">Built-to-suit</a></li>
 										</ul>
 									</div>
 								</div>
@@ -85,89 +85,84 @@
 			<!-- UNIT_LG UNIT -->
 			<div class="main__row row">
 				<div class="main__col col-md-8">
-					<div class="main__owl owl">
-						<div class="owl__item unit_lg unit_lg--img_one">
+					<div class="owl">
+						<div class="unit_lg unit_lg--img_one">
 							<div class="unit_lg__text_cont">
 								<h2 class="unit_lg__head">Лучшие производственно-складские помещения в Петербурге</h2>
-								<p class="unit_lg__descr">Просмотрите самые интересные предложения</p>
+								<a class="unit_lg__descr" href="#">Просмотрите самые интересные предложения</a>
 							</div>
 						</div>
-						<div class="owl__item unit_lg unit_lg--img_one">
+						<div class="unit_lg unit_lg--img_one">
 							<div class="unit_lg__text_cont">
 								<h2 class="unit_lg__head">Лучшие производственно-складские помещения в Петербурге</h2>
-								<p class="unit_lg__descr">Просмотрите самые интересные предложения</p>
+								<a class="unit_lg__descr" href="#">Просмотрите самые интересные предложения</a>
 							</div>
 						</div>
-						<div class="owl__item unit_lg unit_lg--img_one">
+						<div class="unit_lg unit_lg--img_one">
 							<div class="unit_lg__text_cont">
 								<h2 class="unit_lg__head">Лучшие производственно-складские помещения в Петербурге</h2>
-								<p class="unit_lg__descr">Просмотрите самые интересные предложения</p>
+								<a class="unit_lg__descr" href="#">Просмотрите самые интересные предложения</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="main__col col-md-4">
-					<div class="main__unit unit unit--img_sklad_one">
+					<a class="unit unit--img_sklad_one" href="#">
 						<h2 class="unit__head unit__head--mid">Выбрать склад</h2>
-					</div>
+					</a>
 				</div>
 				<div class="main__col col-md-4">
-					<div class="main__unit unit unit--img_sklad_two">
+					<a class="unit unit--img_sklad_two" href="#">
 						<h2 class="unit__head">Да будет склад!</h2>
 						<p class="unit__descr unit__descr--bottom">Подробнее о нас</p>
-					</div>
+					</a>
+					</a>
 				</div>
 			</div>
 
 			<!-- UNIT_LEFT UNIT-->
 			<div class="main__row row">
-				<div class="main__col col-md-8">
-					<div class="main__unit unit_left">
-						<div class="main__row main__row--marg_zero row">
-							<div class="main__col col-md-6">
-								<div class="unit_left__img unit_left__img--img_1"></div>
-							</div>
-							<div class="main__col col-md-6">
-								<div class="unit_left__content">
-									<h3 class="unit_left__head">Складское помещение в самом центре Санкт-Петербурга</h3>
-									<p class="unit_left__p">Общая площадь: 30 000 м2</p>
-									<p class="unit_left__p">Класс: А</p>
-									<p class="unit_left__p">Район Санкт-Петербурга: Центральный</p>
-									<p class="unit_left__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
-								</div>
+				<div class="main__col unit_left col-md-8">
+					<div class="main__row main__row--marg_zero row">
+						<div class="main__col col-md-6">
+							<a class="unit_left__img unit_left__img--img_1" href="#"></a>
+						</div>
+						<div class="main__col col-md-6">
+							<div class="unit_left__content">
+								<h3 class="unit_left__head">Складское помещение в самом центре Санкт-Петербурга</h3>
+								<p class="unit_left__p">Общая площадь: 30 000 м2</p>
+								<p class="unit_left__p">Класс: А</p>
+								<p class="unit_left__p">Район Санкт-Петербурга: Центральный</p>
+								<p class="unit_left__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="main__col col-md-4">
-					<div class="main__unit unit unit--img_analit">
+					<a class="unit unit--img_analit" href="#">
 						<h2 class="unit__head unit__head--bottom">Аналитика</h2>
-					</div>
+					</a>
 				</div>
 			</div>
 
 			<!-- UNIT_TOP -->
 			<div class="main__row main__row--flex row">
-				<div class="main__col main__col--flex col-md-4">
-					<div class="main__unit unit_top">
-						<div class="unit_top__img unit_top__img--img_one"></div>
-						<div class="unit_top__content">
-							<h3 class="unit_top__head">Складское помещение в самом центре Санкт-Петербурга</h3>
-							<p class="unit_top__p">Общая площадь: 30 000 м2</p>
-							<p class="unit_top__p">Класс: А</p>
-							<p class="unit_top__p">Район Санкт-Петербурга: Центральный</p>
-							<p class="unit_top__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
-						</div>
+				<div class="main__col main__col--flex unit_top col-md-4">
+					<div class="unit_top__img unit_top__img--img_one"></div>
+					<div class="unit_top__content">
+						<h3 class="unit_top__head">Складское помещение в самом центре Санкт-Петербурга</h3>
+						<p class="unit_top__p">Общая площадь: 30 000 м2</p>
+						<p class="unit_top__p">Класс: А</p>
+						<p class="unit_top__p">Район Санкт-Петербурга: Центральный</p>
+						<p class="unit_top__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
 					</div>
 				</div>
-				<div class="main__col main__col--flex col-md-8">
-					<div class="main__unit unit_top unit_top--wide">
-						<div class="unit_top__img unit_top__img--img_two"></div>
-						<div class="unit_top__content unit_top__content--wide">
-							<h3 class="unit_top__head">Складское помещение в аренду</h3>
-							<p class="unit_top__p">Складское помещение расположено в новом, многофункциональном комплексе, состоящем из жилой, офисной и коммерческой недвижимости в непосредственной близости от Невского проспекта. Бесплатным бонусом к объекту идет открытая терраса площадью 500 кв.м.!</p>
-							<span class="unit_top__arrow glyphicon glyphicon-chevron-down"></span>
-						</div>
+				<div class="main__col main__col--flex unit_top unit_top--wide col-md-8">
+					<div class="unit_top__img unit_top__img--img_two"></div>
+					<div class="unit_top__content unit_top__content--wide">
+						<h3 class="unit_top__head">Складское помещение в аренду</h3>
+						<p class="unit_top__p">Складское помещение расположено в новом, многофункциональном комплексе, состоящем из жилой, офисной и коммерческой недвижимости в непосредственной близости от Невского проспекта. Бесплатным бонусом к объекту идет открытая терраса площадью 500 кв.м.!</p>
+						<span class="unit_top__arrow glyphicon glyphicon-chevron-down"></span>
 					</div>
 				</div>
 			</div>
@@ -175,27 +170,21 @@
 			<!-- LAST_NEWS SOCIAL_BLOCK-->
 			<div class="main__row main__row--flex row">
 				<div class="main__col col-md-8">
-					<div class="main__last_news last_news">
+					<div class="last_news">
 						<h3 class="last_news__head">Последние новости</h3>
-						<span class="last_news__more">Смотреть ещё</span>
-						<div class="last_news__list table">
+						<a class="last_news__more" href="#">Смотреть ещё</a>
+						<div class="last_news__list">
 							<span class="last_news__date">15/09/2016</span>
-							<div class="last_news__descr_cont">
-								<p class="last_news__descr">Х5 Retail Group полностью арендовала 1 очередь логопарка «Софьино»</p>
-							</div>
+							<a class="last_news__descr" href="#">Х5 Retail Group полностью арендовала 1 очередь логопарка «Софьино»</a>
 							<span class="last_news__date">10/09/2016</span>
-							<div class="last_news__descr_cont">
-								<p class="last_news__descr">С 2008 г. объем складов индивидуального хранения в Москве вырос в 21 раз</p>
-							</div>
+							<a class="last_news__descr" href="#">С 2008 г. объем складов индивидуального хранения в Москве вырос в 21 раз</a>
 							<span class="last_news__date">05/09/2016</span>
-							<div class="last_news__descr_cont">
-								<p class="last_news__descr">XII Ежегодная складская конференция Knight Frank состоится 15 сентября</p>
-							</div>
+							<a class="last_news__descr" href="#">XII Ежегодная складская конференция Knight Frank состоится 15 сентября</a>
 						</div>
 					</div>
 				</div>
 				<div class="main__col main__col--flex col-md-4">
-					<div class="main__social_block social_block">
+					<div class="social_block">
 						<h3 class="social_block__head">Присоединяйтесь к нам +</h3>
 						<ul class="social_block__social social">
 							<li class="social__item"><a href="#" class="social__link"></a></li>
@@ -207,19 +196,15 @@
 
 			<!-- HELLO -->
 			<div class="main__row main__row--flex row">
-				<div class="main__col main__col--flex col-md-4">
-					<div class="main__hello hello">
-						<div class="hello__head_cont">
-							<h3 class="hello__head">Добро пожаловать в Knight Frank</h3>
-						</div>
+				<div class="main__col main__col--flex hello col-md-4">
+					<div class="hello__head_cont">
+						<h3 class="hello__head">Добро пожаловать в Knight Frank</h3>
 					</div>
 				</div>
-				<div class="main__col main__col--flex col-md-8">
-					<div class="main__hello hello">
-						<div class="hello__descr_cont">
-							<p class="hello__descr">Международная консалтинговая компания Knight Frank была основана в Лондоне в 1896 году и является одним из лидеров мирового рынка коммерческой и жилой недвижимости.</p>
-							<p class="hello__descr">На сегодняшний день Knight Frank, совместно со своим стратегическим североамериканским партнером, компанией Newmark Grubb Knight Frank, насчитывает 370 офисов в 55 странах мира.</p>
-						</div>
+				<div class="main__col main__col--flex hello col-md-8">
+					<div class="hello__descr_cont">
+						<p class="hello__descr">Международная консалтинговая компания Knight Frank была основана в Лондоне в 1896 году и является одним из лидеров мирового рынка коммерческой и жилой недвижимости.</p>
+						<p class="hello__descr">На сегодняшний день Knight Frank, совместно со своим стратегическим североамериканским партнером, компанией Newmark Grubb Knight Frank, насчитывает 370 офисов в 55 странах мира.</p>
 					</div>
 				</div>
 			</div>
@@ -234,10 +219,10 @@
 				<li class="social__item social__item--sm"><a href="#" class="social__link"></a></li>
 			</ul>
 			<ul class="footer__items">
-				<li class="footer__item"><a href="#" class="footer__link">Недвижимость</a></li>
-				<li class="footer__item"><a href="#" class="footer__link">Земельные участки</a></li>
-				<li class="footer__item"><a href="#" class="footer__link">О компании</a></li>
-				<li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+				<li class="footer__item"><a href="#">Недвижимость</a></li>
+				<li class="footer__item"><a href="#">Земельные участки</a></li>
+				<li class="footer__item"><a href="#">О компании</a></li>
+				<li class="footer__item"><a href="#">Контакты</a></li>
 			</ul>
 			<span class="footer__copyright">© 2016 Knight Frank</span>
 		</div>

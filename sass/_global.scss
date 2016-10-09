@@ -15,6 +15,15 @@ header {
 	border-bottom: 1px solid $color_hr;
 }
 
+a {
+	color: $color_dark;
+
+	&:hover,
+	&:focus {
+		color: $color_dark;
+	}
+}
+
 @media (max-width: 920px) {
 	body {
 		margin-bottom: 165px;

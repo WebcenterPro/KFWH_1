@@ -17,6 +17,13 @@
 
 	&__descr {
 		font-size: $fs_bigger;
+		color: $color_bright;
+
+		&:hover,
+		&:focus {
+			color: $color_bright;
+			text-decoration: underline;
+		}
 	}
 
 	&--img_one {

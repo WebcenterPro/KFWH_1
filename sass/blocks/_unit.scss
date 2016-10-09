@@ -2,6 +2,12 @@
 	color: $color_bright;
 	position: relative;
 	overflow: hidden;
+	display: block;
+
+	&:hover,
+	&:focus {
+		color: $color_bright;
+	}
 
 	&__head {
 		position: absolute;
@@ -26,6 +32,10 @@
 	&__descr {
 		position: absolute;
 		left: 30px;
+
+		&:hover {
+			text-decoration: underline;
+		}
 
 		&--bottom {
 			bottom: 20px;

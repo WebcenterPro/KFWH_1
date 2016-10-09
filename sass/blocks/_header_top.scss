@@ -11,14 +11,14 @@
 		max-width: $width_global;
 	}
 
-	&__href {
+	&__purchase {
 		margin-right: 30px;
 		color: $color_bright;
-		text-decoration: none;
 
-		&:hover {
-			color: $color_bright;
+		&:hover,
+		&:focus {
 			text-decoration: none;
+			color: $color_bright;
 		}
 	}
 
@@ -31,7 +31,8 @@
 		color: $color_bright;
 		text-decoration: none;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $color_bright;
 			text-decoration: none;
 		}

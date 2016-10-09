@@ -13,7 +13,6 @@
 		position: absolute;
 		top: 24px;
 		right: 25px;
-		display: inline-block;
 	}
 
 	&__date {
@@ -23,18 +22,15 @@
 		font-weight: bold;
 	}
 
-	&__descr_cont {
+	&__descr {
 		margin-left: 100px;
+		padding: 10px 0;
 		border-bottom: 1px solid $color_hr;
+		display: block;
 
 		&:last-child {
 			border-bottom: none;
 		}
-	}
-
-	&__descr {
-		margin: 0;
-		padding: 10px 0;
 	}
 }
 
@@ -57,7 +53,7 @@
 			padding: 15px 0 0;
 		}
 
-		&__descr_cont {
+		&__descr {
 			margin-left: 0;
 		}
 	}

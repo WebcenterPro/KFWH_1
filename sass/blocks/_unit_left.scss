@@ -2,6 +2,14 @@
 	background-color: $color_footer;
 
 	&__img {
+		display: block;
+		color: $color_bright;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $color_bright;
+		}
 
 		&--img_1 {
 			background: url("../img/unit_3.png") center no-repeat;
