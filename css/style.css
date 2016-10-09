@@ -241,12 +241,12 @@ header {
   top: 3px;
 }
 
-@media (max-width: 1045px) {
+@media (max-width: 1060px) {
   .header_main__inner_cont {
     margin-left: 0;
   }
 }
-@media (min-width: 768px) and (max-width: 1045px) {
+@media (min-width: 768px) and (max-width: 1060px) {
   .header_main {
     position: static;
   }
@@ -259,7 +259,7 @@ header {
     height: 100%;
   }
 }
-@media (min-width: 768px) and (max-width: 809px) {
+@media (min-width: 768px) and (max-width: 824px) {
   .header_main__items {
     font-size: 14px;
   }
