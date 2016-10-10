@@ -33,7 +33,7 @@
   font-style: normal;
   font-weight: normal;
 }
-.header_main__link--phone::after, .unit_left__content::before, .unit_top__content::before, .hello__descr_cont::before {
+.header_main__link--line::after, .unit_left__content::before, .unit_top__content::before, .hello__descr_cont::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -74,7 +74,7 @@ html {
 }
 
 body {
-  font-family: SegoeUIRegular, Arial, sans-serif;
+  font-family: "SegoeUIRegular", Arial, sans-serif;
   color: #424242;
   font-size: 16px;
   margin-bottom: 90px;
@@ -90,6 +90,7 @@ a {
 }
 a:hover, a:focus {
   color: #424242;
+  outline: none;
 }
 
 @media (max-width: 920px) {
@@ -134,11 +135,6 @@ a:hover, a:focus {
   font-size: 11px;
 }
 
-@media (max-width: 767px) {
-  .header_top {
-    display: none;
-  }
-}
 .header_main {
   min-height: 75px;
   background: white;
@@ -154,13 +150,22 @@ a:hover, a:focus {
   margin-top: 20px;
   margin-bottom: 20px;
   position: relative;
+  border-color: #D82949;
+}
+.header_main__toggle_line {
+  background-color: #D82949;
 }
 .header_main__lens {
   position: absolute;
-  top: 1px;
-  left: -50px;
+  top: 22px;
+  right: 80px;
   font-size: 30px;
   color: #D82949;
+  border: none;
+}
+.header_main__lens:hover, .header_main__lens:focus {
+  color: #D82949;
+  text-decoration: none;
 }
 .header_main__outer {
   padding: 0;
@@ -202,12 +207,19 @@ a:hover, a:focus {
   position: relative;
 }
 .header_main__link:hover {
+  color: #D82949;
   border-bottom: 2px solid #D82949;
 }
 .header_main__link--phone {
   font-size: 23px;
 }
-.header_main__link--phone::after {
+.header_main__link--phone:hover {
+  border-bottom: none;
+}
+.header_main__link--line {
+  cursor: inherit;
+}
+.header_main__link--line::after {
   height: 36px;
   width: 1px;
   background-color: #D82949;
@@ -286,7 +298,7 @@ a:hover, a:focus {
     margin-right: 5px;
   }
   .header_main__lens {
-    left: -40px;
+    right: 60px;
   }
 }
 .subitems {

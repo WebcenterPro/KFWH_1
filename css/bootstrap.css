@@ -4512,7 +4512,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  //color: #333;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -4528,14 +4528,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ddd;
+  //border-color: #ddd;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
+  //background-color: #ddd;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  //background-color: #888;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {

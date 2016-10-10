@@ -26,12 +26,12 @@
 		<nav class="header_main navbar navbar-default">
 			<div class="header_main__cont container-fluid">
 				<div class="navbar-header">
+					<a class="header_main__lens glyphicon glyphicon-search visible-xs" href="#"></a>
 					<button type="button" class="header_main__toggle navbar-toggle" data-toggle="collapse" data-target="#header_main__outer_cont">
-						<span class="header_main__lens glyphicon glyphicon-search"></span>
 						<span class="sr-only">Навигация</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<span class="header_main__toggle_line icon-bar"></span>
+						<span class="header_main__toggle_line icon-bar"></span>
+						<span class="header_main__toggle_line icon-bar"></span>
 					</button>
 					<a class="header_main__logo navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
 				</div>
@@ -61,10 +61,28 @@
 								<a class="header_main__link" href="#">Земельные участки<span class="header_main__arrow_down glyphicon glyphicon-chevron-down visible-xs"></span></a>
 							</li>
 							<li class="header_main__item">
-								<a class="header_main__link" href="#">О компании<span class="header_main__arrow_down glyphicon glyphicon-chevron-down visible-xs"></span></a>
+								<a class="header_main__link" data-toggle="dropdown" href="#">О компании<span class="header_main__arrow_down glyphicon glyphicon-chevron-down visible-xs"></span></a>
+								<div class="subitems dropdown-menu">
+									<div class="subitems__inner container-fluid">
+										<ul class="subitems__items col-sm-4">
+											<li class="subitems__item"><a class="subitems__link" href="#">Новости</a></li>
+											<li class="subitems__item"><a class="subitems__link" href="#">Услуги</a></li>
+										</ul>
+										<ul class="subitems__items col-sm-4">
+											<li class="subitems__item"><a class="subitems__link" href="#">Аналитика</a></li>
+											<li class="subitems__item"><a class="subitems__link" href="#">Блог</a></li>
+										</ul>
+										<ul class="subitems__items col-sm-4">
+											<li class="subitems__item"><a class="subitems__link" href="#">FAQ</a></li>
+										</ul>
+									</div>
+								</div>
 							</li>
 							<li class="header_main__item hidden-xs">
 								<a class="header_main__link header_main__link--phone" href="#"><span class="header_main__img_phone glyphicon glyphicon-earphone"></span> +7 (812) 363-22-22</a>
+							</li>
+							<li class="header_main__item hidden-xs">
+								<span class="header_main__link header_main__link--line" href="#"></span>
 							</li>
 							<li class="header_main__item header_main__item--last">
 								<a class="header_main__link header_main__link" href="#">Контакты <span class="header_main__arrow_right glyphicon glyphicon-chevron-right hidden-xs"></span><span class="header_main__arrow_down glyphicon glyphicon-chevron-down visible-xs"></span></a>

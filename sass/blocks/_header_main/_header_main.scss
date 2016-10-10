@@ -14,14 +14,26 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 		position: relative;
+		border-color: $color_header;
+	}
+
+	&__toggle_line {
+		background-color: $color_header;
 	}
 
 	&__lens {
 		position: absolute;
-		top: 1px;
-		left: -50px;
+		top: 22px;
+		right: 80px;
 		font-size: 30px;
 		color: $color_header;
+		border: none;
+
+		&:hover,
+		&:focus {
+			color: $color_header;
+			text-decoration: none;
+		}
 	}
 
 	&__outer {
@@ -81,11 +93,20 @@
 		position: relative;
 
 		&:hover {
+			color: $color_header;
 			border-bottom: 2px solid $color_header;
 		}
 
 		&--phone {
 			font-size: 23px;
+
+			&:hover {
+				border-bottom: none;
+			}
+		}
+
+		&--line {
+			cursor: inherit;
 
 			&::after {
 				@extend %pseudoelem_param;
@@ -203,7 +224,7 @@
 		}
 
 		&__lens {
-			left: -40px;
+			right: 60px;
 		}
 	}
 }

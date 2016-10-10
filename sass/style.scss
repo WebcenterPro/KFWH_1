@@ -2,17 +2,17 @@
 @import "_variables.scss"; //Переменные
 @import "_global.scss"; //Общие параметры
 
-	@import "blocks/_header_top.scss"; //Верхняя шапка
-		@import "blocks/_header_main/_header_main.scss"; //Главная шапка
-		@import "blocks/_header_main/_subitems.scss"; //Подменю главной шапки
-	@import "blocks/_main.scss"; //Контент
-	@import "blocks/_owl.scss"; //Слайдер большого блока
-	@import "blocks/_unit.scss"; //Обычный блок
-	@import "blocks/_unit_lg.scss"; //Большой блок
-	@import "blocks/_unit_left.scss"; //Двойной блок, картинка слева
-	@import "blocks/_unit_top.scss"; //Двойной блок, картинка сверху
-	@import "blocks/_last_news.scss"; //Последние новости
-	@import "blocks/_social.scss"; //Социальные иконки
-	@import "blocks/_hello.scss"; //Блок приветствия
-	@import "blocks/_social_block.scss"; //Блок социальных иконок
-	@import "blocks/_footer.scss"; //Подвал
+@import "blocks/_header_top.scss"; //Верхняя шапка
+	@import "blocks/_header_main/_header_main.scss"; //Главная шапка
+	@import "blocks/_header_main/_subitems.scss"; //Подменю главной шапки
+@import "blocks/_main.scss"; //Контент
+@import "blocks/_owl.scss"; //Слайдер большого блока
+@import "blocks/_unit.scss"; //Обычный блок
+@import "blocks/_unit_lg.scss"; //Большой блок
+@import "blocks/_unit_left.scss"; //Двойной блок, картинка слева
+@import "blocks/_unit_top.scss"; //Двойной блок, картинка сверху
+@import "blocks/_last_news.scss"; //Последние новости
+@import "blocks/_social.scss"; //Социальные иконки
+@import "blocks/_hello.scss"; //Блок приветствия
+@import "blocks/_social_block.scss"; //Блок социальных иконок
+@import "blocks/_footer.scss"; //Подвал
