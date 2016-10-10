@@ -17,6 +17,7 @@
 
 		&--border_bot {
 			overflow: hidden;
+			position: relative;
 			border-bottom: 1px solid $color_hr;
 		}
 	}

@@ -40,26 +40,38 @@
 			border-top: none;
 			text-align: justify;
 
+				&:hover {
+
+					// Сброс тени при наведении //
+					.unit_top__inner--wide {
+
+						&::after {
+							display: none;
+						}
+					}
+					// ======================== //
+				}
+
 			&::before {
 				border-bottom-color: $color_bright;
 			}
 		}
 	}
 
-	&__shadow {
-		position: relative;
+	&__inner {
 
 		&--wide {
-			overflow: hidden;
 			max-height: 105px;
+			overflow: hidden;
+			position: relative;
 
 			&::after {
 				content: "";
 				display: block;
 				position: absolute;
+				bottom: -20px;
 				width: 100%;
-				bottom: 0;
-				height: 50px;
+				height: 60px;
 				background: linear-gradient(to top, $color_bright, transparent);
 			}
 		}
@@ -75,9 +87,24 @@
 
 	&__arrow {
 		position: absolute;
-		top: 15px;
-		right: 15px;
+		top: 0;
+		right: 0;
 		color: #00867c;
+	}
+
+	&--wide {
+	}
+}
+
+@media (max-width: 1050px) {
+	.unit_top {
+
+		&__inner {
+
+			&--wide {
+				max-height: 127px;
+			}
+		}
 	}
 }
 
@@ -103,6 +130,17 @@
 			&--wide {
 				margin-bottom: -485px;
 				border-right: none;
+			}
+		}
+
+		&__inner {
+
+			&--wide {
+				max-height: initial;
+
+				&::after {
+					display: none;
+				}
 			}
 		}
 	}
