@@ -1,7 +1,7 @@
 .unit_top {
-	display: flex;
-	flex-direction: column;
-	position: relative;
+	background-color: $color_footer;
+	padding-bottom: 500px;
+	margin-bottom: -500px;
 
 	&__img {
 
@@ -19,16 +19,19 @@
 	}
 
 	&__content {
-		background-color: $color_footer;
-		display: inline-block;
-		width: 100%;
-		height: 100%;
 		padding: 15px;
 		position: relative;
+		padding-bottom: 500px;
+		margin-bottom: -485px;
+		border-left: 1px solid $color_hr;
 
 		&::before {
 			@extend %pseudoelem_param;
 			@extend %triangle_top;
+		}
+
+		&::after {
+			display: none;
 		}
 
 		&--wide {
@@ -39,6 +42,25 @@
 
 			&::before {
 				border-bottom-color: $color_bright;
+			}
+		}
+	}
+
+	&__shadow {
+		position: relative;
+
+		&--wide {
+			overflow: hidden;
+			max-height: 105px;
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				height: 50px;
+				background: linear-gradient(to top, $color_bright, transparent);
 			}
 		}
 	}
@@ -61,6 +83,27 @@
 
 @media (max-width: 991px) {
 	.unit_top {
-		margin-bottom: 15px;
+		
+		&__content {
+			margin-bottom: -469px;
+			border-left: none;
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 500px;
+				left: 0px;
+				height: 15px;
+				background-color: $color_bright;
+				margin-bottom: -31px;
+				width: 100%;
+			}
+
+			&--wide {
+				margin-bottom: -485px;
+				border-right: none;
+			}
+		}
 	}
 }
