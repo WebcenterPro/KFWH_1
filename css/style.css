@@ -708,10 +708,11 @@ a:hover, a:focus {
   margin-right: 0;
 }
 .social__item:nth-child(1) {
-  background-image: url("../img/social_fb.png");
+  background-image: url("../img/social.png");
 }
 .social__item:nth-child(2) {
-  background-image: url("../img/social_insta.png");
+  background-image: url("../img/social.png");
+  background-position: 62px 0;
 }
 .social__item--sm {
   width: 37px;
@@ -720,6 +721,7 @@ a:hover, a:focus {
 }
 .social__item--sm:last-child {
   margin-right: 0;
+  background-position: 37px 0;
 }
 .social__link {
   display: inline-block;
