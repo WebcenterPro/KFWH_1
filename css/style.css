@@ -183,11 +183,9 @@ a:hover, a:focus {
 .header_main__items::before, .header_main__items::after {
   display: none;
 }
-.header_main__items li {
-  position: static;
-}
 .header_main__item {
   position: static;
+  padding: 0 15px;
 }
 .header_main__item.open .dropdown-menu {
   visibility: visible;
@@ -197,6 +195,9 @@ a:hover, a:focus {
 .header_main__item:first-child {
   margin-left: -15px;
 }
+.header_main__item--line {
+  padding: 0;
+}
 .header_main__item--last {
   margin-right: -15px;
 }
@@ -205,8 +206,9 @@ a:hover, a:focus {
   line-height: 43px;
   cursor: pointer;
   position: relative;
+  padding: 15px 0;
 }
-.header_main__link:hover {
+.header_main__link:hover, .header_main__link:focus {
   color: #D82949;
   border-bottom: 2px solid #D82949;
 }

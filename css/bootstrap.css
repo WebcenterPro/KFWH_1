@@ -3977,13 +3977,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   list-style: none;
 }
 .nav > li {
-  position: relative;
+  //position: relative;
   display: block;
 }
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  //padding: 10px 15px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {

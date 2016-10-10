@@ -55,16 +55,11 @@
 		&::after {
 			display: none;
 		}
-
-		// Переопределение бутстрапа //
-		li {
-			position: static;
-		}
-		// ========================= //
 	}
 
 	&__item {
 		position: static;
+		padding: 0 15px;
 
 		// ANIMATION (see the _subitems file) //
 		&.open {
@@ -81,6 +76,10 @@
 			margin-left: -15px;
 		}
 
+		&--line {
+			padding: 0;
+		}
+
 		&--last {
 			margin-right: -15px;
 		}
@@ -91,8 +90,10 @@
 		line-height: 43px;
 		cursor: pointer;
 		position: relative;
+		padding: 15px 0;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $color_header;
 			border-bottom: 2px solid $color_header;
 		}
