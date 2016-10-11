@@ -148,58 +148,109 @@ $(document).ready(function(){
 
 	$(".header_top__search_btn").click(showTopSearch);
 	$(".header_main__lens").click(showTopSearch);
-	$(window).resize(resizeTopSearch);
 	
-	var $mobile = null;
-	var $speed = 400;
+	var $initialHeight = parseInt($(".header_top").css("height")); //Начальная высота шапки
+	var $mobile = null; //Индикатор пересечения брейк-поинтов
+	var $speed = 400; //Скорость анимации
+	var $triangle = $(".header_top__search_triangle"); //Треугольник кнопки поиска
+	var break1 = 767; //Брейкпоинт 1 (с мобильника на планшет)
+	var break2 = 1076; //Брейкпоинт 2 (с планшета на ПК)
 
 	function showTopSearch() {
 
-		var $headerTop = $(".header_top");
-		var $search = $(".search");
-		var $contHeight = parseInt($headerTop.css("height"));
-		var $height = parseInt($search.css("height")) + $contHeight;
+		var $contHeight = parseInt($(".header_top").css("height"));
+		var $height = parseInt($(".search").css("height")) + $contHeight;
 
-		if ($contHeight <= 65) {
-			if ($contHeight == 0) {
+		if ($contHeight <= $initialHeight) {
+
+			if (window.innerWidth <= break1) {
 				$mobile = 1
-			} else {
+			} else if (window.innerWidth < break2){
 				$mobile = 2;
+			} else {
+				$mobile = 3;
 			}
 
-			$headerTop.animate({height: $height}, $speed);
-			$search.show($speed);
+			$(".header_top").animate({height: $height}, $speed);
+			$(".search").show($speed);
 			$(".search__input").focus();
-			if ((window.innerWidth > 767) && (window.innerWidth < 1061)) {
-				$(".header_main__logo").hide($speed);
+
+			if (window.innerWidth > break1) {
+				$triangle.animate({
+					borderWidth: "30px 20px"
+				}, $speed);
+
+				if (window.innerWidth < break2) {
+					$(".header_main__logo").hide($speed);
+				}
 			}
 		}
 
-		if ($contHeight > 65) {
-			var $h = 65;
+		if ($contHeight > $initialHeight) {
+			var $h = $initialHeight;
 			if ($mobile == 1) {
 				$h = 0;
 			}
 
-			$headerTop.animate({height: $h}, $speed);
+			$(".header_top").animate({height: $h}, $speed);
 
-			$search.hide($speed);
-			if ((window.innerWidth > 767) && (window.innerWidth < 1061)) {
+			$(".search").hide($speed);
+			if ((window.innerWidth > break1) && (window.innerWidth < break2)) {
 				$(".header_main__logo").show($speed);
 			}
 
+			$triangle.animate({
+				borderWidth: "60px 20px 0"
+			}, $speed);
+
 			setTimeout(function() {
 				$(".header_top").attr("style", "");
-			}, 450);
+			}, $speed + 50);
 
+			$mobile = 0;
 		}
+
 		$(".header_top__lens").toggleClass("glyphicon-search glyphicon-remove");
-
 	}
 
-	function resizeTopSearch() {
+	$(window).resize(function() {
 
-	}
+		if ($mobile == 1) {
+			if (window.innerWidth > break1) {
+				//Выход из 1
+				$(".header_main__logo").css("display", "none");
+				var $contHeight = parseInt($(".header_top").css("height")) + $initialHeight;
+				$(".header_top").css("height", $contHeight);
+				$triangle.css("display", "block");
+				$mobile = 2;
+			}
+		}
+
+		if ($mobile == 2) {
+			if (window.innerWidth <= break1) {
+				//Выход из 2 налево
+				$(".header_main__logo").css("display", "");
+				$contHeight = parseInt($(".header_top").css("height")) - $initialHeight;
+				$(".header_top").css("height", $contHeight);
+				$triangle.css("display", "none");
+				$mobile = 1;
+			}
+
+			if (window.innerWidth >= break2) {
+				//Выход из 2 направо
+				$(".header_main__logo").css("display", "");
+				$mobile = 3;
+			}
+		}
+
+		if ($mobile == 3) {
+			if (window.innerWidth < break2) {
+				//Выход из 3
+				$(".header_main__logo").css("display", "none");
+				$mobile = 2;
+			}
+		}
+	});
 
 	/* ============= */
 

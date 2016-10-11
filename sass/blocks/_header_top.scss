@@ -5,7 +5,7 @@
 	text-align: right;
 
 	&__cont {
-		line-height: 35px;
+		line-height: 37px;
 		height: 100%;
 		padding: 12px 15px;
 		max-width: $width_global;
@@ -30,11 +30,12 @@
 		height : 40px;
 		color: $color_bright;
 		text-decoration: none;
+		position: relative;
 
 		&:hover,
 		&:focus {
-			color: $color_bright;
 			text-decoration: none;
+			color: $color_bright;
 		}
 	}
 
@@ -42,8 +43,12 @@
 		font-size: 11px;
 	}
 
-	&--opened {
-		height: 265px;
+	&__search_triangle {
+		@extend %triangle_top;
+		position: absolute;
+		border-bottom-color: #C1012E;
+		left: 45px;
+		border-width: 60px 20px 0;
 	}
 }
 

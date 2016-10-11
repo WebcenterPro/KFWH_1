@@ -91,6 +91,7 @@
 		cursor: pointer;
 		position: relative;
 		padding: 15px 0;
+		font-weight: bold;
 
 		&:hover,
 		&:focus {
@@ -100,6 +101,7 @@
 
 		&--phone {
 			font-size: 23px;
+			font-weight: normal;
 
 			&:hover,
 			&:focus {
@@ -136,7 +138,7 @@
 	}
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1075px) {
 	.header_main {
 
 		&__inner {
@@ -145,7 +147,7 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1060px) {
+@media (min-width: 768px) and (max-width: 1075px) {
 	.header_main {
 		position: static;
 
@@ -155,12 +157,17 @@
 			left: 15px;
 			background-color: white;
 			padding: 8px;
-			height: 100%;
+			height: 50%;
+
+			&:hover,
+			&:focus {
+				background-color: white;
+			}
 		}
 	}
 }
 
-@media (min-width: 768px) and (max-width: 824px) {
+@media (min-width: 768px) and (max-width: 840px) {
 	.header_main {
 
 		&__items {
