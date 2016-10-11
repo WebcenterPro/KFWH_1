@@ -6,14 +6,45 @@
 	text-align: left;
 	color: $color_bright;
 
+	&__cont {
+		margin-bottom: 10px;
+	}
+
 	&__input {
-		width: 100%;
 		padding: 10px 0;
 		border: none;
+		border-bottom: 1px solid $color_bright;
 		background-color: $color_header;
 		font-size: $fs_head_xl;
-		border-bottom: 1px solid $color_bright;
-		margin-bottom: 10px;
+		box-shadow: none;
+		border-radius: 0;
+		height: 60px;
+		color: $color_bright;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			box-shadow: none;
+			border: none;
+			color: $color_bright;
+			border-bottom: 1px solid $color_bright;
+		}
+	}
+
+	&__btn_cont {
+		padding: 0;
+		background: none;
+		border: none;
+	}
+
+	&__btn {
+		height: 56px;
+		width: 45px;
+		padding: 0;
+		background: none;
+		border: none;
+		font-size: $fs_head_xl;
+		color: white;
 
 		&:hover,
 		&:focus {

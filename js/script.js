@@ -149,7 +149,7 @@ $(document).ready(function(){
 	$(".header_top__search_btn").click(showTopSearch);
 	$(".header_main__lens").click(showTopSearch);
 	
-	var $initialHeight = parseInt($(".header_top").css("height")); //Начальная высота шапки
+	var $initialHeight = 65; //Начальная высота шапки (задавать вручную)
 	var $mobile = null; //Индикатор пересечения брейк-поинтов
 	var $speed = 400; //Скорость анимации
 	var $triangle = $(".header_top__search_triangle"); //Треугольник кнопки поиска
@@ -221,7 +221,7 @@ $(document).ready(function(){
 				$(".header_main__logo").css("display", "none");
 				var $contHeight = parseInt($(".header_top").css("height")) + $initialHeight;
 				$(".header_top").css("height", $contHeight);
-				$triangle.css("display", "block");
+				$triangle.css("border-width", "30px 20px");
 				$mobile = 2;
 			}
 		}
@@ -232,7 +232,7 @@ $(document).ready(function(){
 				$(".header_main__logo").css("display", "");
 				$contHeight = parseInt($(".header_top").css("height")) - $initialHeight;
 				$(".header_top").css("height", $contHeight);
-				$triangle.css("display", "none");
+				$triangle.css("border-width", "60px 30px");
 				$mobile = 1;
 			}
 

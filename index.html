@@ -19,8 +19,13 @@
 	<header>
 		<div class="header_top">
 			<div class="search container-fluid">
-				<input class="search__input" type="search" id="search" autocomplete="off">
-				<label class="search__label" for="search">Поиск</label>
+				<div class="search__cont input-group">
+					<input class="search__input form-control" type="text" id="search" autocomplete="off">
+					<span class="search__btn_cont input-group-addon">
+						<button class="search__btn glyphicon glyphicon-search"></button>
+					</span>
+				</div>
+				<label class="search__label" for="search">Что вы хотите найти?</label>
 			</div>
 			<div class="header_top__cont container-fluid">
 				<a href="#" class="header_top__purchase" data-toggle="modal" data-target="#purchaseModal">Оставить заявку</a>

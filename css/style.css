@@ -106,16 +106,42 @@ a:hover, a:focus {
   text-align: left;
   color: #FFF;
 }
-.search__input {
-  width: 100%;
-  padding: 10px 0;
-  border: none;
-  background-color: #FA2449;
-  font-size: 33px;
-  border-bottom: 1px solid #FFF;
+.search__cont {
   margin-bottom: 10px;
 }
+.search__input {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  background-color: #FA2449;
+  font-size: 33px;
+  box-shadow: none;
+  border-radius: 0;
+  height: 60px;
+  color: #FFF;
+}
 .search__input:hover, .search__input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #FFF;
+  border-bottom: 1px solid #FFF;
+}
+.search__btn_cont {
+  padding: 0;
+  background: none;
+  border: none;
+}
+.search__btn {
+  height: 56px;
+  width: 45px;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 33px;
+  color: white;
+}
+.search__btn:hover, .search__btn:focus {
   outline: none;
 }
 .search__label {
