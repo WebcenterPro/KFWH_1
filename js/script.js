@@ -37,37 +37,78 @@ function ready() {
 	var inner = null;
 	var parent = null;
 	var arrow = null;
+	var count = 0;
+
+	var shadow = document.querySelector(".unit_top__shadow");
+
+	inner = document.querySelector(".unit_top__inner--wide");
+	inner.oldHeight = parseInt(getComputedStyle(inner).height);
+	inner.style.maxHeight = "initial";
+	inner.newHeight = parseInt(getComputedStyle(inner).height);
+	inner.resHeight = inner.oldHeight - inner.newHeight;
+
+	if (inner.resHeight >= 0) {
+		shadow.style.display = "none";
+	}
+
+	inner.style.maxHeight = "";
 
 	document.querySelector(".unit_top__content--wide").onmouseenter = function(event) {
 
-		var target = event.target;
-		inner = target.children[0];
+		if (window.innerWidth < 992) return;
+		if (inner.resHeight >= 0) return;
 
 		inner.oldHeight = parseInt(getComputedStyle(inner).height);
 		inner.style.maxHeight = "initial";
 		inner.newHeight = parseInt(getComputedStyle(inner).height);
-
-		if (inner.oldHeight >= inner.newHeight) {
-			inner.style.maxHeight = "";
-			return;
-		}
-
 		inner.resHeight = inner.oldHeight - inner.newHeight;
-		target.style.transform = "translateY(" + inner.resHeight + "px)";
+
+		var target = event.target;
+
+		inner.style.maxHeight = "initial";
+
+		var timeout = setInterval(function() {
+			target.style.transform = "translateY(" + count + "px)";
+			if (count <= inner.resHeight) {
+				count = inner.resHeight;
+				clearInterval(timeout);
+			}
+			count = count - 3;
+			if (arrow.classList.contains("glyphicon-chevron-down")) {
+				target.style.transform = "translateY(0px)";
+				clearInterval(timeout);
+			}
+		}, 4);
 
 		parent = target.parentElement;
 		parent.height = parseInt(getComputedStyle(parent).height);
 		parent.style.height = (parent.height + inner.resHeight) + "px";
 
-		arrow = inner.lastElementChild;
+		arrow = inner.querySelector(".unit_top__arrow");
 		arrow.classList.remove("glyphicon-chevron-down");
 		arrow.classList.add("glyphicon-chevron-up");
 	}
 
 	document.querySelector(".unit_top__content--wide").onmouseleave = function(event) {
+
+		if (window.innerWidth < 992) return;
+		if (inner.resHeight >= 0) return;
+
 		var target = event.target;
+		var timeout = setInterval(function() {
+			target.style.transform = "translateY(" + count + "px)";
+			if (count >= 0) {
+				count = 0;
+				clearInterval(timeout);
+			}
+			count = count + 3;
+			if (arrow.classList.contains("glyphicon-chevron-up")) {
+				target.style.transform = "translateY(" + inner.resHeight + "px)";
+				clearInterval(timeout);
+			}
+		}, 4);
+
 		inner.style.maxHeight = "";
-		target.style.transform = "";
 		parent.style.height = "";
 		arrow.classList.remove("glyphicon-chevron-up");
 		arrow.classList.add("glyphicon-chevron-down");

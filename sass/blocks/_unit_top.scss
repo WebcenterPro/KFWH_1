@@ -41,9 +41,9 @@
 				&:hover {
 
 					// Сброс тени при наведении //
-					.unit_top__inner--wide {
+					.unit_top {
 
-						&::after {
+						&__shadow {
 							display: none;
 						}
 					}
@@ -62,16 +62,6 @@
 			max-height: 105px;
 			overflow: hidden;
 			position: relative;
-
-			&::after {
-				content: "";
-				display: block;
-				position: absolute;
-				bottom: -20px;
-				width: 100%;
-				height: 60px;
-				background: linear-gradient(to top, $color_bright, transparent);
-			}
 		}
 	}
 
@@ -90,7 +80,12 @@
 		color: #00867c;
 	}
 
-	&--wide {
+	&__shadow {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 50px;
+		background: linear-gradient(to top, $color_bright, transparent);
 	}
 }
 
@@ -135,11 +130,11 @@
 
 			&--wide {
 				max-height: initial;
-
-				&::after {
-					display: none;
-				}
 			}
+		}
+
+		&__shadow {
+			display: none;
 		}
 	}
 }
