@@ -1,38 +1,47 @@
 /* ===== JAVASCRIPT ===== */
 
-document.addEventListener("DOMContentLoaded", ready);
+/* ===== Подключение функций ===== */
 
-function ready() {
+document.addEventListener("DOMContentLoaded", mainMenuArrows); //Стрелочки главного меню
+document.addEventListener("DOMContentLoaded", unitTopSlidePanel); //Выдвижная панель в блоке unit_top
 
-	/* Стрелочки главного меню */
+/* =============================== */
 
-	document.querySelector(".header_main__items").onclick = function(event) {
+function mainMenuArrows() {
 
-		var glyph = document.querySelector(".header_main__item.open .header_main__link .glyphicon");
-		if (glyph) {
-			glyph.classList.add("glyphicon-chevron-down");
-			glyph.classList.remove("glyphicon-chevron-up");
-			glyph.removeAttribute("data-active");
+	var items = document.querySelector(".header_main__items");
 
-			//alert("Закрывается");
-		} else {
-			setTimeout(function() {
-				glyph = document.querySelector(".header_main__item.open .header_main__link .glyphicon");
-				if (!glyph) return;
-				glyph.classList.remove("glyphicon-chevron-down");
-				glyph.classList.add("glyphicon-chevron-up");
-				glyph.setAttribute("data-active", "true");
-				//alert("Открывается");
-			}, 0);
+	document.onclick = function(event) {
+		if (window.innerWidth > 991) return;
 
+		var glyphs = items.querySelectorAll(".header_main__arrow_down.glyphicon-chevron-up");
+		for (var i = 0; i < glyphs.length; i++) {
+			glyphs[i].classList.add("glyphicon-chevron-down");
+			glyphs[i].classList.remove("glyphicon-chevron-up");
 		}
 
-		var lastItem = event.target;
+		target = event.target;
+
+		while (target != items) {
+			if (target.nodeName == "HTML") break;
+			if (target.classList.contains("header_main__item")) break;
+			target = target.parentElement;
+		}
+
+		if (!target.classList.contains("header_main__item")) return;
+
+		setTimeout(function() {
+
+			if (target.classList.contains("open")) {
+				var glyph = target.querySelector(".header_main__arrow_down");
+				glyph.classList.remove("glyphicon-chevron-down");
+				glyph.classList.add("glyphicon-chevron-up");
+			}
+		}, 0);
 	}
+}
 
-	/* ======================= */
-
-	/* Выезжающая текстовая панель в блоке UNIT_TOP */
+function unitTopSlidePanel() {
 
 	var inner = null;
 	var parent = null;
@@ -113,9 +122,6 @@ function ready() {
 		arrow.classList.remove("glyphicon-chevron-up");
 		arrow.classList.add("glyphicon-chevron-down");
 	}
-
-	/* ============================================ */
-
 }
 
 
