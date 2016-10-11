@@ -4,7 +4,7 @@
 	&__head_cont {
 		display: flex;
 		align-items: center;
-		border: 1px solid $color_hr;
+		border: 1px solid $color_footer;
 		border-right: none;
 		padding: 20px;
 
@@ -36,8 +36,8 @@
 		display: block;
 
 		&__head_cont {
-			border-right: 1px solid $color_hr;
-			border-bottom: none;
+			border: none;
+			border-top: 1px solid $color_footer;
 			justify-content: center;
 		}
 

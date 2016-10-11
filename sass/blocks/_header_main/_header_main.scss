@@ -101,7 +101,8 @@
 		&--phone {
 			font-size: 23px;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				border-bottom: none;
 			}
 		}

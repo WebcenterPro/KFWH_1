@@ -23,7 +23,6 @@
 		position: relative;
 		padding-bottom: 500px;
 		margin-bottom: -485px;
-		border-left: 1px solid $color_hr;
 
 		&::before {
 			@extend %pseudoelem_param;
@@ -36,8 +35,7 @@
 
 		&--wide {
 			background-color: $color_bright;
-			border: 1px solid $color_hr;
-			border-top: none;
+			border-right: 1px solid $color_footer;
 			text-align: justify;
 
 				&:hover {
