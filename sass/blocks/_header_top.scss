@@ -22,7 +22,7 @@
 		}
 	}
 
-	&__search {
+	&__search_btn {
 		display: inline-block;
 		text-align: center;
 		background : #C1012E;
@@ -40,5 +40,15 @@
 
 	&__lens {
 		font-size: 11px;
+	}
+
+	&--opened {
+		height: 265px;
+	}
+}
+
+@media (max-width: 767px) {
+	.header_top {
+		height: 0;
 	}
 }

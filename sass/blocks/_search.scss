@@ -1,0 +1,27 @@
+.search {
+	display: none;
+	height: 200px;
+	max-width: $width_global;
+	padding: 60px 15px 15px;
+	text-align: left;
+	color: $color_bright;
+
+	&__input {
+		width: 100%;
+		padding: 10px 0;
+		border: none;
+		background-color: $color_header;
+		font-size: $fs_head_xl;
+		border-bottom: 1px solid $color_bright;
+		margin-bottom: 10px;
+
+		&:hover,
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__label {
+		font-weight: normal;
+	}
+}

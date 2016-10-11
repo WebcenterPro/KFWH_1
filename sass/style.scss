@@ -2,6 +2,7 @@
 @import "_variables.scss"; //Переменные
 @import "_global.scss"; //Общие параметры
 
+@import "blocks/_search.scss"; //Верхний поиск
 @import "blocks/_header_top.scss"; //Верхняя шапка
 	@import "blocks/_header_main/_header_main.scss"; //Главная шапка
 	@import "blocks/_header_main/_subitems.scss"; //Подменю главной шапки

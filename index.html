@@ -17,10 +17,14 @@
 <body>
 
 	<header>
-		<div class="header_top hidden-xs">
+		<div class="header_top">
+			<div class="search container-fluid">
+				<input class="search__input" type="search" id="search" autocomplete="off">
+				<label class="search__label" for="search">Поиск</label>
+			</div>
 			<div class="header_top__cont container-fluid">
 				<a href="#" class="header_top__purchase" data-toggle="modal" data-target="#purchaseModal">Оставить заявку</a>
-				<a href="#" class="header_top__search"><span class="header_top__lens glyphicon glyphicon-search"></span> Поиск</a>
+				<a href="#" class="header_top__search_btn"><span class="header_top__lens glyphicon glyphicon-search"></span> Поиск</a>
 			</div>
 		</div>
 		<nav class="header_main navbar navbar-default">
