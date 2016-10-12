@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", unitTopSlidePanel); //Выдвиж
 
 /* =============================== */
 
+/* Стрелочки главного меню */
+
 function mainMenuArrows() {
 
 	var items = document.querySelector(".header_main__items");
@@ -41,6 +43,10 @@ function mainMenuArrows() {
 	}
 }
 
+/* ======================= */
+
+/* Выдвижная панель в блоке unit_top */
+
 function unitTopSlidePanel() {
 
 	var inner = null;
@@ -58,6 +64,8 @@ function unitTopSlidePanel() {
 
 	if (inner.resHeight >= 0) {
 		shadow.style.display = "none";
+	} else {
+		shadow.style.display = "";
 	}
 
 	inner.style.maxHeight = "";
@@ -121,6 +129,21 @@ function unitTopSlidePanel() {
 		parent.style.height = "";
 		arrow.classList.remove("glyphicon-chevron-up");
 		arrow.classList.add("glyphicon-chevron-down");
+	}
+
+	window.onresize = function() {
+		inner.oldHeight = parseInt(getComputedStyle(inner).height);
+		inner.style.maxHeight = "initial";
+		inner.newHeight = parseInt(getComputedStyle(inner).height);
+		inner.resHeight = inner.oldHeight - inner.newHeight;
+
+		if (inner.resHeight >= 0) {
+			shadow.style.display = "none";
+		} else {
+			shadow.style.display = "";
+		}
+
+		inner.style.maxHeight = "";
 	}
 }
 
@@ -261,7 +284,7 @@ $(document).ready(function(){
 
 	/* ============= */
 
-	/* Добавление / удаление поведения ссылки у пунктов меню с подпунктами */
+	/* Делание ссылок в главном меню с подпунктами - кликабельными на ПК */
 
 	var $windowSize = window.innerWidth;
 	if ($windowSize > break1){
@@ -271,7 +294,7 @@ $(document).ready(function(){
 	}
 
 	$(window).resize(function() {
-		if (window.innerWidth <= break1){
+		if (window.innerWidth <= break1) {
 			$(".header_main__link[data-toggle]").attr("data-toggle", "dropdown");
 		} else {
 			$(".header_main__link[data-toggle]").attr("data-toggle", "");
@@ -279,5 +302,18 @@ $(document).ready(function(){
 	})
 
 	/* =================================================================== */
+
+	/* Воспроизведение видео во всплывающем окне */
+
+	$('.popup__play').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+	});
+
+	/* ========================================= */
 
 });
