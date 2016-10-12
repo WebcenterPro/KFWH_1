@@ -100,7 +100,7 @@ a:hover, a:focus {
 }
 @media (max-width: 419px) {
   body {
-    margin-bottom: 300px;
+    margin-bottom: 230px;
   }
 }
 .search {
@@ -336,6 +336,7 @@ a:hover, a:focus {
   }
   .header_main__link--phone {
     font-size: 18px;
+    font-weight: bold;
   }
   .header_main__img_phone {
     top: 3px;
@@ -932,7 +933,7 @@ a:hover, a:focus {
 }
 @media (max-width: 419px) {
   .footer {
-    height: 270px;
+    height: 200px;
   }
   .footer__items {
     margin-bottom: 15px;
