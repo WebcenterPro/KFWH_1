@@ -234,6 +234,9 @@ a:hover, a:focus {
   color: #FA2449;
   text-decoration: none;
 }
+.header_main__logo {
+  height: 75px;
+}
 .header_main__outer {
   padding: 0;
 }
@@ -323,8 +326,8 @@ a:hover, a:focus {
     top: 0px;
     left: 15px;
     background-color: white;
-    padding: 8px;
-    height: 50%;
+    padding: 15px 15px 0;
+    height: 65px;
   }
   .header_main__logo:hover, .header_main__logo:focus {
     background-color: white;

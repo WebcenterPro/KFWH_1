@@ -36,6 +36,10 @@
 		}
 	}
 
+	&__logo {
+		height: 75px;
+	}
+
 	&__outer {
 		padding: 0;
 	}
@@ -157,8 +161,8 @@
 			top: 0px;
 			left: 15px;
 			background-color: white;
-			padding: 8px;
-			height: 50%;
+			padding: 15px 15px 0;
+			height: 65px;
 
 			&:hover,
 			&:focus {

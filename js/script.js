@@ -161,6 +161,7 @@ $(document).ready(function(){
 		var $contHeight = parseInt($(".header_top").css("height"));
 		var $height = parseInt($(".search").css("height")) + $contHeight;
 
+
 		if ($contHeight <= $initialHeight) {
 
 			if (window.innerWidth <= break1) {
@@ -181,7 +182,9 @@ $(document).ready(function(){
 				}, $speed);
 
 				if (window.innerWidth < break2) {
-					$(".header_main__logo").hide($speed);
+					$(".header_main__logo").animate({
+						"top": $height - $contHeight
+					}, $speed);
 				}
 			}
 		}
@@ -196,7 +199,9 @@ $(document).ready(function(){
 
 			$(".search").hide($speed);
 			if ((window.innerWidth > break1) && (window.innerWidth < break2)) {
-				$(".header_main__logo").show($speed);
+				$(".header_main__logo").animate({
+					"top": 0
+				}, $speed);
 			}
 
 			$triangle.animate({
@@ -214,11 +219,13 @@ $(document).ready(function(){
 	}
 
 	$(window).resize(function() {
+		var $contHeight = parseInt($(".header_top").css("height"));
+		var $height = parseInt($(".search").css("height")) + $contHeight;
 
 		if ($mobile == 1) {
 			if (window.innerWidth > break1) {
 				//Выход из 1
-				$(".header_main__logo").css("display", "none");
+				$(".header_main__logo").css("top", $height - $contHeight);
 				var $contHeight = parseInt($(".header_top").css("height")) + $initialHeight;
 				$(".header_top").css("height", $contHeight);
 				$triangle.css("border-width", "30px 20px");
@@ -229,7 +236,7 @@ $(document).ready(function(){
 		if ($mobile == 2) {
 			if (window.innerWidth <= break1) {
 				//Выход из 2 налево
-				$(".header_main__logo").css("display", "");
+				$(".header_main__logo").css("top", "");
 				$contHeight = parseInt($(".header_top").css("height")) - $initialHeight;
 				$(".header_top").css("height", $contHeight);
 				$triangle.css("border-width", "60px 30px");
@@ -238,7 +245,7 @@ $(document).ready(function(){
 
 			if (window.innerWidth >= break2) {
 				//Выход из 2 направо
-				$(".header_main__logo").css("display", "");
+				$(".header_main__logo").css("top", "");
 				$mobile = 3;
 			}
 		}
@@ -246,7 +253,7 @@ $(document).ready(function(){
 		if ($mobile == 3) {
 			if (window.innerWidth < break2) {
 				//Выход из 3
-				$(".header_main__logo").css("display", "none");
+				$(".header_main__logo").css("top", $height - $contHeight);
 				$mobile = 2;
 			}
 		}
