@@ -216,6 +216,20 @@
 				background-color: $color_footer;
 			}
 
+			//Исправление косяка с появлением ...
+			//... подменю при наведении на мобилах
+			&:not(.open) {
+
+				&:hover {
+					
+					.subitems {
+						visibility: hidden;
+						opacity: 0;
+					}
+				}
+			}
+			//====================================
+
 			&:first-child {
 				margin-left: 0;
 			}

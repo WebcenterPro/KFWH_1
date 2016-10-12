@@ -361,6 +361,10 @@ a:hover, a:focus {
   .header_main__item.open {
     background-color: #f4f4f4;
   }
+  .header_main__item:not(.open):hover .subitems {
+    visibility: hidden;
+    opacity: 0;
+  }
   .header_main__item:first-child {
     margin-left: 0;
   }
