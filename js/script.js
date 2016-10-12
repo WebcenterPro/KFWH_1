@@ -134,7 +134,7 @@ $(document).ready(function(){
 	$(".owl").owlCarousel({
 		items: 1,
 		navigation: false,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 10000,
 		autoplayHoverPause: true,
 		loop: true,
