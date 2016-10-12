@@ -519,22 +519,31 @@ a:hover, a:focus {
 .unit__descr--bottom {
   bottom: 20px;
 }
-.unit--img_analit {
-  background: url("../img/unit_4.png") center no-repeat;
-  background-size: cover;
-  padding-bottom: 65%;
-}
 .unit--img_sklad_one {
   background: url("../img/unit_1.png") center no-repeat;
   background-size: cover;
   padding-bottom: 65%;
 }
 .unit--img_sklad_two {
-  background: url("../img/unit_2.png") center no-repeat;
+  background: url("../img/unit_2.jpg") center no-repeat;
+  background-size: cover;
+  padding-bottom: 65%;
+}
+.unit--img_analit {
+  background: url("../img/unit_4.png") center no-repeat;
   background-size: cover;
   padding-bottom: 65%;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .unit--img_sklad_one {
+    padding-bottom: 43%;
+    background-position-y: bottom;
+  }
+  .unit--img_sklad_two {
+    padding-bottom: 43%;
+  }
+}
 @media (max-width: 425px) {
   .unit__head {
     font-size: 22px;
