@@ -7,7 +7,7 @@ body {
 	font-family: $main_font;
 	color: $color_dark;
 	font-size: $fs_standart;
-	margin-bottom: 90px;
+	margin-bottom: 120px;
 }
 
 header {
@@ -27,6 +27,12 @@ a {
 
 @media (max-width: 920px) {
 	body {
-		margin-bottom: 165px;
+		margin-bottom: 195px;
+	}
+}
+
+@media (max-width: 419px) {
+	body {
+		margin-bottom: 300px;
 	}
 }

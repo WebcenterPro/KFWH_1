@@ -77,7 +77,7 @@ body {
   font-family: "SegoeUIRegular", Arial, sans-serif;
   color: #424242;
   font-size: 16px;
-  margin-bottom: 90px;
+  margin-bottom: 120px;
 }
 
 header {
@@ -95,7 +95,12 @@ a:hover, a:focus {
 
 @media (max-width: 920px) {
   body {
-    margin-bottom: 165px;
+    margin-bottom: 195px;
+  }
+}
+@media (max-width: 419px) {
+  body {
+    margin-bottom: 300px;
   }
 }
 .search {
@@ -917,10 +922,18 @@ a:hover, a:focus {
   }
 }
 @media (max-width: 419px) {
-  .footer__item:nth-child(1), .footer__item:nth-child(2) {
-    display: none;
+  .footer {
+    height: 270px;
   }
-  .footer__item:nth-child(3)::before {
-    display: none;
+  .footer__items {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .footer__item {
+    display: block;
+    line-height: 35px;
+  }
+  .footer__item::before {
+    border: none;
   }
 }

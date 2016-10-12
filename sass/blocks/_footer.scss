@@ -88,19 +88,19 @@
 
 @media (max-width: 419px) {
 	.footer {
+		height: 270px;
+
+		&__items {
+			margin-bottom: 15px;
+			margin-top: 15px;
+		}
 
 		&__item {
+			display: block;
+			line-height: 35px;
 
-			&:nth-child(1),
-			&:nth-child(2) {
-				display: none;
-			}
-
-			&:nth-child(3) {
-
-				&::before {
-					display: none;
-				}
+			&::before {
+				border: none;
 			}
 		}
 	}
