@@ -93,13 +93,16 @@
 		&__items {
 			margin-bottom: 15px;
 			margin-top: 15px;
+			font-size: 0;
 		}
 
 		&__item {
-			display: block;
 			line-height: 35px;
+			width: 50%;
+			font-size: 12px;
 
 			&::before {
+				margin: 0;
 				border: none;
 			}
 		}

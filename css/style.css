@@ -254,7 +254,7 @@ a:hover, a:focus {
   position: static;
   padding: 0 15px;
 }
-.header_main__item.open .dropdown-menu {
+.header_main__item.open .subitems, .header_main__item:hover .subitems {
   visibility: visible;
   opacity: 1;
   transition: visibility .3s, opacity .3s;
@@ -937,12 +937,15 @@ a:hover, a:focus {
   .footer__items {
     margin-bottom: 15px;
     margin-top: 15px;
+    font-size: 0;
   }
   .footer__item {
-    display: block;
     line-height: 35px;
+    width: 50%;
+    font-size: 12px;
   }
   .footer__item::before {
+    margin: 0;
     border: none;
   }
 }

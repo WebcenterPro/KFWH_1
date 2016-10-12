@@ -62,9 +62,10 @@
 		padding: 0 15px;
 
 		// ANIMATION (see the _subitems file) //
-		&.open {
+		&.open,
+		&:hover {
 			
-			.dropdown-menu {
+			.subitems {
 				visibility: visible;
 				opacity: 1;
 				transition: visibility .3s, opacity .3s;

@@ -254,4 +254,23 @@ $(document).ready(function(){
 
 	/* ============= */
 
+	/* Добавление / удаление поведения ссылки у пунктов меню с подпунктами */
+
+	var $windowSize = window.innerWidth;
+	if ($windowSize > break1){
+		$(".header_main__link[data-toggle]").attr("data-toggle", "");
+	} else {
+		$(".header_main__link[data-toggle]").attr("data-toggle", "dropdown");
+	}
+
+	$(window).resize(function() {
+		if (window.innerWidth <= break1){
+			$(".header_main__link[data-toggle]").attr("data-toggle", "dropdown");
+		} else {
+			$(".header_main__link[data-toggle]").attr("data-toggle", "");
+		}
+	})
+
+	/* =================================================================== */
+
 });
