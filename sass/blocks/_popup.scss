@@ -13,7 +13,47 @@
 		height: 125px;
 
 		&:hover {
-		background: url("../img/play_hover.png") center no-repeat;
+			background: url("../img/play_hover.png") center no-repeat;
 		}
 	}
+
+	//Плавная анимация появления и скрытия окна
+	&__fog {
+
+		&.mfp-bg {
+			opacity: 0;
+			transition: all 0.1s ease-out;
+
+			&.mfp-ready {
+				opacity: 0.8;
+			}
+
+			&.mfp-removing {
+				opacity: 0;
+			}
+		}
+
+		&.mfp-wrap {
+
+			.mfp-content {
+				opacity: 0;
+				transition: all 0.5s ease-out;
+			}
+
+			&.mfp-ready {
+
+				.mfp-content {
+					opacity: 1;
+				}
+			}
+
+			&.mfp-removing {
+
+				.mfp-content {
+					opacity: 0;
+				}
+			}
+		}
+	}
+	//=========================================
 }

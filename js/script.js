@@ -157,7 +157,7 @@ $(document).ready(function(){
 	$(".owl").owlCarousel({
 		items: 1,
 		navigation: false,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 10000,
 		autoplayHoverPause: true,
 		loop: true,
@@ -308,7 +308,7 @@ $(document).ready(function(){
 	$('.popup__play').magnificPopup({
 		disableOn: 700,
 		type: 'iframe',
-		mainClass: 'mfp-fade',
+		mainClass: 'popup__fog',
 		removalDelay: 160,
 		preloader: false,
 		fixedContentPos: false

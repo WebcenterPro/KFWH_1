@@ -660,7 +660,6 @@ a:hover, a:focus {
   background: url("../img/unit_6.png") center no-repeat;
   background-size: cover;
   padding-bottom: 40%;
-  position: relative;
 }
 .unit_top__content {
   padding: 15px;
@@ -970,4 +969,24 @@ a:hover, a:focus {
 }
 .popup__play:hover {
   background: url("../img/play_hover.png") center no-repeat;
+}
+.popup__fog.mfp-bg {
+  opacity: 0;
+  transition: all 0.1s ease-out;
+}
+.popup__fog.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+.popup__fog.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+.popup__fog.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.popup__fog.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.popup__fog.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }
