@@ -316,4 +316,38 @@ $(document).ready(function(){
 
 	/* ========================================= */
 
+	/* Анимация гамбургера */
+
+	var $toggle = $(".header_main__toggle");
+	var isWorking = false;
+	$toggle.click(headerToggleAnimation);
+
+	function headerToggleAnimation() {
+		if (isWorking) return;
+
+		var $line1 = $(".header_main__toggle_line:nth-child(2)");
+		var $line2 = $(".header_main__toggle_line:nth-child(3)");
+		var $line3 = $(".header_main__toggle_line:nth-child(4)");
+
+		$line1.css("transformOrigin", "100% 50%");
+		$line3.css("transformOrigin", "100% 50%");
+
+		if ($toggle.hasClass("collapsed")) {
+			$line2.css("opacity", 0);
+			$line1.css("transform", "rotate(-35deg)");
+			$line3.css("transform", "rotate(35deg)");
+		} else {
+			$line2.css("opacity", 1);
+			$line1.css("transform", "");
+			$line3.css("transform", "");
+		}
+
+		isWorking = true;
+		setTimeout(function() {
+			isWorking = false;
+		}, 350);
+	}
+
+	/* =================== */
+
 });

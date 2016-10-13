@@ -11,14 +11,21 @@
 	}
 
 	&__toggle {
-		margin-top: 20px;
-		margin-bottom: 20px;
+		margin-top: 16px;
+		margin-bottom: 15px;
 		position: relative;
-		border-color: $color_header;
 	}
 
 	&__toggle_line {
 		background-color: $color_header;
+		height: 4px;
+		width: 35px;
+		margin-top: 6px;
+		transition: transform .35s, opacity .2s;
+
+		&:nth-child(2) {
+			margin-top: 0;
+		}
 	}
 
 	&__lens {
