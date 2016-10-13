@@ -2,45 +2,43 @@
 
 /* ===== Подключение функций ===== */
 
-document.addEventListener("DOMContentLoaded", mainMenuArrows); //Стрелочки главного меню
 document.addEventListener("DOMContentLoaded", unitTopSlidePanel); //Выдвижная панель в блоке unit_top
+document.addEventListener("click", mainMenuArrows); //Стрелочки главного меню
 
 /* =============================== */
+
 
 /* Стрелочки главного меню */
 
 function mainMenuArrows() {
 
 	var items = document.querySelector(".header_main__items");
+	if (window.innerWidth > 991) return;
 
-	document.onclick = function(event) {
-		if (window.innerWidth > 991) return;
-
-		var glyphs = items.querySelectorAll(".header_main__arrow_down.glyphicon-chevron-up");
-		for (var i = 0; i < glyphs.length; i++) {
-			glyphs[i].classList.add("glyphicon-chevron-down");
-			glyphs[i].classList.remove("glyphicon-chevron-up");
-		}
-
-		target = event.target;
-
-		while (target != items) {
-			if (target.nodeName == "HTML") break;
-			if (target.classList.contains("header_main__item")) break;
-			target = target.parentElement;
-		}
-
-		if (!target.classList.contains("header_main__item")) return;
-
-		setTimeout(function() {
-
-			if (target.classList.contains("open")) {
-				var glyph = target.querySelector(".header_main__arrow_down");
-				glyph.classList.remove("glyphicon-chevron-down");
-				glyph.classList.add("glyphicon-chevron-up");
-			}
-		}, 0);
+	var glyphs = items.querySelectorAll(".header_main__arrow_down.glyphicon-chevron-up");
+	for (var i = 0; i < glyphs.length; i++) {
+		glyphs[i].classList.add("glyphicon-chevron-down");
+		glyphs[i].classList.remove("glyphicon-chevron-up");
 	}
+
+	target = event.target;
+
+	while (target != items) {
+		if (target.nodeName == "HTML") break;
+		if (target.classList.contains("header_main__item")) break;
+		target = target.parentElement;
+	}
+
+	if (!target.classList.contains("header_main__item")) return;
+
+	setTimeout(function() {
+
+		if (target.classList.contains("open")) {
+			var glyph = target.querySelector(".header_main__arrow_down");
+			glyph.classList.remove("glyphicon-chevron-down");
+			glyph.classList.add("glyphicon-chevron-up");
+		}
+	}, 0);
 }
 
 /* ======================= */
@@ -131,7 +129,9 @@ function unitTopSlidePanel() {
 		arrow.classList.add("glyphicon-chevron-down");
 	}
 
-	window.onresize = function() {
+	window.addEventListener("resize", unitTopSlidePanelResize); //Фикс при изменении ширины окна
+
+	function unitTopSlidePanelResize() {
 		inner.oldHeight = parseInt(getComputedStyle(inner).height);
 		inner.style.maxHeight = "initial";
 		inner.newHeight = parseInt(getComputedStyle(inner).height);
