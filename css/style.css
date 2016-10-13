@@ -231,7 +231,7 @@ a:hover, a:focus {
 .header_main__lens {
   position: absolute;
   top: 22px;
-  right: 80px;
+  right: 90px;
   font-size: 30px;
   color: #FA2449;
   border: none;
@@ -386,7 +386,7 @@ a:hover, a:focus {
     margin-right: 5px;
   }
   .header_main__lens {
-    right: 60px;
+    right: 65px;
   }
 }
 .subitems {
@@ -707,7 +707,9 @@ a:hover, a:focus {
   bottom: 0;
   width: 100%;
   height: 50px;
-  background: linear-gradient(to top, #FFF, transparent);
+  background: -moz-linear-gradient(bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 @media (max-width: 1050px) {
