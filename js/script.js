@@ -350,4 +350,21 @@ $(document).ready(function(){
 
 	/* =================== */
 
+	/* Закрытие всплывающего меню в шапке при увеличении ширины экрана */
+
+	var $windowSizeArrows = window.innerWidth;
+	$(window).on("resize", function() {
+		if ((window.innerWidth > break1) && 
+		    ($windowSizeArrows <= break1)) {
+			$(".header_main__item.open").removeClass("open");
+			var $toggle = $(".header_main__toggle");
+			if (!$toggle.hasClass("collapsed")) {
+				$toggle.click();
+			}
+		}
+		$windowSizeArrows = window.innerWidth;
+	});
+
+	/* =============================================================== */
+
 });
