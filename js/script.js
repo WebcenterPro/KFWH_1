@@ -147,6 +147,8 @@ function unitTopSlidePanel() {
 	}
 }
 
+/* ================================= */
+
 
 /* ========== JQUERY ========== */
 
@@ -282,6 +284,21 @@ $(document).ready(function(){
 		}
 	});
 
+	$(document).on("click", function() {
+		var target = event.target;
+		while (target.tagName != "BODY") {
+			if ((target.classList.contains("header_top")) ||
+				 (target.classList.contains("modal")) ||
+				 (target.classList.contains("header_main__lens"))) return;
+			target = target.parentNode;
+		}
+		
+		var $contHeight = parseInt($(".header_top").css("height"));
+		if ($contHeight > $initialHeight) {
+			showTopSearch()
+		}
+	})
+
 	/* ============= */
 
 	/* Делание ссылок в главном меню с подпунктами - кликабельными на ПК */
@@ -359,7 +376,8 @@ $(document).ready(function(){
 			$(".header_main__item.open").removeClass("open");
 			var $toggle = $(".header_main__toggle");
 			if (!$toggle.hasClass("collapsed")) {
-				$toggle.click();
+				headerToggleAnimation();
+				$(".header_main .navbar-collapse").collapse("hide");
 			}
 		}
 		$windowSizeArrows = window.innerWidth;
