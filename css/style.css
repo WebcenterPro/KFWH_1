@@ -297,6 +297,7 @@ a:hover, a:focus {
   border-bottom: none;
 }
 .header_main__link--line {
+  display: block;
   cursor: inherit;
 }
 .header_main__link--line::after {
