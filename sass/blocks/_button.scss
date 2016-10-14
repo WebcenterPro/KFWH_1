@@ -1,0 +1,22 @@
+.button {
+	background-color: $color_header;
+	color: $color_bright;
+	border-radius: 0;
+	transition: .15s ease all;
+
+	&:hover,
+	&:focus {
+		color: $color_bright;
+		outline: none;
+		box-shadow: 0 0 8px lighten($color_dark, 10%);
+		background-color: darken($color_header, 10%);
+	}
+
+	&:active {
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+	}
+
+	&--wide {
+		width: 100%;
+	}
+}
