@@ -1020,3 +1020,29 @@ a:hover, a:focus {
 .popup__fog.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
+
+.modal__cont {
+  overflow: hidden;
+}
+.modal__header {
+  background-color: #FA2449;
+  color: #FFF;
+}
+.modal__input:focus {
+  border-color: #8f8f8f;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #8f8f8f;
+}
+.modal__btn {
+  width: 100%;
+  background-color: #FA2449;
+  color: #FFF;
+  border-radius: 0;
+}
+.modal__btn:hover, .modal__btn:focus {
+  color: #FFF;
+  outline: none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #8f8f8f;
+}
+.modal__btn:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}

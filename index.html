@@ -268,18 +268,22 @@
 <!-- END OF VISIBLE CONTENT -->
 
 	<div class="modal fade" id="purchaseModal" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
+		<div class="modal-dialog modal-sm">
+			<div class="modal__cont modal-content">
+				<div class="modal__header modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h4 class="modal-title">Оставить заявку</h4>
 				</div>
 				<div class="modal-body">
-					<p>Здесь что-то будет&hellip;</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
-					<button type="button" class="btn btn-primary">Отправить заявку</button>
+					<form class="form" role="form">
+						<div class="form-group">
+							<input type="text" class="modal__input form-control" placeholder="Ваше имя" required>
+						</div>
+						<div class="form-group">
+							<input type="tel" class="modal__input form-control" placeholder="Ваш телефон" required>
+						</div>
+						<input type="submit" class="modal__btn btn" value="Перезвоните мне">
+					</form>
 				</div>
 			</div>
 		</div>
