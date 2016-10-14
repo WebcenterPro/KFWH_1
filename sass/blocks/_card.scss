@@ -1,0 +1,124 @@
+.card {
+	padding: 0 10px 30px;
+	float: left;
+
+	&:nth-child(3n+1) {
+		padding: 0 20px 30px 0;
+		clear: both;
+	}
+
+	&:nth-child(3n+3) {
+		padding: 0 0 30px 20px;
+	}
+
+	&__img {
+		display: block;
+		position: relative;
+
+		&--img_one {
+			background: url("../img/unit_5.png") center no-repeat;
+			background-size: cover;
+			padding-bottom: 65%;
+		}
+	}
+
+	&__img_link {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__shortlist {
+		position: absolute;
+		background: url("../img/star.png") no-repeat;
+		width: 32px;
+		height: 32px;
+		top: 15px;
+		right: 15px;
+		transition: 1s ease all;
+
+		&:hover {
+			transition: 1s ease all;
+			cursor: default;
+			background: url("../img/star_active.png") no-repeat;
+			transform: scale(1.3) rotate(10deg);
+		}
+
+		&--selected {
+			background: url("../img/star_active.png") no-repeat;
+		}
+	}
+
+	&__content {
+		padding: 15px;
+		position: relative;
+		background-color: $color_footer;
+
+		&::before {
+			@extend %pseudoelem_param;
+			@extend %triangle_top;
+		}
+	}
+
+	&__link {
+		color: $color_header;
+
+		&:hover,
+		&:focus {
+			color: $color_header;
+			text-decoration: none;
+		}
+	}
+
+	&__head {
+		@extend .unit_left__head;
+	}
+
+	&__descr {
+		@extend .unit_left__p;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $color_hr;
+		margin-bottom: 15px;
+	}
+
+	&__p {
+		@extend .unit_left__p;
+	}
+
+	&__more {
+		color: $color_header;
+		font-size: 15px;
+		display: inline-block;
+		margin-top: 15px;
+
+		&:hover,
+		&:focus {
+			color: $color_header;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.card {
+
+		&:nth-child(2n+1) {
+			padding: 0 15px 30px 0;
+			clear: both;
+		}
+
+		&:nth-child(2n+2) {
+			padding: 0 0 30px 15px;
+			clear: initial;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.card {
+
+		&:nth-child(n) {
+			padding: 0 0 30px;
+			float: none;
+		}
+	}
+}

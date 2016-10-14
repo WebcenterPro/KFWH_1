@@ -391,4 +391,12 @@ $(document).ready(function(){
 	
 	/* ====================================== */
 
+	/* Отметка звёздочек в карточках */
+
+	$(".card__shortlist").on("click", function() {
+		$(this).toggleClass("card__shortlist--selected");
+	});
+	
+	/* ============================= */
+
 });
