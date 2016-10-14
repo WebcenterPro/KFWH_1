@@ -161,7 +161,7 @@ a:hover, a:focus {
 }
 .header_top__cont {
   line-height: 37px;
-  height: 100%;
+  height: 65px;
   padding: 12px 15px;
   max-width: 1170px;
 }
@@ -199,6 +199,9 @@ a:hover, a:focus {
 
 @media (max-width: 767px) {
   .header_top {
+    height: 0;
+  }
+  .header_top__cont {
     height: 0;
   }
 }

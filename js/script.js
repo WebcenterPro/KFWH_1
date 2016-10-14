@@ -1,14 +1,8 @@
 /* ========== JAVASCRIPT ========== */
 
-/* ===== Подключение функций ===== */
-
-document.addEventListener("DOMContentLoaded", unitTopSlidePanel); //Выдвижная панель в блоке unit_top
-document.addEventListener("click", mainMenuArrows); //Стрелочки главного меню
-
-/* =============================== */
-
-
 /* Стрелочки главного меню */
+
+document.addEventListener("click", mainMenuArrows);
 
 function mainMenuArrows() {
 
@@ -45,16 +39,20 @@ function mainMenuArrows() {
 
 /* Выдвижная панель в блоке unit_top */
 
+document.addEventListener("DOMContentLoaded", unitTopSlidePanel);
+
 function unitTopSlidePanel() {
 
-	var inner = null;
+	var inner = document.querySelector(".unit_top__inner--wide");
+
+	if (!inner) return;
+
 	var parent = null;
 	var arrow = null;
 	var count = 0;
 
 	var shadow = document.querySelector(".unit_top__shadow");
 
-	inner = document.querySelector(".unit_top__inner--wide");
 	inner.oldHeight = parseInt(getComputedStyle(inner).height);
 	inner.style.maxHeight = "initial";
 	inner.newHeight = parseInt(getComputedStyle(inner).height);
@@ -286,7 +284,7 @@ $(document).ready(function(){
 
 	$(document).on("click", function() {
 		var target = event.target;
-		while (target.tagName != "BODY") {
+		while (target.tagName != "HTML") {
 			if ((target.classList.contains("header_top")) ||
 				 (target.classList.contains("modal")) ||
 				 (target.classList.contains("header_main__lens"))) return;
