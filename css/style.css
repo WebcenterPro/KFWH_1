@@ -53,18 +53,18 @@
 }
 
 .header_top__search_triangle, .unit_top__content::before, .card__content::before {
-  top: -59px;
+  top: -29px;
   left: 40px;
-  border: 20px solid transparent;
-  border-top: 30px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
   border-bottom: 30px solid #f4f4f4;
 }
 
 .unit_left__content::before, .hello__descr_cont::before {
   top: 25px;
-  left: -60px;
-  border: 20px solid transparent;
-  border-left: 30px solid transparent;
+  left: -30px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
   border-right: 30px solid #f4f4f4;
 }
 
@@ -194,7 +194,8 @@ a:hover, a:focus {
   position: absolute;
   border-bottom-color: #C1012E;
   left: 45px;
-  border-width: 60px 20px 0;
+  border-width: 0 20px;
+  top: 0;
 }
 
 @media (max-width: 767px) {

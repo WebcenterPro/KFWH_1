@@ -40,18 +40,18 @@ $width_global: 1170px; //Ширина контейнера
 
 // Треугольники //
 %triangle_top {
-	top: -59px;
+	top: -29px;
 	left: 40px;
-	border: 20px solid transparent;
-	border-top: 30px solid transparent;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
 	border-bottom: 30px solid $color_footer;
 }
 
 %triangle_left {
 	top: 25px;
-	left: -60px;
-	border: 20px solid transparent;
-	border-left: 30px solid transparent;
+	left: -30px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
 	border-right: 30px solid $color_footer;
 }
 // ============ //

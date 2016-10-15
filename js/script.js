@@ -201,7 +201,8 @@ $(document).ready(function(){
 
 			if (window.innerWidth > break1) {
 				$triangle.animate({
-					borderWidth: "30px 20px"
+					borderWidth: "0 20px 30px",
+					top: "-29px"
 				}, $speed);
 
 				if (window.innerWidth < break2) {
@@ -228,7 +229,8 @@ $(document).ready(function(){
 			}
 
 			$triangle.animate({
-				borderWidth: "60px 20px 0"
+				borderWidth: "0 20px",
+				top: "0"
 			}, $speed);
 
 			setTimeout(function() {
@@ -251,7 +253,8 @@ $(document).ready(function(){
 				$(".header_main__logo").css("top", $height - $contHeight);
 				var $contHeight = parseInt($(".header_top").css("height")) + $initialHeight;
 				$(".header_top").css("height", $contHeight);
-				$triangle.css("border-width", "30px 20px");
+				$triangle.css("border-width", "0 20px 30px");
+				$triangle.css("top", "-29px");
 				$mobile = 2;
 			}
 		}
@@ -262,7 +265,7 @@ $(document).ready(function(){
 				$(".header_main__logo").css("top", "");
 				$contHeight = parseInt($(".header_top").css("height")) - $initialHeight;
 				$(".header_top").css("height", $contHeight);
-				$triangle.css("border-width", "60px 30px");
+				$triangle.css("border-width", "0 20px");
 				$mobile = 1;
 			}
 
