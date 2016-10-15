@@ -11,7 +11,7 @@
 	}
 
 	&__toggle {
-		margin-top: 16px;
+		margin-top: 14px;
 		margin-bottom: 15px;
 		position: relative;
 	}
@@ -20,7 +20,7 @@
 		background-color: $color_header;
 		height: 4px;
 		width: 35px;
-		margin-top: 6px;
+		margin-top: 7px;
 		transition: transform .35s, opacity .2s;
 
 		&:nth-child(2) {

@@ -150,7 +150,7 @@ function unitTopSlidePanel() {
 
 /* ========== JQUERY ========== */
 
-$(document).ready(function(){
+$(function(){
 
 	/* Слайдер на главной */
 
@@ -352,8 +352,8 @@ $(document).ready(function(){
 
 		if ($toggle.hasClass("collapsed")) {
 			$line2.css("opacity", 0);
-			$line1.css("transform", "rotate(-35deg)");
-			$line3.css("transform", "rotate(35deg)");
+			$line1.css("transform", "rotate(-45deg) translateX(-3px) translateY(-5px)");
+			$line3.css("transform", "rotate(45deg) translateX(-3px) translateY(5px)");
 		} else {
 			$line2.css("opacity", 1);
 			$line1.css("transform", "");

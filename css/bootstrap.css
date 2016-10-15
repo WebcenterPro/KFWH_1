@@ -5856,6 +5856,7 @@ button.list-group-item-danger.active:focus {
   cursor: pointer;
   filter: alpha(opacity=50);
   opacity: .5;
+  outline: none;
 }
 button.close {
   -webkit-appearance: none;

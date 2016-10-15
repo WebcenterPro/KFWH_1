@@ -218,7 +218,7 @@ a:hover, a:focus {
   max-width: 1170px;
 }
 .header_main__toggle {
-  margin-top: 16px;
+  margin-top: 14px;
   margin-bottom: 15px;
   position: relative;
 }
@@ -226,7 +226,7 @@ a:hover, a:focus {
   background-color: #FA2449;
   height: 4px;
   width: 35px;
-  margin-top: 6px;
+  margin-top: 7px;
   transition: transform .35s, opacity .2s;
 }
 .header_main__toggle_line:nth-child(2) {
