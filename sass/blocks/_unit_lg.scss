@@ -33,7 +33,7 @@
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: $bp_sm_max) {
 	.unit_lg {
 
 		&__text_cont {

@@ -67,7 +67,7 @@
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: $bp_sm_max) {
 	.base_search {
 		text-align: left;
 
@@ -77,7 +77,7 @@
 	}
 }
 
-@media (max-width: 425px) {
+@media (max-width: $bp_xs_max) {
 	.base_search {
 
 		&__link {

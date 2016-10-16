@@ -34,14 +34,14 @@
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width: $bp_md_max) {
 	.last_news {
 		border-right: none;
 		border-bottom: 1px solid $color_hr;
 	}
 }
 
-@media (max-width: 419px) {
+@media (max-width: $bp_xs_max) {
 	.last_news {
 
 		&__more {

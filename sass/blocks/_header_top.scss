@@ -53,7 +53,7 @@
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: $bp_sm_max) {
 	.header_top {
 		height: 0;
 

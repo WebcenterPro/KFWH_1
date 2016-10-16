@@ -98,7 +98,7 @@
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width: $bp_md_max) {
 	.card {
 
 		&:nth-child(2n+1) {
@@ -113,7 +113,7 @@
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: $bp_sm_max) {
 	.card {
 
 		&:nth-child(n) {

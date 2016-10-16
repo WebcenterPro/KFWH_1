@@ -12,7 +12,7 @@
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width: $bp_md_max) {
 	.social_block {
 		text-align: center;
 	}

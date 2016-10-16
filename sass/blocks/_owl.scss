@@ -21,7 +21,7 @@
 	}
 }
 
-@media (max-width: 419px) {
+@media (max-width: $bp_xs_max) {
 	.owl {
 
 		&__dots {

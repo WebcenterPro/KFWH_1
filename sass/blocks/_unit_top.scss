@@ -103,7 +103,7 @@
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width: $bp_md_max) {
 	.unit_top {
 		
 		&__content {

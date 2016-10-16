@@ -160,7 +160,7 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1075px) {
+@media (min-width: $bp_sm_min) and (max-width: 1075px) {
 	.header_main {
 		position: static;
 
@@ -180,7 +180,7 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 840px) {
+@media (min-width: $bp_sm_min) and (max-width: 840px) {
 	.header_main {
 
 		&__items {
@@ -205,7 +205,7 @@
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: $bp_sm_max) {
 	.header_main {
 
 		&__items {

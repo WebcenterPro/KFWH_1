@@ -543,7 +543,7 @@ a:hover, a:focus {
   background-color: white;
 }
 
-@media (max-width: 419px) {
+@media (max-width: 425px) {
   .owl__dots {
     bottom: 10px;
     left: 15px;
@@ -829,7 +829,7 @@ a:hover, a:focus {
     border-bottom: 1px solid #e0e0e0;
   }
 }
-@media (max-width: 419px) {
+@media (max-width: 425px) {
   .last_news__more {
     display: none;
   }
@@ -1014,7 +1014,7 @@ a:hover, a:focus {
     font-size: 12px;
   }
 }
-@media (max-width: 419px) {
+@media (max-width: 425px) {
   .footer {
     height: 240px;
   }

@@ -18,6 +18,13 @@ $fs_head_xl:  33px;	//Очень большие заголовки
 
 $width_global: 1170px; //Ширина контейнера
 
+// Брейкпоинты //
+$bp_md_min: 992px;
+$bp_md_max: 991px;
+$bp_sm_min: 768px;
+$bp_sm_max: 767px;
+$bp_xs_max: 425px;
+
 // Стандартная настройка для псевдоэлементов //
 %pseudoelem_param {
 	content: "";

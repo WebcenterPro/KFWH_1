@@ -111,7 +111,7 @@
 	}
 }
 
-@media (max-width: 419px) {
+@media (max-width: $bp_xs_max) {
 	.footer {
 		height: 240px;
 

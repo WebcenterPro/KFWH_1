@@ -31,7 +31,7 @@
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width: $bp_md_max) {
 	.hello {
 		display: block;
 
@@ -50,7 +50,7 @@
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: $bp_sm_max) {
 	.hello {
 
 		&__head {
