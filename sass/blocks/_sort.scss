@@ -1,0 +1,13 @@
+.sort {
+	text-align: right;
+
+	&__label {
+		margin-right: 10px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sort {
+		text-align: left;
+	}
+}

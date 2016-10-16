@@ -1,5 +1,6 @@
 // COLORS //
 $color_header: #FA2449;
+$color_header_darken: #C1012E;
 $color_footer: #f4f4f4;
 $color_dark: #424242;
 $color_bright: #FFF;
@@ -45,6 +46,13 @@ $width_global: 1170px; //Ширина контейнера
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
 	border-bottom: 30px solid $color_footer;
+}
+%triangle_bottom {
+	bottom: -29px;
+	left: 40px;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 30px solid $color_footer;
 }
 
 %triangle_left {

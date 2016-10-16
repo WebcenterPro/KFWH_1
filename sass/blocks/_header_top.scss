@@ -46,7 +46,7 @@
 	&__search_triangle {
 		@extend %triangle_top;
 		position: absolute;
-		border-bottom-color: #C1012E;
+		border-bottom-color: $color_header_darken;
 		left: 45px;
 		border-width: 0 20px;
 		top: 0;

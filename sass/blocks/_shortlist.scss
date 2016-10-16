@@ -1,0 +1,17 @@
+.shortlist {
+	color: $color_header;
+	text-decoration: underline;
+	position: absolute;
+	top: 30px;
+	right: 0;
+
+	&:hover,
+	&:focus {
+		color: $color_header;
+	}
+
+	&__star {
+		padding-right: 5px;
+		font-size: $fs_smaller;
+	}
+}

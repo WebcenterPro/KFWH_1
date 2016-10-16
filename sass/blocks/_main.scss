@@ -6,6 +6,7 @@
 
 	&__row {
 		margin: 0 0 15px;
+		position: relative;
 
 		&--marg_zero {
 			margin: 0;
@@ -17,7 +18,6 @@
 
 		&--border_bot {
 			overflow: hidden;
-			position: relative;
 			border-bottom: 1px solid $color_footer;
 		}
 	}
@@ -28,6 +28,11 @@
 		&--flex {
 			display: flex;
 		}
+	}
+
+	&__h1 {
+		color: $color_header;
+		font-size: $fs_head_lg;
 	}
 }
 
@@ -42,6 +47,11 @@
 
 			&--flex {
 				display: block;
+			}
+
+			&--spacing {
+				padding-left: 15px;
+				padding-right: 15px;
 			}
 		}
 

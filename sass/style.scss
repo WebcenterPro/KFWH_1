@@ -14,7 +14,6 @@
 @import "blocks/_unit_lg.scss"; //Большой блок
 @import "blocks/_unit_left.scss"; //Двойной блок, картинка слева
 @import "blocks/_unit_top.scss"; //Двойной блок, картинка сверху
-@import "blocks/_card.scss"; //Карточка объекта (дубликат unit_top)
 @import "blocks/_last_news.scss"; //Последние новости
 @import "blocks/_social.scss"; //Социальные иконки
 @import "blocks/_hello.scss"; //Блок приветствия
@@ -24,3 +23,7 @@
 @import "blocks/_modal.scss"; //Стандартные настройки для модального окна бутстрапа
 @import "blocks/_input.scss"; //Стандартное поле ввода
 @import "blocks/_button.scss"; //Стандартная кнопка
+@import "blocks/_card.scss"; //Карточка объекта (дубликат unit_top)
+@import "blocks/_sort.scss"; //Форма сортировки
+@import "blocks/_shortlist.scss"; //Кнопка "Избранное"
+@import "blocks/_base_search.scss"; //Главный поиск
