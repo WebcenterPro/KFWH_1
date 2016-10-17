@@ -1,0 +1,42 @@
+.checkbox_custom {
+	display: none;
+
+	//Стиль отмеченного чекбокса
+	&:checked {
+
+		+ .checkbox_custom__label {
+
+			&::before {
+				content: "\2714";
+			}
+		}
+	}
+	//==========================
+
+	&__head {
+		font-weight: bold;
+		font-size: 17px;
+		margin: 10px 0;
+	}
+
+	&__label {
+		position: relative;
+		display: block;
+		font-weight: normal;
+		padding-left: 28px;
+		margin-bottom: 8px;
+		cursor: pointer;
+
+		&::before {
+			@extend %pseudoelem_param;
+			width: 18px;
+			height: 18px;
+			top: 3px;
+			left: 0;
+			background-color: $color_bright;
+			color: $color_header;
+			font-size: 22px;
+			line-height: 17px;
+		}
+	}
+}

@@ -412,4 +412,13 @@ $(function(){
 	
 	/* ===================================== */
 
+	/* Раскрывающийся фильтр */
+
+	$(".filter__arrow").on("click", function() {
+		$(".filter__arrow_icon").toggleClass("glyphicon glyphicon-chevron-down glyphicon glyphicon-chevron-up");
+		$(".filter__body_cont").slideToggle(300);
+	});
+	
+	/* ===================================== */
+
 });

@@ -1,0 +1,55 @@
+.filter {
+	background-color: $color_footer;
+	padding: 15px;
+	position: relative;
+
+	&__header {
+		font-size: $fs_head_bigger;
+		color: $color_header;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	&__arrow {
+		position: absolute;
+		display: inline-block;
+		top: 0;
+		right: 0;
+		padding: 0 30px;
+		line-height: 61px;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	&__arrow_icon {
+		color: $color_header;
+		top: 3px;
+		left: 8px;
+	}
+
+	&__body_cont {
+		margin-top: 25px;
+		display: none;
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.filter {
+
+		&__header_cont {
+			text-align: center;
+		}
+
+		&__arrow {
+			position: static;
+		}
+
+		&__body_cont {
+			margin-top: 0;
+		}
+	}
+}
