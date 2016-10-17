@@ -10,11 +10,11 @@
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
-	<script src="js/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/magnific-popup.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gYQ3c1LGzyWyLN65QSTM7mtIHu_dNcA&signed_in=true&callback=initMap" async defer></script>
 	<script src="js/script.js"></script>
 	<title>Knight Frank</title>
 </head>
@@ -142,8 +142,8 @@
 					</div>
 				</div>
 				<div class="main__col col-sm-6">
-					<a class="base_search__link"><span class="base_search__link_icon glyphicon glyphicon-map-marker"></span>Карта</a>
-					<a class="base_search__link base_search__link--active"><span class="base_search__link_icon glyphicon glyphicon-list"></span>Список</a>
+					<a class="base_search__link base_search__link--active"><span class="base_search__link_icon glyphicon glyphicon-map-marker"></span>Карта</a>
+					<a class="base_search__link"><span class="base_search__link_icon glyphicon glyphicon-list"></span>Список</a>
 				</div>
 			</div>
 
@@ -267,8 +267,11 @@
 				</div>
 			</div>
 
+			<!-- MAP -->
+			<div class="map" id="map"></div>
+
 			<!-- BLOCK CARDS -->
-			<div id="cards">
+			<div class="cards" id="cards">
 
 				<!-- SORT -->
 				<div class="main__row main__row--spacing row">

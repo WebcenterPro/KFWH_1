@@ -147,8 +147,86 @@ function unitTopSlidePanel() {
 
 /* ================================= */
 
+/* Карта */
+
+function initMap() {
+	var customMapType = new google.maps.StyledMapType([
+
+		{"elementType": "geometry", "stylers": [{"color": "#f5f5f5"} ] },
+		{"elementType": "labels.icon", "stylers": [{"visibility": "off"} ] },
+		{"elementType": "labels.text.fill", "stylers": [{"color": "#616161"} ] },
+		{"elementType": "labels.text.stroke", "stylers": [{"color": "#f5f5f5"} ] },
+		{"featureType": "administrative.land_parcel", "elementType": "labels", "stylers": [{"visibility": "off"} ] },
+		{"featureType": "administrative.land_parcel", "elementType": "labels.text.fill", "stylers": [{"color": "#bdbdbd"} ] },
+		{"featureType": "poi", "elementType": "geometry", "stylers": [{"color": "#eeeeee"} ] },
+		{"featureType": "poi", "elementType": "labels.text", "stylers": [{"visibility": "off"} ] },
+		{"featureType": "poi", "elementType": "labels.text.fill", "stylers": [{"color": "#757575"} ] },
+		{"featureType": "poi.business", "stylers": [{"visibility": "off"} ] },
+		{"featureType": "poi.park", "elementType": "geometry", "stylers": [{"color": "#e5e5e5"} ] },
+		{"featureType": "poi.park", "elementType": "labels.text", "stylers": [{"visibility": "off"} ] },
+		{"featureType": "poi.park", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"} ] },
+		{"featureType": "road", "elementType": "geometry", "stylers": [{"color": "#ffffff"} ] },
+		{"featureType": "road", "elementType": "geometry.fill", "stylers": [{"color": "#fa2449"} ] },
+		{"featureType": "road.arterial", "elementType": "labels.text.fill", "stylers": [{"color": "#757575"} ] },
+		{"featureType": "road.highway", "elementType": "geometry", "stylers": [{"color": "#dadada"} ] },
+		{"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#fa2449"} ] },
+		{"featureType": "road.highway", "elementType": "labels.text.fill", "stylers": [{"color": "#616161"} ] },
+		{"featureType": "road.local", "elementType": "labels", "stylers": [{"visibility": "off"} ] },
+		{"featureType": "road.local", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"} ] }, {"featureType": "transit.line", "elementType": "geometry", "stylers": [{"color": "#e5e5e5"} ] },
+		{"featureType": "transit.station", "elementType": "geometry", "stylers": [{"color": "#eeeeee"} ] },
+		{"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#c9c9c9"} ] },
+		{"featureType": "water", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"} ] }
+
+	], {
+		name: 'Custom Style'
+	});
+
+	var customMapTypeId = 'custom_style';
+	var warehouse = {lat: 59.740616, lng: 30.526411};
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 14,
+		center: warehouse,  
+		mapTypeControlOptions: {
+			mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+		}
+	});
+
+	map.mapTypes.set(customMapTypeId, customMapType);
+	map.setMapTypeId(customMapTypeId);
+
+	var contentString = '<div id="content">'+
+	'<div id="siteNotice">'+
+	'</div>'+
+	'<h1 class="map__header">Складской комплекс "АКМ Логистик 2"</h1>'+
+	'<div>'+
+	'<h4 class="map__descr">Поселок Шушары, на первой линии Московского ш.</h4>'+
+	'<p>К аренде представлено встроенное складское помещение в логистическом комплексе «АКМ Лоджистик 2» класса «А», расположенное  '+
+	'в пос. Шушары, на первой линии Московского ш., в 4 км от КАД.</p>'+
+	'</div>'+
+	'</div>';
+
+	var infowindow = new google.maps.InfoWindow({
+		content: contentString,
+		maxWidth: 270
+	});
+	var image = 'img/beachflag.png';
+	var marker = new google.maps.Marker({
+		position: warehouse,
+		map: map,
+		icon: image,
+		title: 'Склад'
+	});
+	marker.addListener('click', function() {
+		infowindow.open(map, marker);
+	});
+}
+
+/* ===== */
+
 
 /* ========== JQUERY ========== */
+
+var $document = $(document);
 
 $(function(){
 
@@ -286,6 +364,9 @@ $(function(){
 	});
 
 	$(document).on("click", function() {
+		var $contHeight = parseInt($(".header_top").css("height"));
+		if ($contHeight <= $initialHeight) return;
+
 		var target = event.target;
 		while (target.tagName != "HTML") {
 			if ((target.classList.contains("header_top")) ||
@@ -293,11 +374,8 @@ $(function(){
 				 (target.classList.contains("header_main__lens"))) return;
 			target = target.parentNode;
 		}
-		
-		var $contHeight = parseInt($(".header_top").css("height"));
-		if ($contHeight > $initialHeight) {
-			showTopSearch()
-		}
+
+		showTopSearch();
 	})
 
 	/* ============= */
@@ -408,6 +486,7 @@ $(function(){
 		if (this.classList.contains("base_search__link--active")) return;
 		$(".base_search__link").toggleClass("base_search__link--active");
 		$("#cards").toggle();
+		$(".map").toggle();
 	});
 	
 	/* ===================================== */
@@ -415,9 +494,22 @@ $(function(){
 	/* Раскрывающийся фильтр */
 
 	$(".filter__arrow").on("click", function() {
-		$(".filter__arrow_icon").toggleClass("glyphicon glyphicon-chevron-down glyphicon glyphicon-chevron-up");
-		$(".filter__body_cont").slideToggle(300);
+		var arrow = $(this).html();
+		$document.queue(function() {
+			$(".filter__arrow_icon").toggleClass("glyphicon glyphicon-chevron-down glyphicon glyphicon-chevron-up");
+			$(".filter__body_cont").slideToggle(300);
+			
+			if (~arrow.indexOf("Раскрыть")) {
+				arrow = "Закрыть" + arrow.slice(8);
+			} else {
+				arrow = "Раскрыть" + arrow.slice(7);
+			}
+
+			$(this).html(arrow);
+			$document.dequeue();
+		})
 	});
+
 	
 	/* ===================================== */
 

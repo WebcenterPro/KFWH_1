@@ -1,0 +1,16 @@
+.map {
+	width: 100%;
+	height: 450px;
+
+	&__header {
+		color: $color_header;
+		font-size: $fs_head_bigger;
+		line-height: 30px;
+	}
+
+	&__descr {
+		color: $color_dark;
+		font-size: 15px;
+		font-weight: bold;
+	}
+}
