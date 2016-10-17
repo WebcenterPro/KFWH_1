@@ -1102,8 +1102,8 @@ a:hover, a:focus {
   position: relative;
   display: block;
   font-weight: normal;
-  padding-left: 28px;
-  margin-bottom: 8px;
+  padding: 4px 15px 4px 28px;
+  margin-bottom: 0;
   cursor: pointer;
 }
 .checkbox_custom__label::before {
@@ -1322,8 +1322,10 @@ a:hover, a:focus {
 }
 .filter {
   background-color: #f4f4f4;
-  padding: 15px;
   position: relative;
+}
+.filter__header_cont {
+  padding: 20px;
 }
 .filter__header {
   font-size: 26px;
@@ -1336,8 +1338,8 @@ a:hover, a:focus {
   display: inline-block;
   top: 0;
   right: 0;
-  padding: 0 30px;
-  line-height: 61px;
+  padding: 0 40px;
+  line-height: 72px;
   cursor: pointer;
 }
 .filter__arrow:hover, .filter__arrow:focus {
@@ -1349,18 +1351,23 @@ a:hover, a:focus {
   left: 8px;
 }
 .filter__body_cont {
-  margin-top: 25px;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
   display: none;
 }
 
 @media (max-width: 767px) {
   .filter__header_cont {
     text-align: center;
+    padding-bottom: 0;
   }
   .filter__arrow {
     position: static;
+    display: block;
   }
-  .filter__body_cont {
-    margin-top: 0;
+}
+@media (max-width: 520px) {
+  .filter__body_inner {
+    width: 100%;
   }
 }

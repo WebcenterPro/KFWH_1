@@ -1,7 +1,10 @@
 .filter {
 	background-color: $color_footer;
-	padding: 15px;
 	position: relative;
+
+	&__header_cont {
+		padding: 20px;
+	}
 
 	&__header {
 		font-size: $fs_head_bigger;
@@ -15,8 +18,8 @@
 		display: inline-block;
 		top: 0;
 		right: 0;
-		padding: 0 30px;
-		line-height: 61px;
+		padding: 0 40px;
+		line-height: 72px;
 		cursor: pointer;
 
 		&:hover,
@@ -32,7 +35,8 @@
 	}
 
 	&__body_cont {
-		margin-top: 25px;
+		padding: 20px;
+		border-top: 1px solid $color_hr;
 		display: none;
 	}
 }
@@ -42,14 +46,21 @@
 
 		&__header_cont {
 			text-align: center;
+			padding-bottom: 0;
 		}
 
 		&__arrow {
 			position: static;
+			display: block;
 		}
+	}
+}
 
-		&__body_cont {
-			margin-top: 0;
+@media (max-width: 520px) {
+	.filter {
+
+		&__body_inner {
+			width: 100%;
 		}
 	}
 }
