@@ -407,6 +407,7 @@ $(function(){
 	$(".base_search__link").on("click", function() {
 		if (this.classList.contains("base_search__link--active")) return;
 		$(".base_search__link").toggleClass("base_search__link--active");
+		$("#cards").toggle();
 	});
 	
 	/* ===================================== */

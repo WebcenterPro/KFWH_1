@@ -41,7 +41,7 @@
 			transition: 1s ease all;
 			cursor: default;
 			background: url("../img/star_active.png") no-repeat;
-			transform: scale(1.3) rotate(10deg);
+			transform: rotate(360deg);
 		}
 
 		&--selected {
