@@ -25,6 +25,10 @@ a {
 	}
 }
 
+::selection {
+	background-color: darken($color_hr, 5%);
+}
+
 @media (max-width: 920px) {
 	body {
 		margin-bottom: 235px;

@@ -185,7 +185,10 @@ function initMap() {
 	var warehouse = {lat: 59.740616, lng: 30.526411};
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 14,
-		center: warehouse,  
+		center: warehouse,
+		scrollwheel: false,
+		mapTypeControl: false,
+		streetViewControl: false,
 		mapTypeControlOptions: {
 			mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
 		}
@@ -209,24 +212,112 @@ function initMap() {
 		content: contentString,
 		maxWidth: 270
 	});
+
 	var image = 'img/beachflag.png';
-	var marker = new google.maps.Marker({
+
+	var marker1 = new google.maps.Marker({
 		position: warehouse,
 		map: map,
 		icon: image,
-		title: 'Склад'
+		title: 'Склад',
+		id: 'markerCard-1'
 	});
-	marker.addListener('click', function() {
-		infowindow.open(map, marker);
+
+	var lastWindowSize = window.innerWidth;
+	var $cont = $(".map__outer");
+	var $map = $(".map");
+
+	/* Клик по маркеру */
+	marker1.addListener('click', function() {
+		lastWindowSize = window.innerWidth;
+		infowindow.open(map, marker1);
+
+		if ($("#currentMapItem")) {
+			$("#currentMapItem").remove();
+		}
+		var $card = $("#card-1").clone();
+		$card
+		.removeClass("card col-md-4 col-sm-6")
+		.addClass("col-sm-5 col-md-4")
+		.attr("id", "currentMapItem")
+		.css("opacity", 0)
+		;
+		
+		if (window.innerWidth > 767) {
+			$map.css("display", "flex");
+
+			$cont.css({
+				"height": "initial",
+				"border-right": "1px solid #e0e0e0"
+			})
+			.removeClass("col-sm-12")
+			.addClass("col-sm-7 col-md-8");
+		}
+		$map.append($card);
+		$card.animate({
+			"opacity": 1
+		}, 700);
+
+		if ($(".map__close").css("display") == "none") {
+			$(".map__close").show(200);
+		}
 	});
+
+	/* Изменение ширины окна при открытой карточке */
+	$(window).on("resize", function() {
+		if (!$("#currentMapItem").html()) return;
+
+		if ((lastWindowSize > 767) && (window.innerWidth <= 767)) {
+			$map.css("display", "");
+
+			$cont.css({
+				"height": "",
+				"border-right": ""
+			})
+			.removeClass("col-sm-7 col-md-8")
+			.addClass("col-sm-12");
+			
+			lastWindowSize = window.innerWidth;
+		}
+
+		if ((lastWindowSize <= 767) && (window.innerWidth > 767)) {
+			$map.css("display", "flex");
+
+			$cont.css({
+				"height": "initial",
+				"border-right": "1px solid #e0e0e0"
+			})
+			.removeClass("col-sm-12")
+			.addClass("col-sm-7 col-md-8");
+
+			lastWindowSize = window.innerWidth;
+		}
+
+	});
+
+	/* Клик по кнопке "Закрыть" */
+	$(".map__close").on("click", function(e) {
+		$("#currentMapItem").animate({
+			"opacity": 0
+		}, 700, function() {
+			$("#currentMapItem").remove();
+			$map.css("display", "");
+			$cont.css({
+				"height": "",
+				"border": ""
+			})
+			.removeClass("col-sm-7 col-md-8")
+			.addClass("col-sm-12");
+		});
+		$(".map__close").hide(200);
+	});
+
 }
 
 /* ===== */
 
 
 /* ========== JQUERY ========== */
-
-var $document = $(document);
 
 $(function(){
 
@@ -474,7 +565,7 @@ $(function(){
 
 	/* Отметка звёздочек в карточках */
 
-	$(".card__shortlist").on("click", function() {
+	$(".main__cont").on("click", ".card__shortlist", function() {
 		$(this).toggleClass("card__shortlist--selected");
 	});
 	
@@ -493,7 +584,16 @@ $(function(){
 
 	/* Раскрывающийся фильтр */
 
-	$(".filter__arrow").on("click", function() {
+	$(".filter__header_cont").on("click", function(event) {
+		if (event.target.classList.contains("filter__apply") ||
+		    event.target.classList.contains("filter__reset")) return;
+
+		if ($(".filter .checkbox_custom").is(":checked")) {
+			$(".filter__buttons").css("display", "inline-block");
+		} else {
+			$(".filter__buttons").css("display", "");
+		}
+
 		$(".filter__arrow_icon").toggleClass("glyphicon glyphicon-chevron-down glyphicon glyphicon-chevron-up");
 		$(".filter__body_cont").slideToggle(300);
 
@@ -507,7 +607,21 @@ $(function(){
 		$(".filter__arrow_text").text(text);
 	});
 
-	
+	/* Появление / скрытие кнопок "Применить", "Сбросить" */
+	$(".filter .checkbox_custom").on("change", function() {
+		if ($(".filter .checkbox_custom").is(":checked")) {
+			$(".filter__buttons").css("display", "inline-block");
+		} else {
+			$(".filter__buttons").css("display", "");
+		}
+	});
+
+	/* Действие кнопки "Сбросить" */
+	$(".filter__reset").on("click", function() {
+		$(".filter .checkbox_custom").removeAttr("checked");
+		$(".filter__buttons").css("display", "");
+	});
+
 	/* ===================================== */
 
 });

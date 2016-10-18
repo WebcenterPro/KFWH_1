@@ -1,6 +1,35 @@
 .map {
-	width: 100%;
-	height: 450px;
+
+	&__outer {
+		height: 450px;
+	}
+
+	&__cont {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__close {
+		width: 55px;
+		height: 55px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: $color_dark;
+		color: $color_bright;
+		font-size: 25px;
+		line-height: 52px;
+		text-align: center;
+		cursor: pointer;
+		border-bottom-left-radius: 25%;
+		opacity: .8;
+		display: none;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+	}
 
 	&__header {
 		color: $color_header;

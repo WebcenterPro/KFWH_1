@@ -155,7 +155,7 @@
 						<h2 class="filter__header">Фильтрация</h2>
 						<div class="filter__buttons">
 							<button class="filter__apply button btn">Применить</button>
-							<a class="filter__reset">Отменить</a>
+							<a class="filter__reset">Сбросить</a>
 						</div>
 						<a class="filter__arrow"><span class="filter__arrow_text">Раскрыть</span><span class="filter__arrow_icon glyphicon glyphicon-chevron-down"></span></a>
 					</div>
@@ -272,7 +272,12 @@
 			</div>
 
 			<!-- MAP -->
-			<div class="map" id="map"></div>
+			<div class="main__row map row">
+				<div class="main__col map__outer col-sm-12">
+					<div class="map__cont" id="map"></div>
+					<div class="map__close">&#10006;</div>
+				</div>
+			</div>
 
 			<!-- BLOCK CARDS -->
 			<div class="cards" id="cards">
@@ -294,13 +299,13 @@
 
 				<!-- CARD -->
 				<div class="main__row row">
-					<div class="main__col card col-md-4 col-sm-6">
+					<div class="main__col card col-md-4 col-sm-6" id="card-1">
 						<div class="card__img card__img--img_one">
 							<a class="card__img_link" href="#"></a>
 							<div class="card__shortlist"></div>
 						</div>
 						<div class="card__content">
-							<h3 class="card__head"><a class="card__link" href="#">Логистический парк Шушары</a></h3>
+							<h3 class="card__head"><a class="card__link" href="#">Складской комплекс "АКМ Логистик 2</a></h3>
 							<p class="card__descr">Санкт-Петербург город, Шушары пос., Московское ш., 70, корп.4</p>
 							<p class="card__p">Общая площадь: 30 000 м<sup>2</sup></p>
 							<p class="card__p">Класс: А</p>

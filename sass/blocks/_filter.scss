@@ -4,6 +4,7 @@
 
 	&__header_cont {
 		padding: 10px;
+		cursor: pointer;
 	}
 
 	&__header {
@@ -16,22 +17,19 @@
 
 	&__buttons {
 		margin: 0 0 0 50px;
-		display: inline-block;
+		display: none;
 	}
 
 	&__apply {
-		margin-right: 10px;
+		margin-right: 5px;
 		margin-bottom: 3px;
 	}
 
 	&__reset {
 		font-size: 14px;
 		cursor: pointer;
-
-		&:hover,
-		&:focus {
-			text-decoration: none;
-		}
+		display: inline-block;
+		padding: 7px 15px;
 	}
 
 	&__arrow {
@@ -41,7 +39,6 @@
 		right: 0;
 		padding: 0 40px;
 		line-height: 72px;
-		cursor: pointer;
 
 		&:hover,
 		&:focus {

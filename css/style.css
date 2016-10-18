@@ -101,6 +101,10 @@ a:hover, a:focus {
   outline: none;
 }
 
+::selection {
+  background-color: lightgray;
+}
+
 @media (max-width: 920px) {
   body {
     margin-bottom: 235px;
@@ -1226,9 +1230,31 @@ a:hover, a:focus {
   display: none;
 }
 
-.map {
-  width: 100%;
+.map__outer {
   height: 450px;
+}
+.map__cont {
+  width: 100%;
+  height: 100%;
+}
+.map__close {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #424242;
+  color: #FFF;
+  font-size: 25px;
+  line-height: 52px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom-left-radius: 25%;
+  opacity: .8;
+  display: none;
+}
+.map__close:hover, .map__close:focus {
+  opacity: 1;
 }
 .map__header {
   color: #FA2449;
@@ -1349,6 +1375,7 @@ a:hover, a:focus {
 }
 .filter__header_cont {
   padding: 10px;
+  cursor: pointer;
 }
 .filter__header {
   font-size: 26px;
@@ -1359,18 +1386,17 @@ a:hover, a:focus {
 }
 .filter__buttons {
   margin: 0 0 0 50px;
-  display: inline-block;
+  display: none;
 }
 .filter__apply {
-  margin-right: 10px;
+  margin-right: 5px;
   margin-bottom: 3px;
 }
 .filter__reset {
   font-size: 14px;
   cursor: pointer;
-}
-.filter__reset:hover, .filter__reset:focus {
-  text-decoration: none;
+  display: inline-block;
+  padding: 7px 15px;
 }
 .filter__arrow {
   position: absolute;
@@ -1379,7 +1405,6 @@ a:hover, a:focus {
   right: 0;
   padding: 0 40px;
   line-height: 72px;
-  cursor: pointer;
 }
 .filter__arrow:hover, .filter__arrow:focus {
   text-decoration: none;
