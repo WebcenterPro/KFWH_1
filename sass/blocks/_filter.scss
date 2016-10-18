@@ -3,14 +3,35 @@
 	position: relative;
 
 	&__header_cont {
-		padding: 20px;
+		padding: 10px;
 	}
 
 	&__header {
 		font-size: $fs_head_bigger;
 		color: $color_header;
-		margin-top: 0;
-		margin-bottom: 5px;
+		margin: 0 0 5px 15px;
+		display: inline-block;
+		line-height: 48px;
+	}
+
+	&__buttons {
+		margin: 0 0 0 50px;
+		display: inline-block;
+	}
+
+	&__apply {
+		margin-right: 10px;
+		margin-bottom: 3px;
+	}
+
+	&__reset {
+		font-size: 14px;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
 	}
 
 	&__arrow {
@@ -59,6 +80,11 @@
 		&__header_cont {
 			text-align: center;
 			padding-bottom: 0;
+		}
+
+		&__buttons {
+			display: block;
+			margin: 15px 0 0;
 		}
 
 		&__arrow {
