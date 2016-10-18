@@ -1,9 +1,8 @@
 .shortlist {
 	color: $color_header;
 	text-decoration: underline;
-	position: absolute;
-	top: 30px;
-	right: 0;
+	float: right;
+	margin-top: 30px;
 
 	&:hover,
 	&:focus {
@@ -13,5 +12,11 @@
 	&__star {
 		padding-right: 5px;
 		font-size: $fs_smaller;
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.shortlist {
+		margin-top: 5px;
 	}
 }
