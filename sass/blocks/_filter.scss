@@ -39,6 +39,18 @@
 		border-top: 1px solid $color_hr;
 		display: none;
 	}
+
+	&__body_inner {
+		border-left: 1px solid $color_hr;
+		margin-left: 15px;
+		padding-left: 15px;
+
+		&:first-child {
+			border-left: 0;
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
 }
 
 @media (max-width: $bp_sm_max) {
@@ -53,6 +65,18 @@
 			position: static;
 			display: block;
 		}
+
+		&__body_inner {
+			border-left: 0;
+			margin-left: 0;
+			padding-left: 0;
+
+			&:nth-child(2) {
+				border-left: 1px solid $color_hr;
+				margin-left: 15px;
+				padding-left: 15px;
+			}
+		}
 	}
 }
 
@@ -61,6 +85,12 @@
 
 		&__body_inner {
 			width: 100%;
+
+			&:nth-child(2) {
+				border-left: 0;
+				margin-left: 0;
+				padding-left: 0;
+			}
 		}
 	}
 }

@@ -1374,6 +1374,16 @@ a:hover, a:focus {
   border-top: 1px solid #e0e0e0;
   display: none;
 }
+.filter__body_inner {
+  border-left: 1px solid #e0e0e0;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+.filter__body_inner:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
 
 @media (max-width: 767px) {
   .filter__header_cont {
@@ -1384,9 +1394,24 @@ a:hover, a:focus {
     position: static;
     display: block;
   }
+  .filter__body_inner {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .filter__body_inner:nth-child(2) {
+    border-left: 1px solid #e0e0e0;
+    margin-left: 15px;
+    padding-left: 15px;
+  }
 }
 @media (max-width: 520px) {
   .filter__body_inner {
     width: 100%;
+  }
+  .filter__body_inner:nth-child(2) {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
