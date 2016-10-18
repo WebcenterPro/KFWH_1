@@ -494,20 +494,17 @@ $(function(){
 	/* Раскрывающийся фильтр */
 
 	$(".filter__arrow").on("click", function() {
-		var arrow = $(this).html();
-		$document.queue(function() {
-			$(".filter__arrow_icon").toggleClass("glyphicon glyphicon-chevron-down glyphicon glyphicon-chevron-up");
-			$(".filter__body_cont").slideToggle(300);
-			
-			if (~arrow.indexOf("Раскрыть")) {
-				arrow = "Закрыть" + arrow.slice(8);
-			} else {
-				arrow = "Раскрыть" + arrow.slice(7);
-			}
+		$(".filter__arrow_icon").toggleClass("glyphicon glyphicon-chevron-down glyphicon glyphicon-chevron-up");
+		$(".filter__body_cont").slideToggle(300);
 
-			$(this).html(arrow);
-			$document.dequeue();
-		})
+		var text = $(".filter__arrow_text").text();
+		if (text == "Раскрыть") {
+			text = "Закрыть";
+		} else {
+			text = "Раскрыть";
+		}
+
+		$(".filter__arrow_text").text(text);
 	});
 
 	
