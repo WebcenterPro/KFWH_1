@@ -1249,7 +1249,6 @@ a:hover, a:focus {
   line-height: 52px;
   text-align: center;
   cursor: pointer;
-  border-bottom-left-radius: 25%;
   opacity: .8;
   display: none;
 }
