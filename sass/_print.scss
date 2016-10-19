@@ -1,0 +1,35 @@
+@media print {
+	@page {
+		margin: 1.5cm;
+	}
+
+	* {
+		color: black;
+		background-color: white;
+	}
+
+	header,
+	.shortlist,
+	.base_search,
+	.filter,
+	.map__outer,
+	.social,
+	.footer__items,
+	.sort,
+	.card__img,
+	.card__content::before,
+	.card__more,
+	.button {
+		display: none;
+	}
+
+	.card {
+		page-break-inside: avoid;
+
+		&__descr {
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+}

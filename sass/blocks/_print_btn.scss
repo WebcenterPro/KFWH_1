@@ -4,9 +4,5 @@
 	height: 40px;
 	background: url("../img/print.png") no-repeat;
 	background-size: contain;
-
-	&__link {
-		display: block;
-		height: 100%;
-	}
+	cursor: pointer;
 }
