@@ -1,0 +1,9 @@
+.link {
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		color: $color_header;
+		text-decoration: none;
+	}
+}
