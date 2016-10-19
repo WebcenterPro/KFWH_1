@@ -39,9 +39,11 @@
 				color: $color_header;
 			}
 
+			//Работа подсветки
 			.archive__link {
 				color: $color_header;
 			}
+			//================
 		}
 
 		&:last-child {
@@ -59,5 +61,11 @@
 		&:focus {
 			text-decoration: none;
 		}
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.archive {
+		padding-right: 0;
 	}
 }

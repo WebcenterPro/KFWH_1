@@ -70,10 +70,6 @@
 		}
 	}
 
-	&__head {
-		@extend .unit_left__head;
-	}
-
 	&__descr {
 		@extend .unit_left__p;
 		padding-bottom: 20px;

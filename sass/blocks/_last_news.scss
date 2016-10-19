@@ -5,10 +5,6 @@
 	border-right: 1px solid $color_hr;
 	width: 100%;
 
-	&__head {
-		@extend .unit_left__head;
-	}
-
 	&__more {
 		position: absolute;
 		top: 24px;

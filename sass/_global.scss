@@ -10,11 +10,6 @@ body {
 	margin-bottom: 160px;
 }
 
-header {
-	position: relative;
-	border-bottom: 1px solid $color_footer;
-}
-
 a {
 	color: $color_dark;
 
@@ -35,7 +30,7 @@ a {
 	}
 }
 
-@media (max-width: 419px) {
+@media (max-width: $bp_xs_max) {
 	body {
 		margin-bottom: 270px;
 	}

@@ -34,6 +34,12 @@
 		color: $color_header;
 		font-size: $fs_head_lg;
 	}
+
+	&__h3 {
+		color: $color_header;
+		font-size: $fs_head;
+		margin: 5px 0 10px;
+	}
 }
 
 @media (max-width: $bp_md_max) {

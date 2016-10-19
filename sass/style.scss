@@ -2,6 +2,7 @@
 @import "_variables.scss"; //Переменные
 @import "_global.scss"; //Общие параметры
 
+@import "blocks/_header.scss"; //Шапка сайта
 @import "blocks/_search.scss"; //Верхний поиск
 @import "blocks/_header_top.scss"; //Верхняя шапка
 	@import "blocks/_header_main/_header_main.scss"; //Главная шапка
@@ -18,7 +19,7 @@
 @import "blocks/_social.scss"; //Социальные иконки
 @import "blocks/_hello.scss"; //Блок приветствия
 @import "blocks/_social_block.scss"; //Блок социальных иконок
-@import "blocks/_footer.scss"; //Подвал
+@import "blocks/_footer.scss"; //Подвал сайта
 @import "blocks/_popup.scss"; //Затемнение с кнопкой "play" (плагин Magnific Popup)
 @import "blocks/_modal.scss"; //Стандартные настройки для модального окна бутстрапа
 @import "blocks/_input.scss"; //Стандартное поле ввода
@@ -34,5 +35,6 @@
 @import "blocks/_ul.scss"; //Стандартный список
 @import "blocks/_link.scss"; //Обычная ссылка
 @import "blocks/_archive.scss"; //Блок "Архив новостей"
+@import "blocks/_news_pre.scss"; //Превью новости
 
 @import "_print.scss"; //Версия для печати

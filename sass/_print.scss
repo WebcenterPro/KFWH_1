@@ -19,17 +19,26 @@
 	.card__img,
 	.card__content::before,
 	.card__more,
-	.button {
+	.button,
+	.archive {
 		display: none;
 	}
 
-	.card {
+	.card,
+	.news_pre {
 		page-break-inside: avoid;
+	}
+
+	.card {
 
 		&__descr {
 			border-bottom: none;
 			margin-bottom: 0;
 			padding-bottom: 0;
 		}
+	}
+
+	.news_pre {
+		border: 0;
 	}
 }
