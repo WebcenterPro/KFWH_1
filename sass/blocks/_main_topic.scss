@@ -1,9 +1,9 @@
-.base_search {
+.main_topic {
 	background-color: $color_header;
 	padding: 20px;
 	margin-bottom: 35px;
-	text-align: right;
 	position: relative;
+	color: $color_bright;
 
 	&::before {
 		@extend %pseudoelem_param;
@@ -66,20 +66,31 @@
 	&__link_icon {
 		padding-right: 10px;
 	}
+
+	&__p {
+		margin: 0;
+	}
+
+	&--text_right {
+		text-align: right;
+	}
 }
 
 @media (max-width: $bp_sm_max) {
-	.base_search {
-		text-align: left;
+	.main_topic {
 
 		&__link {
 			margin-top: 20px;
+		}
+
+		&--text_right {
+			text-align: left;
 		}
 	}
 }
 
 @media (max-width: $bp_xs_max) {
-	.base_search {
+	.main_topic {
 
 		&__link {
 			display: block;

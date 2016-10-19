@@ -573,9 +573,9 @@ $(function(){
 
 	/* Работа переключателя в главном поиске */
 
-	$(".base_search__link").on("click", function() {
-		if (this.classList.contains("base_search__link--active")) return;
-		$(".base_search__link").toggleClass("base_search__link--active");
+	$(".main_topic__link").on("click", function() {
+		if (this.classList.contains("main_topic__link--active")) return;
+		$(".main_topic__link").toggleClass("main_topic__link--active");
 		$("#cards").toggle();
 		$(".map").toggle();
 	});
