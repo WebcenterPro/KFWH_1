@@ -170,6 +170,7 @@ a:hover, a:focus {
   background-color: #FA2449;
   height: 65px;
   text-align: right;
+  overflow: hidden;
 }
 .header_top__cont {
   line-height: 37px;
@@ -1625,7 +1626,7 @@ a:hover, a:focus {
   color: #757575;
 }
 .news_item__body {
-  margin: 40px 20% 0;
+  margin: 20px 20% 0;
   text-align: justify;
 }
 .news_item__img {
