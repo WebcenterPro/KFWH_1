@@ -1620,6 +1620,25 @@ a:hover, a:focus {
     padding-right: 20px;
   }
 }
+.news_item__date {
+  margin-top: 20px;
+  color: #757575;
+}
+.news_item__body {
+  margin: 40px 20% 0;
+  text-align: justify;
+}
+.news_item__img {
+  padding: 10px 0;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .news_item__body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .pag {
   padding-left: 0;
   border-radius: 5px;
@@ -1671,7 +1690,7 @@ a:hover, a:focus {
     background-color: white;
   }
 
-  header,
+  .header,
   .shortlist,
   .main_topic,
   .filter,
@@ -1683,7 +1702,8 @@ a:hover, a:focus {
   .card__content::before,
   .card__more,
   .button,
-  .archive {
+  .archive,
+  .pag {
     display: none;
   }
 

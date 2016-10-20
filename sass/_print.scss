@@ -8,7 +8,7 @@
 		background-color: white;
 	}
 
-	header,
+	.header,
 	.shortlist,
 	.main_topic,
 	.filter,
@@ -20,7 +20,8 @@
 	.card__content::before,
 	.card__more,
 	.button,
-	.archive {
+	.archive,
+	.pag {
 		display: none;
 	}
 

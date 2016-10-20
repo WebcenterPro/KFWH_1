@@ -1,0 +1,27 @@
+.news_item {
+
+	&__date {
+		margin-top: 20px;
+		color: lighten($color_dark, 20%);
+	}
+
+	&__body {
+		margin: 40px 20% 0;
+		text-align: justify;
+	}
+
+	&__img {
+		padding: 10px 0;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.news_item {
+
+		&__body {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
