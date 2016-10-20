@@ -40,6 +40,10 @@
 		font-size: $fs_head;
 		margin: 5px 0 10px;
 	}
+
+	&__social_fontello {
+		float: right;
+	}
 }
 
 @media (max-width: $bp_md_max) {

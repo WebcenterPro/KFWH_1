@@ -1,0 +1,26 @@
+.social_fontello {
+	font-family: "fontello";
+	font-size: $fs_bigger;
+
+	&__fb {
+		margin-left: 10px;
+		color: $color_hr;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $color_fb;
+		}
+	}
+
+	&__vk {
+		margin-left: 10px;
+		color: $color_hr;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $color_vk;
+		}
+	}
+}
