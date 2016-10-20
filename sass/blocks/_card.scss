@@ -29,10 +29,11 @@
 	}
 
 	&__shortlist {
+		display: inline-block;
+		background: url("../img/card_icon.png") -33px 0 no-repeat;
+		width: 33px;
+		height: 33px;
 		position: absolute;
-		background: url("../img/star.png") no-repeat;
-		width: 32px;
-		height: 32px;
 		top: 15px;
 		right: 15px;
 		transition: 1s ease all;
@@ -40,12 +41,32 @@
 		&:hover {
 			transition: 1s ease all;
 			cursor: default;
-			background: url("../img/star_active.png") no-repeat;
-			transform: rotate(360deg);
+			background: url("../img/card_icon_active.png") -33px 0 no-repeat;
 		}
 
 		&--selected {
-			background: url("../img/star_active.png") no-repeat;
+			background: url("../img/card_icon_active.png") -33px 0 no-repeat;
+		}
+	}
+
+	&__compare {
+		display: inline-block;
+		background: url("../img/card_icon.png") no-repeat;
+		width: 33px;
+		height: 33px;
+		position: absolute;
+		top: 15px;
+		right: 60px;
+		transition: 1s ease all;
+
+		&:hover {
+			transition: 1s ease all;
+			cursor: default;
+			background: url("../img/card_icon_active.png") no-repeat;
+		}
+
+		&--selected {
+			background: url("../img/card_icon_active.png") no-repeat;
 		}
 	}
 

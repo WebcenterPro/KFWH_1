@@ -568,6 +568,10 @@ $(function(){
 	$(".main__cont").on("click", ".card__shortlist", function() {
 		$(this).toggleClass("card__shortlist--selected");
 	});
+
+	$(".main__cont").on("click", ".card__compare", function() {
+		$(this).toggleClass("card__compare--selected");
+	});
 	
 	/* ============================= */
 
