@@ -1,0 +1,61 @@
+.pag {
+	padding-left: 0;
+	border-radius: 5px;
+	border: 1px solid $color_hr;
+	display: inline-block;
+	overflow: hidden;
+	margin: 0;
+
+	&__item {
+		@extend %inline_ul;
+		display: block;
+		float: left;
+
+		&:first-child {
+			
+			//Убрать бордер у первой ссылки
+			.pag {
+
+				&__link {
+					border-left: none;
+				}
+			}
+			//=============================
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 6px 12px;
+		border-left: 1px solid $color_hr;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			background-color: $color_footer;
+		}
+
+		&--active {
+			background-color: $color_header;
+			color: $color_bright;
+
+			&:hover,
+			&:focus {
+				background-color: $color_header;
+				cursor: default;
+			}
+		}
+
+		&--disabled {
+			color: $color_hr;
+			cursor: default;
+
+			&:hover,
+			&:focus {
+				color: $color_hr;
+				cursor: default;
+				background-color: $color_bright;
+			}
+		}
+	}
+}
