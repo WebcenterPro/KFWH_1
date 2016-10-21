@@ -521,6 +521,12 @@ a:hover, a:focus {
 .main__col--flex {
   display: flex;
 }
+.main__col--marg_bot {
+  margin-bottom: 15px;
+}
+.main__col--pad_right {
+  padding-right: 30px;
+}
 .main__h1 {
   color: #FA2449;
   font-size: 30px;
@@ -550,6 +556,11 @@ a:hover, a:focus {
   }
   .main__col--flex {
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  .main__col--pad_right {
+    padding-right: 0;
   }
 }
 .owl__dots {
@@ -781,13 +792,22 @@ a:hover, a:focus {
   .unit_right__content {
     width: 100%;
   }
-  .unit_right__content::before {
+  .unit_right__content--top::before {
     top: -50px;
     left: 40px;
-    width: 0;
+    right: initial;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 30px solid #f4f4f4;
+  }
+  .unit_right__content--bottom::before {
+    bottom: -50px;
+    left: 40px;
+    top: initial;
+    width: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #f4f4f4;
   }
 }
 .unit_top {
@@ -1869,6 +1889,11 @@ a:hover, a:focus {
     padding-left: 0;
   }
 }
+.simple_block {
+  background-color: #f4f4f4;
+  padding: 15px 25px;
+}
+
 @media print {
   @page {
     margin: 1.5cm;
@@ -1884,6 +1909,7 @@ a:hover, a:focus {
   .filter,
   .map__outer,
   .social,
+  .social_block,
   .footer__items,
   .sort,
   .card__img,

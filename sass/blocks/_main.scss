@@ -28,6 +28,14 @@
 		&--flex {
 			display: flex;
 		}
+
+		&--marg_bot {
+			margin-bottom: 15px;
+		}
+
+		&--pad_right {
+			padding-right: 30px;
+		}
 	}
 
 	&__h1 {
@@ -73,6 +81,18 @@
 
 			&--flex {
 				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.main {
+
+		&__col {
+
+			&--pad_right {
+				padding-right: 0;
 			}
 		}
 	}

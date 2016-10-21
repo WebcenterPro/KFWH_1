@@ -60,13 +60,29 @@
 		&__content {
 			width: 100%;
 
-			&::before {
-				top: -50px;
-				left: 40px;
-				width: 0;
-				border-left: 20px solid transparent;
-				border-right: 20px solid transparent;
-				border-bottom: 30px solid $color_footer;
+			&--top {
+
+				&::before {
+					top: -50px;
+					left: 40px;
+					right: initial;
+					border-left: 20px solid transparent;
+					border-right: 20px solid transparent;
+					border-bottom: 30px solid $color_footer;
+				}
+			}
+
+			&--bottom {
+
+				&::before {
+					bottom: -50px;
+					left: 40px;
+					top: initial;
+					width: 0;
+					border-left: 20px solid transparent;
+					border-right: 20px solid transparent;
+					border-top: 30px solid $color_footer;
+				}
 			}
 		}
 	}
