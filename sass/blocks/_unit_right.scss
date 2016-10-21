@@ -1,4 +1,4 @@
-.unit_left {
+.unit_right {
 	background-color: $color_footer;
 
 	&__img {
@@ -27,7 +27,8 @@
 
 		&::before {
 			@extend %pseudoelem_param;
-			@extend %triangle_left;
+			@extend %triangle_right;
+			z-index: 1;
 		}
 	}
 
@@ -49,7 +50,7 @@
 }
 
 @media (max-width: $bp_md_max) {
-	.unit_left {
+	.unit_right {
 		margin-bottom: 15px;
 
 		&__img {
@@ -60,10 +61,11 @@
 			width: 100%;
 
 			&::before {
-				top: -59px;
+				top: -50px;
 				left: 40px;
-				border: 20px solid transparent;
-				border-top: 30px solid transparent;
+				width: 0;
+				border-left: 20px solid transparent;
+				border-right: 20px solid transparent;
 				border-bottom: 30px solid $color_footer;
 			}
 		}

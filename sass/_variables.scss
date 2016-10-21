@@ -72,4 +72,12 @@ $bp_xs_max: 425px;
 	border-bottom: 20px solid transparent;
 	border-right: 30px solid $color_footer;
 }
+
+%triangle_right {
+	top: 25px;
+	right: -29px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 30px solid $color_footer;
+}
 // ============ //

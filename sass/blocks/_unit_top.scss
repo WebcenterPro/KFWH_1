@@ -4,6 +4,7 @@
 	margin-bottom: -500px;
 
 	&__img {
+		display: block;
 
 		&--img_one {
 			background: url("../img/unit_5.png") center no-repeat;
@@ -16,6 +17,14 @@
 			background-size: cover;
 			padding-bottom: 40%;
 		}
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__head {
+		display: inline-block;
 	}
 
 	&__content {
