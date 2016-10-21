@@ -1142,7 +1142,7 @@ a:hover, a:focus {
 .checkbox_custom__label::before {
   width: 18px;
   height: 18px;
-  top: 3px;
+  top: 6px;
   left: 0;
   background-color: #FFF;
   color: #FA2449;
@@ -1729,6 +1729,37 @@ a:hover, a:focus {
   color: #e0e0e0;
   cursor: default;
   background-color: #FFF;
+}
+
+.compare__head {
+  margin: 0;
+}
+.compare__head::before {
+  display: none;
+}
+.compare__param {
+  display: none;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #424242;
+  border-top: 1px solid #e0e0e0;
+}
+.compare__inner {
+  border-left: 1px solid #e0e0e0;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+.compare__inner:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+.compare__body {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.compare__body td:first-child {
+  font-weight: bold;
 }
 
 @media print {

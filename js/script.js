@@ -575,13 +575,26 @@ $(function(){
 	
 	/* ============================= */
 
-	/* Работа переключателя в главном поиске */
+	/* Работа переключателей внутри блока .main_topic */
 
-	$(".main_topic__link").on("click", function() {
-		if (this.classList.contains("main_topic__link--active")) return;
-		$(".main_topic__link").toggleClass("main_topic__link--active");
-		$("#cards").toggle();
-		$(".map").toggle();
+	$(".main_topic").on("click", ".main_topic__link", function() {
+
+		if (this.parentNode.getAttribute("id") == "mainTopicCatalog") {
+			if (this.classList.contains("main_topic__link--active")) return;
+			$("#mainTopicCatalog .main_topic__link").toggleClass("main_topic__link--active");
+			$("#cards").toggle();
+			$(".map").toggle();
+		}
+
+		if (this.parentNode.getAttribute("id") == "compareChar") {
+			if (this.classList.contains("main_topic__link--active")) return;
+			$("#compareChar .main_topic__link").toggleClass("main_topic__link--active");
+		}
+
+		if (this.parentNode.getAttribute("id") == "compareParam") {
+			$("#compareParam .main_topic__link").toggleClass("main_topic__link--active");
+			$("#compareParamBody").slideToggle(300);
+		}
 	});
 	
 	/* ===================================== */

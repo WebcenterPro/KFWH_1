@@ -1,0 +1,44 @@
+.compare {
+
+	&__head {
+		margin: 0;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	&__param {
+		display: none;
+		padding: 20px;
+		background-color: $color_footer;
+		color: $color_dark;
+		border-top: 1px solid $color_hr;
+	}
+
+	&__inner {
+		border-left: 1px solid $color_hr;
+		margin-left: 15px;
+		padding-left: 15px;
+
+		&:first-child {
+			border-left: 0;
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+
+	&__body {
+		white-space: nowrap;
+		overflow-x: auto;
+
+		//Настройка бутстраповской таблицы
+		td {
+
+			&:first-child {
+				font-weight: bold;
+			}
+		}
+		//================================
+	}
+}
