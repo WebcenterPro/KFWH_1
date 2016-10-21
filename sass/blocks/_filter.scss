@@ -30,6 +30,13 @@
 		cursor: pointer;
 		display: inline-block;
 		padding: 7px 15px;
+		text-decoration: none;
+
+		&:hover,
+		&:active {
+			color: $color_dark;
+			text-decoration: underline;
+		}
 	}
 
 	&__arrow {
@@ -39,10 +46,11 @@
 		right: 0;
 		padding: 0 40px;
 		line-height: 72px;
+		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			text-decoration: none;
+			color: $color_dark;
 		}
 	}
 

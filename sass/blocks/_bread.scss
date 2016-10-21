@@ -21,10 +21,6 @@
 	}
 
 	&__link {
-		
-		&:hover,
-		&:focus {
-			color: $color_header;
-		}
+		text-decoration: none;
 	}
 }

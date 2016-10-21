@@ -47,10 +47,10 @@
 		color: $color_bright;
 		margin-left: 15px;
 		cursor: pointer;
+		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			text-decoration: none;
 			color: $color_bright;
 		}
 

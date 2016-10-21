@@ -595,6 +595,10 @@ $(function(){
 			$("#compareParam .main_topic__link").toggleClass("main_topic__link--active");
 			$("#compareParamBody").slideToggle(300);
 		}
+
+		if (this.parentNode.getAttribute("id") == "compareClear") {
+			$("#compareClear .main_topic__link").hide();
+		}
 	});
 	
 	/* ===================================== */

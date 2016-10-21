@@ -8,6 +8,10 @@
 		}
 	}
 
+	&__clear {
+		text-align: right;
+	}
+
 	&__param {
 		display: none;
 		padding: 20px;
@@ -40,5 +44,38 @@
 			}
 		}
 		//================================
+	}
+
+	&__del {
+		text-decoration: none;
+	}
+}
+
+@media (max-width: $bp_md_max) {
+	.compare {
+
+		&__clear {
+			text-align: left;
+			margin-top: 60px;
+		}
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.compare {
+
+		&__head {
+			padding-top: 1px;
+		}
+
+		&__clear {
+			margin-top: 0;
+		}
+
+		&__inner {
+			border-left: 0;
+			margin-left: 0;
+			padding-left: 0;
+		}
 	}
 }

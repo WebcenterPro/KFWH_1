@@ -28,10 +28,11 @@
 		display: inline-block;
 		padding: 6px 12px;
 		border-left: 1px solid $color_hr;
+		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			text-decoration: none;
+			color: $color_dark;
 			background-color: $color_footer;
 		}
 
@@ -42,6 +43,7 @@
 			&:hover,
 			&:focus {
 				background-color: $color_header;
+				color: $color_bright;
 				cursor: default;
 			}
 		}

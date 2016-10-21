@@ -15,10 +15,10 @@
 	&__purchase {
 		margin-right: 30px;
 		color: $color_bright;
+		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			text-decoration: none;
 			color: $color_bright;
 		}
 	}

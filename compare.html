@@ -127,19 +127,22 @@
 
 			<!-- COMPARE MAIN_TOPIC -->
 			<div class="compare">
-				<div class="main__row main_topic compare__head row">
-					<div class="main__col col-sm-3" id="compareParam">
-						<a class="main_topic__link">Параметры сравнения</a>
-					</div>
-					<div class="main__col col-sm-9" id="compareChar">
+				<div class="main__row compare__head main_topic row">
+					<div class="main__col col-sm-7 col-md-6 col-sm-push-4 col-md-push-3" id="compareChar">
 						<a class="main_topic__link main_topic__link--active">Все характеристики</a>
 						<a class="main_topic__link">Только различающиеся</a>
+					</div>
+					<div class="main__col col-sm-4 col-md-3 col-sm-pull-7 col-md-pull-6" id="compareParam">
+						<a class="main_topic__link">Параметры сравнения</a>
+					</div>
+					<div class="main__col compare__clear col-md-3" id="compareClear">
+						<a class="main_topic__link"><span class="glyphicon glyphicon-trash"></span> Очистить список</a>
 					</div>
 				</div>
 
 				<!-- PARAM (FILTER) -->
 				<div class="main__row compare__param row" id="compareParamBody">
-					<div class="main__col compare__inner col-md-5">
+					<div class="main__col compare__inner col-sm-5">
 						<p class="checkbox_custom__head">Характеристики объекта</p>
 						<input class="checkbox_custom" type="checkbox" id="checkCompare1" value="checkCompare1" checked>
 						<label class="checkbox_custom__label" for="checkCompare1">Тип объекта</label>
@@ -180,7 +183,7 @@
 						<input class="checkbox_custom" type="checkbox" id="checkCompare19" value="checkCompare19" checked>
 						<label class="checkbox_custom__label" for="checkCompare19">Отопление</label>
 					</div>
-					<div class="main__col compare__inner col-md-5">
+					<div class="main__col compare__inner col-sm-6">
 						<input class="checkbox_custom" type="checkbox" id="checkCompare20" value="checkCompare20" checked>
 						<label class="checkbox_custom__label" for="checkCompare20">Водоснабжение</label>
 						<input class="checkbox_custom" type="checkbox" id="checkCompare21" value="checkCompare21" checked>
@@ -227,49 +230,39 @@
 					<div class="main__col compare__body col-sm-12">
 						<table class="table table-striped">
 							<tr>
-								<td>Характеристика</td>
-								<td>Название товара</td>
-								<td>Название товара</td>
-								<td>Название товара</td>
-								<td>Название товара</td>
-								<td>Название товара</td>
-								<td>Название товара</td>
+								<td>Название</td>
+								<td><a href="#">Складской комплекс "АКМ Логистик 2</a></td>
+								<td><a href="#">Логистический парк Шушары</a></td>
+								<td><a href="#">Логистический парк Шушары</a></td>
+								<td><a href="#">Логистический парк Шушары</a></td>
 							</tr>
 							<tr>
-								<td>Характеристика</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
+								<td>Общая площадь объекта</td>
+								<td>30 000 м<sup>2</sup></td>
+								<td>30 000 м<sup>2</sup></td>
+								<td>30 000 м<sup>2</sup></td>
+								<td>30 000 м<sup>2</sup></td>
 							</tr>
 							<tr>
-								<td>Характеристика</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
+								<td>Класс</td>
+								<td>A</td>
+								<td>A</td>
+								<td>A</td>
+								<td>A</td>
 							</tr>
 							<tr>
-								<td>Характеристика</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
-								<td>Значение</td>
+								<td>Арендная ставка</td>
+								<td>50 000 руб/м<sup>2</sup></td>
+								<td>50 000 руб/м<sup>2</sup></td>
+								<td>50 000 руб/м<sup>2</sup></td>
+								<td>50 000 руб/м<sup>2</sup></td>
 							</tr>
 							<tr>
 								<td></td>
-								<td>Удалить</td>
-								<td>Удалить</td>
-								<td>Удалить</td>
-								<td>Удалить</td>
-								<td>Удалить</td>
-								<td>Удалить</td>
+								<td><a class="compare__del" href="#"><span class="glyphicon glyphicon-trash"></span> Удалить</a></td>
+								<td><a class="compare__del" href="#"><span class="glyphicon glyphicon-trash"></span> Удалить</a></td>
+								<td><a class="compare__del" href="#"><span class="glyphicon glyphicon-trash"></span> Удалить</a></td>
+								<td><a class="compare__del" href="#"><span class="glyphicon glyphicon-trash"></span> Удалить</a></td>
 							</tr>
 						</table>
 					</div>
@@ -286,10 +279,10 @@
 				<li class="social__item social__item--sm"><a href="#" class="social__link"></a></li>
 			</ul>
 			<ul class="footer__items">
-				<li class="footer__item"><a href="#">Недвижимость</a></li>
-				<li class="footer__item"><a href="#">Земельные участки</a></li>
-				<li class="footer__item"><a href="#">О компании</a></li>
-				<li class="footer__item"><a href="#">Контакты</a></li>
+				<li class="footer__item"><a class="footer__link" href="#">Недвижимость</a></li>
+				<li class="footer__item"><a class="footer__link" href="#">Земельные участки</a></li>
+				<li class="footer__item"><a class="footer__link" href="#">О компании</a></li>
+				<li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
 			</ul>
 			<span class="footer__copyright">© 2016 Knight Frank</span>
 			<span class="footer__webcenter">Разработано в <a class="footer__webcenter_link" href="http://webcenter.pro/" target="_blank">Webcenter.pro</a></span>

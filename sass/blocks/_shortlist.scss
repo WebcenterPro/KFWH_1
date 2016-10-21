@@ -1,13 +1,7 @@
 .shortlist {
 	color: $color_header;
-	text-decoration: underline;
 	float: right;
 	margin-top: 30px;
-
-	&:hover,
-	&:focus {
-		color: $color_header;
-	}
 
 	&__star {
 		padding-right: 5px;

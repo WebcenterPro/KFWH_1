@@ -12,10 +12,12 @@ body {
 
 a {
 	color: $color_dark;
+	text-decoration: underline;
 
 	&:hover,
 	&:focus {
-		color: $color_dark;
+		color: $color_header;
+		text-decoration: none;
 		outline: none;
 	}
 }

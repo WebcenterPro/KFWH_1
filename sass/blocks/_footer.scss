@@ -25,6 +25,16 @@
 		}
 	}
 
+	&__link {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: $color_dark;
+			text-decoration: underline;
+		}
+	}
+
 	&__copyright {
 		display: inline-block;
 		line-height: 90px;
@@ -44,11 +54,11 @@
 	}
 
 	&__webcenter_link {
+		text-decoration: none;
 		
 		&:hover,
 		&:focus {
 			border-bottom: 1px dashed #e96259;
-			text-decoration: none;
 			color: #e96259;
 		}
 	}

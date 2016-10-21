@@ -9,6 +9,7 @@
 		position: absolute;
 		top: 24px;
 		right: 25px;
+		text-decoration: none;
 	}
 
 	&__date {
@@ -23,6 +24,12 @@
 		padding: 10px 0;
 		border-bottom: 1px solid $color_hr;
 		display: block;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
 
 		&:last-child {
 			border-bottom: none;

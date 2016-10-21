@@ -28,35 +28,13 @@
 		width: 100%;
 	}
 
-	&__shortlist {
-		display: inline-block;
-		background: url("../img/card_icon.png") -33px 0 no-repeat;
-		width: 33px;
-		height: 33px;
-		position: absolute;
-		top: 15px;
-		right: 15px;
-		transition: 1s ease all;
-
-		&:hover {
-			transition: 1s ease all;
-			cursor: default;
-			background: url("../img/card_icon_active.png") -33px 0 no-repeat;
-		}
-
-		&--selected {
-			background: url("../img/card_icon_active.png") -33px 0 no-repeat;
-		}
-	}
-
+	&__shortlist,
 	&__compare {
 		display: inline-block;
-		background: url("../img/card_icon.png") no-repeat;
 		width: 33px;
 		height: 33px;
 		position: absolute;
 		top: 15px;
-		right: 60px;
 		transition: 1s ease all;
 
 		&:hover {
@@ -64,6 +42,25 @@
 			cursor: default;
 			background: url("../img/card_icon_active.png") no-repeat;
 		}
+	}
+
+	&__shortlist {
+		background: url("../img/card_icon.png") -33px 0 no-repeat;
+		right: 15px;
+
+		&:hover {
+			background-position: -33px 0;
+		}
+
+		&--selected {
+			background: url("../img/card_icon_active.png") no-repeat;
+			background-position: -33px 0;
+		}
+	}
+
+	&__compare {
+		background: url("../img/card_icon.png") no-repeat;
+		right: 60px;
 
 		&--selected {
 			background: url("../img/card_icon_active.png") no-repeat;
@@ -83,12 +80,7 @@
 
 	&__link {
 		color: $color_header;
-
-		&:hover,
-		&:focus {
-			color: $color_header;
-			text-decoration: none;
-		}
+		text-decoration: none;
 	}
 
 	&__descr {
@@ -104,6 +96,7 @@
 
 	&__more {
 		color: $color_header;
+		text-decoration: none;
 		font-size: 15px;
 		display: inline-block;
 		margin-top: 15px;
@@ -111,6 +104,7 @@
 		&:hover,
 		&:focus {
 			color: $color_header;
+			text-decoration: underline;
 		}
 	}
 }

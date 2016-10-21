@@ -31,12 +31,11 @@
 		display: block;
 		padding: 10px;
 		border: 1px solid $color_footer;
+		text-decoration: none;
 
 		&:hover,
 		&:focus {
 			border-bottom: 1px solid $color_hr;
-			text-decoration: none;
-			color: $color_header;
 		}
 
 		&::before {
