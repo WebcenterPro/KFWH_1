@@ -1900,6 +1900,27 @@ a:hover, a:focus {
   color: #FA2449;
 }
 
+.accordion__panel {
+  box-shadow: none;
+  border: none;
+  margin-top: 20px;
+}
+.accordion__link {
+  display: block;
+  padding: 15px;
+  background-color: #FA2449;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 18px;
+}
+.accordion__link:hover, .accordion__link:focus {
+  color: #FFF;
+}
+.accordion__descr {
+  background-color: #f4f4f4;
+  padding: 15px;
+}
+
 @media print {
   @page {
     margin: 1.5cm;

@@ -1,0 +1,27 @@
+.accordion {
+
+	&__panel {
+		box-shadow: none;
+		border: none;
+		margin-top: 20px;
+	}
+
+	&__link {
+		display: block;
+		padding: 15px;
+		background-color: $color_header;
+		color: $color_bright;
+		text-decoration: none;
+		font-size: $fs_bigger;
+
+		&:hover,
+		&:focus {
+			color: $color_bright;
+		}
+	}
+
+	&__descr {
+		background-color: $color_footer;
+		padding: 15px;
+	}
+}
