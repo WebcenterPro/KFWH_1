@@ -1679,11 +1679,19 @@ a:hover, a:focus {
     padding-right: 0;
   }
 }
+.news_cont__sort {
+  margin-bottom: 20px;
+}
 .news_cont__pag {
   text-align: center;
   margin-top: 30px;
 }
 
+@media (max-width: 767px) {
+  .news_cont__sort {
+    margin-top: 20px;
+  }
+}
 .news_pre {
   border-bottom: 1px solid #e0e0e0;
   padding: 20px 20px 20px 0;
@@ -1918,6 +1926,20 @@ a:hover, a:focus {
 .accordion__descr {
   background-color: #f4f4f4;
   padding: 15px;
+}
+
+.download:hover::before, .download:focus::before {
+  background-position: -21px 0;
+}
+.download::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  background: url("../img/download.png") no-repeat;
+  width: 21px;
+  height: 24px;
+  top: 3px;
+  margin-right: 8px;
 }
 
 @media print {

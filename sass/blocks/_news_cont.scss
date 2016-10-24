@@ -1,7 +1,20 @@
 .news_cont {
+
+	&__sort {
+		margin-bottom: 20px;
+	}
 	
 	&__pag {
 		text-align: center;
 		margin-top: 30px;
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.news_cont {
+
+		&__sort {
+			margin-top: 20px;
+		}
 	}
 }

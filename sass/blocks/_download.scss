@@ -1,0 +1,21 @@
+.download {
+
+	&:hover,
+	&:focus {
+
+		&::before {
+			background-position: -21px 0;
+		}
+	}
+
+	&::before {
+		content: "";
+		display: inline-block;
+		position: relative;
+		background: url("../img/download.png") no-repeat;
+		width: 21px;
+		height: 24px;
+		top: 3px;
+		margin-right: 8px;
+	}
+}
