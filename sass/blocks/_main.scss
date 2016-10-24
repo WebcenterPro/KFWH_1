@@ -70,11 +70,6 @@
 			&--flex {
 				display: block;
 			}
-
-			&--spacing {
-				padding-left: 15px;
-				padding-right: 15px;
-			}
 		}
 
 		&__col {
@@ -82,6 +77,11 @@
 			&--flex {
 				display: block;
 			}
+		}
+
+		&__spacing {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 }

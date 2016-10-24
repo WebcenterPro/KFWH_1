@@ -550,12 +550,12 @@ a:hover, a:focus {
   .main__row--flex {
     display: block;
   }
-  .main__row--spacing {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   .main__col--flex {
     display: block;
+  }
+  .main__spacing {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -1596,7 +1596,6 @@ a:hover, a:focus {
     padding-bottom: 0;
   }
   .filter__buttons {
-    display: block;
     margin: 15px 0 0;
   }
   .filter__arrow {

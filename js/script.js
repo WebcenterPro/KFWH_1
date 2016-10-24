@@ -617,7 +617,11 @@ $(function(){
 		    event.target.classList.contains("filter__reset")) return;
 
 		if ($(".filter .checkbox_custom").is(":checked")) {
-			$(".filter__buttons").css("display", "inline-block");
+			if (window.innerWidth > 767) {
+				$(".filter__buttons").css("display", "inline-block");
+			} else {
+				$(".filter__buttons").css("display", "block");
+			}
 		} else {
 			$(".filter__buttons").css("display", "");
 		}
@@ -638,9 +642,24 @@ $(function(){
 	/* Появление / скрытие кнопок "Применить", "Сбросить" */
 	$(".filter .checkbox_custom").on("change", function() {
 		if ($(".filter .checkbox_custom").is(":checked")) {
-			$(".filter__buttons").css("display", "inline-block");
+			if (window.innerWidth > 767) {
+				$(".filter__buttons").css("display", "inline-block");
+			} else {
+				$(".filter__buttons").css("display", "block");
+			}
 		} else {
 			$(".filter__buttons").css("display", "");
+		}
+	});
+
+	/* Поведение кнопок при изменении ширины экрана */
+	$(window).on("resize", function() {
+		if ($(".filter__buttons").css("display") == "none") return;
+		
+		if (window.innerWidth > 767) {
+			$(".filter__buttons").css("display", "inline-block");
+		} else {
+			$(".filter__buttons").css("display", "block");
 		}
 	});
 
