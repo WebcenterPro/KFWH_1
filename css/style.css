@@ -67,7 +67,7 @@
   border-bottom: 30px solid #f4f4f4;
 }
 
-.main_topic::before {
+.main_topic::before, .accordion__triangle {
   bottom: -29px;
   left: 40px;
   border-left: 20px solid transparent;
@@ -1913,6 +1913,7 @@ a:hover, a:focus {
   margin-top: 20px;
 }
 .accordion__link {
+  position: relative;
   display: block;
   padding: 15px;
   background-color: #FA2449;
@@ -1923,9 +1924,26 @@ a:hover, a:focus {
 .accordion__link:hover, .accordion__link:focus {
   color: #FFF;
 }
+.accordion__arrow {
+  position: absolute;
+  right: 15px;
+  line-height: 53px;
+}
+.accordion__body {
+  position: relative;
+}
+.accordion__triangle {
+  display: inline-block;
+  position: absolute;
+  border-top: 20px solid #FA2449;
+  top: 0;
+  right: 40px;
+  bottom: initial;
+  left: initial;
+}
 .accordion__descr {
   background-color: #f4f4f4;
-  padding: 15px;
+  padding: 25px 15px 15px;
 }
 
 .download:hover::before, .download:focus::before {

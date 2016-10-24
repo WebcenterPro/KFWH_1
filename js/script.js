@@ -679,4 +679,17 @@ $(function(){
 
 	/* ======================= */
 
+	/* Поведение стрелочек в аккордеоне страницы FAQ */
+
+	$("#accordion").on("show.bs.collapse",  function(e) {
+		var parent = e.target.parentNode;
+		$(parent).find(".glyphicon").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
+	});
+
+	$("#accordion").on("hide.bs.collapse", function(e) {
+		var parent = e.target.parentNode;
+		$(parent).find(".glyphicon").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
+	});
+
+	/* ============================================= */
 });

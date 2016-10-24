@@ -7,6 +7,7 @@
 	}
 
 	&__link {
+		position: relative;
 		display: block;
 		padding: 15px;
 		background-color: $color_header;
@@ -20,8 +21,29 @@
 		}
 	}
 
+	&__arrow {
+		position: absolute;
+		right: 15px;
+		line-height: 53px;
+	}
+
+	&__body {
+		position: relative;
+	}
+
+	&__triangle {
+		@extend %triangle_bottom;
+		display: inline-block;
+		position: absolute;
+		border-top: 20px solid $color_header;
+		top: 0;
+		right: 40px;
+		bottom: initial;
+		left: initial;
+	}
+
 	&__descr {
 		background-color: $color_footer;
-		padding: 15px;
+		padding: 25px 15px 15px;
 	}
 }
