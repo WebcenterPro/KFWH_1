@@ -53,7 +53,7 @@
   margin-bottom: 0;
 }
 
-.unit_left::after, .unit_right::after {
+.unit_left::after, .unit_right::after, .recall__link::after {
   content: "";
   display: table;
   clear: both;
@@ -67,7 +67,7 @@
   border-bottom: 30px solid #f4f4f4;
 }
 
-.main_topic::before, .accordion__triangle {
+.main_topic::before, .accordion__triangle, .recall__triangle {
   bottom: -29px;
   left: 40px;
   border-left: 20px solid transparent;
@@ -1916,6 +1916,7 @@ a:hover, a:focus {
   position: relative;
   display: block;
   padding: 15px;
+  padding-right: 55px;
   background-color: #FA2449;
   color: #FFF;
   text-decoration: none;
@@ -1926,7 +1927,9 @@ a:hover, a:focus {
 }
 .accordion__arrow {
   position: absolute;
-  right: 15px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   line-height: 53px;
 }
 .accordion__body {
@@ -1946,6 +1949,75 @@ a:hover, a:focus {
   padding: 25px 15px 15px;
 }
 
+.recall__panel {
+  box-shadow: none;
+  margin-top: 20px;
+}
+.recall__link {
+  position: relative;
+  display: block;
+  padding: 20px;
+  padding-right: 90px;
+  background-color: #f4f4f4;
+  text-decoration: none;
+  font-size: 18px;
+}
+.recall__link:hover, .recall__link:focus {
+  color: #424242;
+}
+.recall__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.recall__head {
+  padding-left: 20px;
+}
+.recall__org {
+  font-style: italic;
+  color: #8f8f8f;
+}
+.recall__date {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.recall__arrow {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.recall__body {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+.recall__triangle {
+  display: inline-block;
+  position: absolute;
+  border-top: 20px solid #f4f4f4;
+  top: 0;
+  right: 40px;
+  bottom: initial;
+  left: initial;
+}
+.recall__descr {
+  padding: 25px 15px 15px;
+}
+
+@media (max-width: 767px) {
+  .recall__link {
+    padding-right: 55px;
+  }
+  .recall__img {
+    margin-bottom: 15px;
+  }
+  .recall__head {
+    padding-left: 0;
+  }
+  .recall__arrow {
+    right: 20px;
+  }
+}
 .download:hover::before, .download:focus::before {
   background-position: -21px 0;
 }
@@ -1983,7 +2055,9 @@ a:hover, a:focus {
   .card__more,
   .button,
   .archive,
-  .pag {
+  .pag,
+  .recall__arrow,
+  .recall__triangle {
     display: none;
   }
 
@@ -2000,5 +2074,9 @@ a:hover, a:focus {
 
   .news_pre {
     border: 0;
+  }
+
+  .recall__body {
+    border: none;
   }
 }

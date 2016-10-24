@@ -22,7 +22,9 @@
 	.card__more,
 	.button,
 	.archive,
-	.pag {
+	.pag,
+	.recall__arrow,
+	.recall__triangle {
 		display: none;
 	}
 
@@ -31,16 +33,18 @@
 		page-break-inside: avoid;
 	}
 
-	.card {
-
-		&__descr {
-			border-bottom: none;
-			margin-bottom: 0;
-			padding-bottom: 0;
-		}
+	.card__descr {
+		border-bottom: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
 	.news_pre {
 		border: 0;
 	}
+
+	.recall__body {
+		border: none;
+	}
+
 }

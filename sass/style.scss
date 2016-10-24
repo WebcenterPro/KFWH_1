@@ -43,6 +43,7 @@
 @import "blocks/_simple_block.scss"; //Стандартный обычный блок
 @import "blocks/_text.scss"; //Контейнер для обычного текста (содержит каскад)
 @import "blocks/_accordion.scss"; //Аккордеон
+@import "blocks/_recall.scss"; //Карточка отзыва клиента (дубликат accordion)
 @import "blocks/_download.scss"; //Ссылка на загрузку файла
 
 @import "_print.scss"; //Версия для печати

@@ -10,6 +10,7 @@
 		position: relative;
 		display: block;
 		padding: 15px;
+		padding-right: 55px;
 		background-color: $color_header;
 		color: $color_bright;
 		text-decoration: none;
@@ -23,7 +24,9 @@
 
 	&__arrow {
 		position: absolute;
-		right: 15px;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
 		line-height: 53px;
 	}
 
