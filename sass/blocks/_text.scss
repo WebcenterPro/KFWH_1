@@ -1,0 +1,19 @@
+.text {
+
+	ul {
+		list-style-type: none;
+		padding-left: 30px;
+
+		li {
+
+			&::before {
+				content: "+";
+				position: relative;
+				left: -10px;
+				font-size: 1.2em;
+				font-weight: bold;
+				color: $color_header;
+			}
+		}
+	}
+}

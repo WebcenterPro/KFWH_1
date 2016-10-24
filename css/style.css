@@ -1624,19 +1624,6 @@ a:hover, a:focus {
     padding-left: 0;
   }
 }
-.ul {
-  list-style-type: none;
-  padding-left: 30px;
-}
-.ul__item::before {
-  content: "+";
-  position: relative;
-  left: -10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #FA2449;
-}
-
 .archive {
   padding-right: 30px;
 }
@@ -1660,6 +1647,7 @@ a:hover, a:focus {
 }
 .archive__list {
   padding-left: 0;
+  list-style-type: none;
 }
 .archive__item {
   cursor: pointer;
@@ -1676,6 +1664,11 @@ a:hover, a:focus {
   border: none;
 }
 .archive__item::before {
+  content: "+";
+  position: relative;
+  left: -10px;
+  font-size: 1.2em;
+  font-weight: bold;
   color: #424242;
 }
 .archive__link {
@@ -1892,6 +1885,19 @@ a:hover, a:focus {
 .simple_block {
   background-color: #f4f4f4;
   padding: 15px 25px;
+}
+
+.text ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+.text ul li::before {
+  content: "+";
+  position: relative;
+  left: -10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #FA2449;
 }
 
 @media print {

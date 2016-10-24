@@ -34,7 +34,6 @@
 @import "blocks/_shortlist.scss"; //Кнопка "Избранное"
 @import "blocks/_main_topic.scss"; //Основной контейнер-заголовок
 @import "blocks/_filter.scss"; //Главный фильтр
-@import "blocks/_ul.scss"; //Стандартный список
 @import "blocks/_archive.scss"; //Блок "Архив новостей"
 @import "blocks/_news_cont.scss"; //Контейнер для всех превью новостей
 @import "blocks/_news_pre.scss"; //Превью новости
@@ -42,5 +41,6 @@
 @import "blocks/_pag.scss"; //Пагинация
 @import "blocks/_compare.scss"; //Блок сравнения объектов
 @import "blocks/_simple_block.scss"; //Стандартный обычный блок
+@import "blocks/_text.scss"; //Контейнер для обычного текста (содержит каскад)
 
 @import "_print.scss"; //Версия для печати
