@@ -70,6 +70,13 @@
 	&__descr {
 		padding: 25px 15px 15px;
 	}
+
+	&__rec_glyph {
+		margin-right: 10px;
+		position: relative;
+		top: 6px;
+		font-size: $fs_head;
+	}
 }
 
 @media (max-width: $bp_sm_max) {

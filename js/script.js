@@ -490,8 +490,7 @@ $(function(){
 
 	/* =================================================================== */
 
-	/* Воспроизведение видео во всплывающем окне */
-
+	/* Magnific Popup (для видео) */
 	$('.popup__play').magnificPopup({
 		disableOn: 700,
 		type: 'iframe',
@@ -501,7 +500,16 @@ $(function(){
 		fixedContentPos: false
 	});
 
-	/* ========================================= */
+	/* Сопроводительное письмо в отзывах */
+	$('.recall__rec').magnificPopup({
+		type: 'image',
+		mainClass: 'popup__fog',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+	});
+
+	/* ============== */
 
 	/* Анимация гамбургера */
 
@@ -683,12 +691,12 @@ $(function(){
 
 	$("#accordion").on("show.bs.collapse",  function(e) {
 		var parent = e.target.parentNode;
-		$(parent).find(".glyphicon").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
+		$(parent).find(".accordion__arrow, .recall__arrow").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
 	});
 
 	$("#accordion").on("hide.bs.collapse", function(e) {
 		var parent = e.target.parentNode;
-		$(parent).find(".glyphicon").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
+		$(parent).find(".accordion__arrow, .recall__arrow").toggleClass("glyphicon-chevron-down glyphicon-chevron-up");
 	});
 
 	/* ============================================= */

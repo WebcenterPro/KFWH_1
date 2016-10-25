@@ -2003,6 +2003,12 @@ a:hover, a:focus {
 .recall__descr {
   padding: 25px 15px 15px;
 }
+.recall__rec_glyph {
+  margin-right: 10px;
+  position: relative;
+  top: 6px;
+  font-size: 22px;
+}
 
 @media (max-width: 767px) {
   .recall__link {
