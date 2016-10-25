@@ -20,3 +20,12 @@
 		width: 100%;
 	}
 }
+
+@media (max-width: $bp_xs_max) {
+	.button {
+
+		&--resp {
+			width: 100%;
+		}
+	}
+}

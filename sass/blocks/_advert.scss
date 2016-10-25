@@ -1,0 +1,40 @@
+.advert {
+	background-color: $color_footer;
+	padding: 50px;
+
+	&::after {
+		@extend %pseudoelem_param;
+		@extend %triangle_right;
+	}
+
+	&__head {
+		margin: 0 0 30px;
+	}
+
+	&__p {
+		font-size: $fs_bigger;
+	}
+}
+
+@media (max-width: $bp_md_max) {
+	.advert {
+		margin-bottom: 15px;
+
+		&::after {
+			bottom: -29px;
+			left: 40px;
+			top: initial;
+			right: initial;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-top: 30px solid $color_footer;
+			border-bottom: none;
+		}
+	}
+}
+
+@media (max-width: $bp_xs_max) {
+	.advert {
+		padding: 15px;
+	}
+}

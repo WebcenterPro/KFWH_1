@@ -1,0 +1,17 @@
+.form_cont {
+	padding: 15px 50px;
+	border: 1px solid $color_hr;
+	border-left: none;
+}
+
+@media (max-width: $bp_md_max) {
+	.form_cont {
+		border: none;
+	}
+}
+
+@media (max-width: $bp_xs_max) {
+	.form_cont {
+		padding: 15px;
+	}
+}
