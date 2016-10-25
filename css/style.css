@@ -2037,6 +2037,14 @@ a:hover, a:focus {
   margin-right: 8px;
 }
 
+.history_hr {
+  margin: 20px 0;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #adadad;
+  font-size: 18px;
+}
+
 @media print {
   @page {
     margin: 1.5cm;
