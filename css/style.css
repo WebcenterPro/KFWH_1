@@ -1227,9 +1227,27 @@ a:hover, a:focus {
   background-color: #f4f4f4;
 }
 
+.input {
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  color: #424242;
+  box-shadow: none;
+}
 .input:focus {
   border-color: #8f8f8f;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #8f8f8f;
+}
+.input:-moz-placeholder {
+  color: #bababa;
+}
+.input:-ms-input-placeholder {
+  color: #bababa;
+}
+.input::-webkit-input-placeholder {
+  color: #bababa;
+}
+.input::-moz-placeholder {
+  color: #bababa;
 }
 
 .checkbox_custom {
