@@ -1222,6 +1222,24 @@ a:hover, a:focus {
 .modal__header {
   background-color: #FA2449;
   color: #FFF;
+  position: relative;
+}
+.modal__close {
+  color: #FFF;
+  opacity: 1;
+  text-shadow: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 55px;
+  font-size: 30px;
+  font-weight: normal;
+}
+.modal__close:hover, .modal__close:focus {
+  color: #FFF;
+  opacity: 1;
+  font-weight: bold;
 }
 .modal__footer {
   background-color: #f4f4f4;

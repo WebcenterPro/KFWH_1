@@ -7,6 +7,27 @@
 	&__header {
 		background-color: $color_header;
 		color: $color_bright;
+		position: relative;
+	}
+
+	&__close {
+		color: $color_bright;
+		opacity: 1;
+		text-shadow: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 60px;
+		height: 55px;
+		font-size: 30px;
+		font-weight: normal;
+
+		&:hover,
+		&:focus {
+			color: $color_bright;
+			opacity: 1;
+			font-weight: bold;
+		}
 	}
 
 	&__footer {
