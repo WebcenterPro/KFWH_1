@@ -48,5 +48,10 @@
 @import "blocks/_history_hr.scss"; //Полоса, разделяющая объекты по датам
 @import "blocks/_advert.scss"; //Объявление
 @import "blocks/_form_cont.scss"; //Контейнер формы
+@import "blocks/_back.scss"; //Кнопка "Назад к результатам"
+@import "blocks/_interest.scss"; //Блок "Интересует ли объект"
+@import "blocks/_item_img.scss"; //Главная картинка объекта
+@import "blocks/_icon_short.scss"; //Иконка "Избранное" в карточке объекта
+@import "blocks/_icon_comp.scss"; //Иконка "Сравнение" в карточке объекта
 
 @import "_print.scss"; //Версия для печати

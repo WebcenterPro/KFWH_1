@@ -581,12 +581,12 @@ $(function(){
 
 	/* Отметка звёздочек в карточках */
 
-	$(".main__cont").on("click", ".card__shortlist", function() {
-		$(this).toggleClass("card__shortlist--selected");
+	$(".icon_short").on("click", function() {
+		$(this).toggleClass("icon_short--selected");
 	});
 
-	$(".main__cont").on("click", ".card__compare", function() {
-		$(this).toggleClass("card__compare--selected");
+	$(".icon_comp").on("click", function() {
+		$(this).toggleClass("icon_comp--selected");
 	});
 	
 	/* ============================= */

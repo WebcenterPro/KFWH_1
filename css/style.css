@@ -515,6 +515,9 @@ a:hover, a:focus {
   overflow: hidden;
   border-bottom: 1px solid #f4f4f4;
 }
+.main__row--marg_neg {
+  margin-top: -10px;
+}
 .main__col {
   padding: 0;
 }
@@ -1347,37 +1350,6 @@ a:hover, a:focus {
   height: 100%;
   width: 100%;
 }
-.card__shortlist, .card__compare {
-  display: inline-block;
-  width: 33px;
-  height: 33px;
-  position: absolute;
-  top: 15px;
-  transition: 1s ease all;
-}
-.card__shortlist:hover, .card__compare:hover {
-  transition: 1s ease all;
-  cursor: default;
-  background: url("../img/card_icon_active.png") no-repeat;
-}
-.card__shortlist {
-  background: url("../img/card_icon.png") -33px 0 no-repeat;
-  right: 15px;
-}
-.card__shortlist:hover {
-  background-position: -33px 0;
-}
-.card__shortlist--selected {
-  background: url("../img/card_icon_active.png") no-repeat;
-  background-position: -33px 0;
-}
-.card__compare {
-  background: url("../img/card_icon.png") no-repeat;
-  right: 60px;
-}
-.card__compare--selected {
-  background: url("../img/card_icon_active.png") no-repeat;
-}
 .card__content {
   padding: 15px 20px 20px;
   position: relative;
@@ -2133,6 +2105,70 @@ a:hover, a:focus {
     padding: 15px;
   }
 }
+.back {
+  color: #FA2449;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+}
+.back__arrow {
+  margin-right: 5px;
+}
+
+.interest {
+  display: inline-block;
+  margin-top: 26px;
+  margin-right: 40px;
+  float: right;
+}
+.interest__title {
+  margin-right: 10px;
+}
+.interest__btn {
+  position: relative;
+  bottom: 1px;
+}
+
+.item_img {
+  background: url("../img/item.jpg") center no-repeat;
+  background-size: cover;
+  padding-bottom: 40%;
+}
+
+.icon_short, .icon_comp {
+  display: inline-block;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 15px;
+  right: 15px;
+  background: url("../img/card_icon.png") -33px 0 no-repeat;
+  transition: 1s ease all;
+  z-index: 2;
+}
+.icon_short:hover, .icon_comp:hover {
+  background: url("../img/card_icon_active.png") no-repeat;
+  background-position: -33px 0;
+  transition: 1s ease all;
+  cursor: default;
+}
+.icon_short--selected {
+  background: url("../img/card_icon_active.png") no-repeat;
+  background-position: -33px 0;
+}
+
+.icon_comp {
+  background-position: 0 0;
+  right: 60px;
+}
+.icon_comp:hover {
+  background: url("../img/card_icon_active.png") no-repeat;
+  background-position: initial;
+}
+.icon_comp--selected {
+  background: url("../img/card_icon_active.png") no-repeat;
+}
+
 @media print {
   @page {
     margin: 1.5cm;
@@ -2158,7 +2194,8 @@ a:hover, a:focus {
   .archive,
   .pag,
   .recall__arrow,
-  .recall__triangle {
+  .recall__triangle,
+  .advert::after {
     display: none;
   }
 

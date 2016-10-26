@@ -28,45 +28,6 @@
 		width: 100%;
 	}
 
-	&__shortlist,
-	&__compare {
-		display: inline-block;
-		width: 33px;
-		height: 33px;
-		position: absolute;
-		top: 15px;
-		transition: 1s ease all;
-
-		&:hover {
-			transition: 1s ease all;
-			cursor: default;
-			background: url("../img/card_icon_active.png") no-repeat;
-		}
-	}
-
-	&__shortlist {
-		background: url("../img/card_icon.png") -33px 0 no-repeat;
-		right: 15px;
-
-		&:hover {
-			background-position: -33px 0;
-		}
-
-		&--selected {
-			background: url("../img/card_icon_active.png") no-repeat;
-			background-position: -33px 0;
-		}
-	}
-
-	&__compare {
-		background: url("../img/card_icon.png") no-repeat;
-		right: 60px;
-
-		&--selected {
-			background: url("../img/card_icon_active.png") no-repeat;
-		}
-	}
-
 	&__content {
 		padding: 15px 20px 20px;
 		position: relative;

@@ -20,6 +20,10 @@
 			overflow: hidden;
 			border-bottom: 1px solid $color_footer;
 		}
+
+		&--marg_neg {
+			margin-top: -10px;
+		}
 	}
 
 	&__col {

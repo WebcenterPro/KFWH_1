@@ -1,0 +1,15 @@
+.interest {
+	display: inline-block;
+	margin-top: 26px;
+	margin-right: 40px;
+	float: right;
+
+	&__title {
+		margin-right: 10px;
+	}
+
+	&__btn {
+		position: relative;
+		bottom: 1px;
+	}
+}

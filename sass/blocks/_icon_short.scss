@@ -1,0 +1,23 @@
+.icon_short {
+	display: inline-block;
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	top: 15px;
+	right: 15px;
+	background: url("../img/card_icon.png") -33px 0 no-repeat;
+	transition: 1s ease all;
+	z-index: 2;
+
+	&:hover {
+		background: url("../img/card_icon_active.png") no-repeat;
+		background-position: -33px 0;
+		transition: 1s ease all;
+		cursor: default;
+	}
+
+	&--selected {
+		background: url("../img/card_icon_active.png") no-repeat;
+		background-position: -33px 0;
+	}
+}

@@ -1,0 +1,14 @@
+.icon_comp {
+	@extend .icon_short;
+	background-position: 0 0;
+	right: 60px;
+
+	&:hover {
+		background: url("../img/card_icon_active.png") no-repeat;
+		background-position: initial;
+	}
+
+	&--selected {
+		background: url("../img/card_icon_active.png") no-repeat;
+	}
+}
