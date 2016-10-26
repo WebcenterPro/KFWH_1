@@ -9,6 +9,7 @@
 	@import "blocks/_header_main/_subitems.scss"; //Подменю главной шапки
 @import "blocks/_bread.scss"; //Хлебные крошки
 @import "blocks/_print_btn.scss"; //Кнопка печати
+@import "blocks/_viewed_btn.scss"; //Кнопка печати
 @import "blocks/_main.scss"; //Контент
 @import "blocks/_owl.scss"; //Слайдер большого блока
 @import "blocks/_unit.scss"; //Обычный блок
@@ -32,6 +33,7 @@
 @import "blocks/_map.scss"; //Карта со списком объектов
 @import "blocks/_sort.scss"; //Форма сортировки
 @import "blocks/_shortlist.scss"; //Кнопка "Избранное"
+@import "blocks/_short_cont.scss"; //Контейнер для кнопок "Избранное" и "Сравнение"
 @import "blocks/_main_topic.scss"; //Основной контейнер-заголовок
 @import "blocks/_filter.scss"; //Главный фильтр
 @import "blocks/_archive.scss"; //Блок "Архив новостей"

@@ -13,3 +13,27 @@
 		bottom: 1px;
 	}
 }
+
+@media (max-width: $bp_md_max) {
+	.interest {
+		float: none;
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.interest {
+		margin-top: 20px;
+		margin-right: 0;
+		display: block;
+	}
+}
+
+@media (max-width: $bp_xs_max) {
+	.interest {
+
+		&__title {
+			display: inline-block;
+			margin-bottom: 8px;
+		}
+	}
+}

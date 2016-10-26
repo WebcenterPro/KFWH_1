@@ -8,3 +8,9 @@
 		margin-right: 5px;
 	}
 }
+
+@media (max-width: $bp_sm_max) {
+	.back {
+		margin-bottom: 20px;
+	}
+}

@@ -115,6 +115,7 @@
 			<li class="bread__item"><a class="bread__link" href="#">Складская недвижимость в аренду</a></li>
 			<li class="bread__item active">Название объекта</li>
 			<li class="print_btn"></li>
+			<li class="viewed_btn"><a class="viewed_btn__link" href="viewed.html"></a></li>
 		</ul>
 	</div>
 
@@ -125,17 +126,21 @@
 			<div class="main__row main__row--marg_neg main__spacing row">
 
 				<!-- BACK -->
-				<div class="main__col col-sm-3">
+				<div class="main__col col-md-3">
 					<a class="back" href="#"><span class="back__arrow glyphicon glyphicon-chevron-left"></span>Назад к результатам</a>
 				</div>
 
-				<!-- SHORTLIST INTEREST -->
-				<div class="main__col col-sm-9">
-					<a class="shortlist" href="shortlist.html"><span class="shortlist__star glyphicon glyphicon-star"></span>Избранное</a>
+				<!-- SHORT_CONT INTEREST -->
+				<div class="main__col col-md-9">
+					<div class="short_cont">
+						<a class="short_cont__short" href="shortlist.html">Избранное (2)</a>
+						<a class="short_cont__comp" href="compare.html">Сравнение (2)</a>
+					</div>
 					<div class="interest">
 						<span class="interest__title">Интересует этот объект?</span>
-						<button class="interest__btn button btn" data-toggle="modal" data-target="#purchaseModal">Заказать звонок</button>
+						<button class="interest__btn button button--resp btn" data-toggle="modal" data-target="#purchaseModal">Заказать звонок</button>
 					</div>
+
 				</div>
 			</div>
 

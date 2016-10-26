@@ -1,0 +1,42 @@
+.short_cont {
+	float: right;
+	margin-top: 30px;
+
+	&__short,
+	&__comp {
+		color: $color_header;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			position: relative;
+			top: 1px;
+			height: 13px;
+			margin-right: 6px;
+			background: url("../img/short.png") no-repeat;
+		}
+	}
+
+	&__short {
+		margin-right: 25px;
+
+		&::before {
+			width: 14px;
+		}
+	}
+
+	&__comp {
+
+		&::before {
+			width: 13px;
+			background-position: 0 -13px;
+		}
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.short_cont {
+		float: none;
+		margin-top: 0;
+	}
+}
