@@ -1,0 +1,23 @@
+.aside {
+	background-color: $color_footer;
+	padding: 20px;
+	margin: 15px 0;
+}
+
+@media (min-width: $bp_sm_min) and (max-width: $bp_md_max) {
+	.aside {
+		margin-bottom: 0;
+
+		&--bor_right {
+			border-right: 15px solid $color_bright;
+		}
+	}
+}
+
+@media (max-width: $bp_xs_max) {
+	.aside {
+		margin-left: -15px;
+		margin-right: -15px;
+		padding: 15px;
+	}
+}

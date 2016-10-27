@@ -1,0 +1,21 @@
+.obj_class {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	width: 32px;
+	height: 20px;
+	background: url("../img/obj_class.png") no-repeat;
+	background-size: cover;
+
+	&--a {
+		background-position: 0 0;
+	}
+
+	&--b {
+		background-position: 0 -20px;
+	}
+
+	&--c {
+		background-position: 0 -40px;
+	}
+}

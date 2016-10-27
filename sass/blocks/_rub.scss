@@ -1,0 +1,7 @@
+.rub {
+	font-family: "rubsn";
+
+	&::before {
+		content: "\"";
+	}
+}

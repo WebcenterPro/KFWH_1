@@ -1,0 +1,29 @@
+.stock_type {
+	padding-left: 6px;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		position: relative;
+		top: 3px;
+		right: 6px;
+		width: 13px;
+		height: 14px;
+		background: url("../img/stock_type.png") no-repeat;
+		background-size: cover;
+	}
+
+	&--froze {
+
+		&::before {
+			background-position: 0 0;
+		}
+	}
+
+	&--dry {
+
+		&::before {
+			background-position: 0 -14px;
+		}
+	}
+}

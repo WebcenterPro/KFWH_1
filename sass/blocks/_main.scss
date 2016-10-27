@@ -33,12 +33,20 @@
 			display: flex;
 		}
 
+		&--marg_top {
+			margin-top: 15px;
+		}
+
 		&--marg_bot {
 			margin-bottom: 15px;
 		}
 
 		&--pad_right {
 			padding-right: 30px;
+		}
+
+		&--right {
+			float: right;
 		}
 	}
 
@@ -80,6 +88,10 @@
 
 			&--flex {
 				display: block;
+			}
+
+			&--right {
+				float: none;
 			}
 		}
 

@@ -55,5 +55,10 @@
 @import "blocks/_item_img.scss"; //Главная картинка объекта
 @import "blocks/_icon_short.scss"; //Иконка "Избранное" в карточке объекта
 @import "blocks/_icon_comp.scss"; //Иконка "Сравнение" в карточке объекта
+@import "blocks/_charact.scss"; //Характеристика товара в блоках справа (карточка объекта)
+@import "blocks/_aside.scss"; //Контейнер характеристик (карточка объекта)
+@import "blocks/_obj_class.scss"; //Класс объекта
+@import "blocks/_stock_type.scss"; //Тип склада
+@import "blocks/_rub.scss"; //Знак рубля
 
 @import "_print.scss"; //Версия для печати

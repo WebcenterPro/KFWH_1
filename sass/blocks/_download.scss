@@ -18,4 +18,18 @@
 		top: 3px;
 		margin-right: 8px;
 	}
+
+	&--no_bord {
+		text-decoration: none;
+	}
+
+	&--block {
+		display: block;
+		line-height: 43px;
+		border-bottom: 1px solid $color_hr;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
 }
