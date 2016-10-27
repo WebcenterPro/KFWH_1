@@ -2314,11 +2314,13 @@ a:hover, a:focus {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .aside {
-    margin-bottom: 0;
-  }
   .aside--bor_right {
     border-right: 15px solid #FFF;
+  }
+}
+@media (max-width: 991px) {
+  .aside {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 425px) {
@@ -2375,6 +2377,75 @@ a:hover, a:focus {
   content: "\"";
 }
 
+.adv {
+  font-size: 15px;
+  display: block;
+  height: 50px;
+  position: relative;
+  margin-left: 40px;
+  padding: 5px 15px 5px 0;
+  box-sizing: content-box;
+}
+.adv::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -40px;
+  background: url("../img/adv.png") no-repeat;
+}
+.adv--1::before {
+  background-position: -0px -0px;
+  height: 27px;
+  width: 23px;
+}
+.adv--2::before {
+  background-position: -23px -0px;
+  height: 27px;
+  width: 19px;
+}
+.adv--3::before {
+  background-position: -26px -53px;
+  height: 17px;
+  width: 30px;
+}
+.adv--4::before {
+  background-position: -0px -53px;
+  height: 18px;
+  width: 26px;
+}
+.adv--5::before {
+  background-position: -28px -27px;
+  height: 21px;
+  width: 26px;
+}
+.adv--6::before {
+  background-position: -57px -0px;
+  height: 19px;
+  width: 25px;
+}
+.adv--7::before {
+  background-position: -42px -0px;
+  height: 27px;
+  width: 15px;
+}
+.adv--8::before {
+  background-position: -0px -27px;
+  height: 26px;
+  width: 28px;
+}
+
+@media (max-width: 991px) {
+  .adv {
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 767px) {
+  .adv {
+    height: initial;
+    margin-bottom: 10px;
+    padding-right: 0;
+  }
+}
 @media print {
   @page {
     margin: 1.5cm;

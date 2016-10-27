@@ -6,11 +6,16 @@
 
 @media (min-width: $bp_sm_min) and (max-width: $bp_md_max) {
 	.aside {
-		margin-bottom: 0;
 
 		&--bor_right {
 			border-right: 15px solid $color_bright;
 		}
+	}
+}
+
+@media (max-width: $bp_md_max) {
+	.aside {
+		margin-bottom: 0;
 	}
 }
 

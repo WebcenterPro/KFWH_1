@@ -1,0 +1,103 @@
+.adv {
+	font-size: $fs_small;
+	display: block;
+	height: 50px;
+	position: relative;
+	margin-left: 40px;
+	padding: 5px 15px 5px 0;
+	box-sizing: content-box;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: -40px;
+		background: url("../img/adv.png") no-repeat;
+	}
+
+	&--1 {
+
+		&::before {
+			background-position: -0px -0px;
+			height: 27px;
+			width: 23px;
+		}
+	}
+
+	&--2 {
+
+		&::before {
+			background-position: -23px -0px;
+			height: 27px;
+			width: 19px;
+		}
+	}
+
+	&--3 {
+
+		&::before {
+			background-position: -26px -53px;
+			height: 17px;
+			width: 30px;
+		}
+	}
+
+	&--4 {
+
+		&::before {
+			background-position: -0px -53px;
+			height: 18px;
+			width: 26px;
+		}
+	}
+
+	&--5 {
+
+		&::before {
+			background-position: -28px -27px;
+			height: 21px;
+			width: 26px;
+		}
+	}
+
+	&--6 {
+
+		&::before {
+			background-position: -57px -0px;
+			height: 19px;
+			width: 25px;
+		}
+	}
+
+	&--7 {
+
+		&::before {
+			background-position: -42px -0px;
+			height: 27px;
+			width: 15px;
+		}
+	}
+
+	&--8 {
+
+		&::before {
+			background-position: -0px -27px;
+			height: 26px;
+			width: 28px;
+		}
+	}
+}
+
+@media (max-width: $bp_md_max) {
+	.adv {
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.adv {
+		height: initial;
+		margin-bottom: 10px;
+		padding-right: 0;
+	}
+}
