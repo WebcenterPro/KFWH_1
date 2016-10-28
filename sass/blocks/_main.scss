@@ -26,6 +26,10 @@
 			border-bottom: 1px solid $color_footer;
 		}
 
+		&--over_vis {
+			overflow: visible;
+		}
+
 		&--marg_neg {
 			margin-top: -10px;
 		}

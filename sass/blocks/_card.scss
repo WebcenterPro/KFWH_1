@@ -42,6 +42,8 @@
 	&__link {
 		color: $color_header;
 		text-decoration: none;
+		display: inline-block;
+		height: 50px;
 	}
 
 	&__descr {
