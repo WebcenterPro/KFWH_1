@@ -61,7 +61,7 @@
   margin-bottom: 0;
 }
 
-.unit_left::after, .unit_right::after, .recall__link::after, .charact::after {
+.unit_left::after, .unit_right::after, .recall__link::after, .charact::after, .man__cont::after {
   content: "";
   display: table;
   clear: both;
@@ -577,6 +577,9 @@ a:hover, a:focus {
   color: #FA2449;
   font-size: 22px;
   margin: 5px 0 10px;
+}
+.main__h3--marg_bot {
+  margin-bottom: 25px;
 }
 .main__social_fontello {
   float: right;
@@ -2337,6 +2340,9 @@ a:hover, a:focus {
   float: right;
   color: black;
 }
+.charact__rub {
+  color: #FA2449;
+}
 
 @media (max-width: 425px) {
   .charact__left, .charact__right {
@@ -2546,6 +2552,56 @@ a:hover, a:focus {
   right: 0;
 }
 
+.form_call {
+  display: flex;
+  justify-content: space-between;
+}
+.form_call__group {
+  display: inline-block;
+  margin-bottom: 0;
+  width: 35%;
+}
+
+@media (max-width: 767px) {
+  .form_call {
+    display: block;
+  }
+  .form_call__group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.man {
+  padding-left: 20px;
+}
+.man__cont {
+  background-color: #f4f4f4;
+  padding: 20px;
+  overflow: hidden;
+}
+.man__img {
+  max-width: 120px;
+  max-height: 160px;
+  float: left;
+  margin-right: 15px;
+}
+.man__name {
+  margin-top: 0;
+}
+.man__post, .man__phone {
+  margin-bottom: 6px;
+  line-height: 20px;
+}
+.man__email {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+@media (max-width: 991px) {
+  .man {
+    padding-left: 0;
+  }
+}
 @media print {
   @page {
     margin: 1.5cm;

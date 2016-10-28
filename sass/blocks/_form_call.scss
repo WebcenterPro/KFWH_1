@@ -1,0 +1,21 @@
+.form_call {
+	display: flex;
+	justify-content: space-between;
+
+	&__group {
+		display: inline-block;
+		margin-bottom: 0;
+		width: 35%
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.form_call {
+		display: block;
+
+		&__group {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+}

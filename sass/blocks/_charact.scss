@@ -22,6 +22,10 @@
 		float: right;
 		color: black;
 	}
+
+	&__rub {
+		color: $color_header;
+	}
 }
 
 @media (max-width: $bp_xs_max) {

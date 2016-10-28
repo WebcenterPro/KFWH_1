@@ -1,0 +1,41 @@
+.man {
+	padding-left: 20px;
+
+	&__cont {
+		background-color: $color_footer;
+		padding: 20px;
+		overflow: hidden;
+
+		&::after {
+			@extend %clearfix;
+		}
+	}
+
+	&__img {
+		max-width: 120px;
+		max-height: 160px;
+		float: left;
+		margin-right: 15px;
+	}
+
+	&__name {
+		margin-top: 0;
+	}
+
+	&__post,
+	&__phone {
+		margin-bottom: 6px;
+		line-height: 20px;
+	}
+
+	&__email {
+		margin-bottom: 0;
+		line-height: 20px;
+	}
+}
+
+@media (max-width: $bp_md_max) {
+	.man {
+		padding-left: 0;
+	}
+}
