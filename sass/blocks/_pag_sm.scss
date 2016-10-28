@@ -1,0 +1,42 @@
+.pag_sm {
+	padding-left: 0;
+	display: inline-block;
+	margin: 0;
+
+	&__title {
+		@extend %inline_ul;
+		display: block;
+		float: left;
+		margin-right: 15px;
+	}
+
+	&__item {
+		@extend %inline_ul;
+		display: block;
+		float: left;
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 1px 8px;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: $color_dark;
+			background-color: $color_footer;
+		}
+
+		&--active {
+			background-color: $color_header;
+			color: $color_bright;
+
+			&:hover,
+			&:focus {
+				background-color: $color_header;
+				color: $color_bright;
+				cursor: default;
+			}
+		}
+	}
+}

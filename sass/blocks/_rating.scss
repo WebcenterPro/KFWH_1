@@ -1,0 +1,19 @@
+.rating {
+	width: 80%;
+	margin-top: 1px;
+
+	&__bar {
+		background-color: $color_second;
+	}
+
+	&__perc {
+		position: absolute;
+		display: inline-block;
+		width: 20%;
+		padding-left: 15px;
+		font-weight: bold;
+		font-size: 15px;
+		top: -2px;
+		right: 0;
+	}
+}

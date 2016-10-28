@@ -14,8 +14,13 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/magnific-popup.min.js"></script>
+
+	<!-- Этот скрипт НЕ НУЖЕН на других страницах -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gYQ3c1LGzyWyLN65QSTM7mtIHu_dNcA&signed_in=true&callback=initMap" async defer></script>
+	<!-- ======================================== -->
+
 	<script src="js/script.js"></script>
-	<title>Название объекта | Knight Frank</title>
+	<title>Складской комплекс "АКМ Логистик 2" | Knight Frank</title>
 </head>
 <body>
 
@@ -113,7 +118,7 @@
 		<ul class="bread__cont breadcrumb container-fluid">
 			<li class="bread__item"><a class="bread__link" href="#">Главная</a></li>
 			<li class="bread__item"><a class="bread__link" href="#">Складская недвижимость в аренду</a></li>
-			<li class="bread__item active">Название объекта</li>
+			<li class="bread__item active">Складской комплекс "АКМ Логистик 2"</li>
 			<li class="print_btn"></li>
 			<li class="viewed_btn"><a class="viewed_btn__link" href="viewed.html"></a></li>
 		</ul>
@@ -284,9 +289,9 @@
 			</div>
 
 			<!-- ADV -->
-			<div class="main__row main__row--border_bot main__spacing row">
+			<div class="main__row main__row--border_bot main__row--bot_indent main__spacing row">
 				<div class="main__col main__col--marg_bot col-md-12">
-					<h2>Основные преимущества:</h2>
+					<h2 class="main__h2">Основные преимущества:</h2>
 				</div>
 				<div class="main__col col-md-3 col-sm-6">
 					<span class="adv adv--1">Парковка для грузового транспорта</span>
@@ -305,9 +310,168 @@
 					<span class="adv adv--8">Столовая</span>
 				</div>
 			</div>
-		</div>
+			
+			<!-- MARKERS PAG_SM -->
+			<div class="main__row main__row--sm main__spacing row">
 
-	</div>
+				<!-- HEAD -->
+				<div class="main__col main__col--marg_bot col-md-12">
+					<h3 class="main__h3">Планировки склада</h3>
+				</div>
+
+				<!-- MARKERS -->
+				<div class="main__col main__col--marg_bot markers col-md-3">
+					<div class="markers__good">Свободно</div>
+					<div class="markers__bad">Занято</div>
+				</div>
+
+				<!-- PAG_SM -->
+				<div class="main__col main__col--marg_bot col-md-5 col-sm-8">
+					<ul class="pag_sm">
+						<li class="pag_sm__title">Корпус</li>
+						<li class="pag_sm__item"><span class="pag_sm__link pag_sm__link--active">1</span></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">2</a></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">3</a></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">4</a></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">5</a></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">6</a></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">7</a></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">8</a></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">9</a></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">10</a></li>
+					</ul>
+				</div>
+
+				<!-- PAG_SM -->
+				<div class="main__col main__col--marg_bot col-md-4 col-sm-4">
+					<ul class="pag_sm">
+						<li class="pag_sm__title">Этаж</li>
+						<li class="pag_sm__item"><span class="pag_sm__link pag_sm__link--active">1</span></li>
+						<li class="pag_sm__item"><a class="pag_sm__link" href="#">2</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- PLAN M_TABLE -->
+			<div class="main__row main__row--border_bot main__row--bot_indent main__spacing row">
+
+				<!-- PLAN -->
+				<div class="main__col main__col--pad_right main__col--marg_bot col-md-8">
+					<div class="plan">
+						<img class="plan__img" src="img/plan.png" alt="">
+					</div>
+				</div>
+
+				<!-- M_TABLE -->
+				<div class="main__col main__col--marg_bot col-md-4 col-sm-7">
+					<h2 class="main__h2">Вакантные площади</h2>
+					<table class="m_table">
+						<tr class="m_table__tr">
+							<th class="m_table__th">Свободная площадь</th>
+							<th class="m_table__th">Арендная ставка</th>
+						</tr>
+						<tr class="m_table__tr">
+							<td class="m_table__td">4 500 м<sup>2</sup></td>
+							<td class="m_table__td">2 000 <span class="rub"></span>/м<sup>2</sup></td>
+						</tr>
+						<tr class="m_table__tr m_table__tr--active">
+							<td class="m_table__td">4 500 м<sup>2</sup></td>
+							<td class="m_table__td">2 000 <span class="rub"></span>/м<sup>2</sup></td>
+						</tr>
+						<tr class="m_table__tr">
+							<td class="m_table__td">7 500 м<sup>2</sup></td>
+							<td class="m_table__td">2 000 <span class="rub"></span>/м<sup>2</sup></td>
+						</tr>
+						<tr class="m_table__tr">
+							<td class="m_table__td">5 500 м<sup>2</sup></td>
+							<td class="m_table__td">2 000 <span class="rub"></span>/м<sup>2</sup></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<!-- RATING -->
+			<div class="main__row main__row--border_bot main__row--bot_indent main__spacing row">
+
+				<div class="main__col main__col--marg_bot col-md-12">
+					<h3 class="main__h3">Рейтинг 6,5 из 10</h3>
+				</div>
+
+				<div class="main__col col-md-7">
+					Максимальная контактность в переговорах по отношению  к арендатору
+				</div>
+				<div class="main__col col-md-5">
+					<div class="rating progress progress-striped">
+						<div class="rating__bar progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+						<span class="rating__perc">60%</span>
+					</div>
+				</div>
+
+				<div class="main__col col-md-7">
+					Соответствие объекта заявленной классности
+				</div>
+				<div class="main__col col-md-5">
+					<div class="rating progress progress-striped">
+						<div class="rating__bar progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+						<span class="rating__perc">60%</span>
+					</div>
+				</div>
+
+				<div class="main__col col-md-7">
+					Готовность вкладывать деньги в дополнительные улучшения
+				</div>
+				<div class="main__col col-md-5">
+					<div class="rating progress progress-striped">
+						<div class="rating__bar progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+						<span class="rating__perc">60%</span>
+					</div>
+				</div>
+
+				<div class="main__col col-md-7">
+					Отзвывы арендаторов и партнеров
+				</div>
+				<div class="main__col col-md-5">
+					<div class="rating progress progress-striped">
+						<div class="rating__bar progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+						<span class="rating__perc">60%</span>
+					</div>
+				</div>
+
+				<div class="main__col col-md-7">
+					Выгодные условия контракта
+				</div>
+				<div class="main__col col-md-5">
+					<div class="rating progress progress-striped">
+						<div class="rating__bar progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+						<span class="rating__perc">70%</span>
+					</div>
+				</div>
+
+				<div class="main__col col-md-7">
+					Профессионализм управляющей компании
+				</div>
+				<div class="main__col col-md-5">
+					<div class="rating progress progress-striped">
+						<div class="rating__bar progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+						<span class="rating__perc">100%</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- MAP HEAD -->
+			<div class="main__row main__spacing row">
+				<h3 class="main__h3">Объект на карте</h3>
+			</div>
+
+			<!-- MAP -->
+			<div class="main__row main__row--border_bot main__row--bot_indent map row">
+				<div class="main__col main__col--marg_bot map__outer col-md-12">
+					<div class="map__cont" id="map"></div>
+					<div class="map__close">&#10006;</div>
+				</div>
+			</div>
+
+		</div>
 	</main>
 
 	<footer class="footer">

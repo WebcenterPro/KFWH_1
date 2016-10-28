@@ -1,0 +1,31 @@
+.markers {
+
+	&__good,
+	&__bad {
+		display: inline-block;
+		position: relative;
+		margin: 0 30px;
+
+		&::before {
+			@extend %pseudoelem_param;
+			width: 20px;
+			height: 20px;
+			left: -30px;
+			top: 1px;
+		}
+	}
+
+	&__good {
+
+		&::before {
+			background-color: $color_second;
+		}
+	}
+
+	&__bad {
+
+		&::before {
+			background-color: $color_header;
+		}
+	}
+}
