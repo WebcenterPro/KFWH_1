@@ -27,7 +27,8 @@
 	.pag,
 	.recall__arrow,
 	.recall__triangle,
-	.advert::after {
+	.advert::after,
+	.map {
 		display: none;
 	}
 
@@ -48,6 +49,16 @@
 
 	.recall__body {
 		border: none;
+	}
+
+	.charact__right {
+		float: none;
+		margin-left: 20px;
+	}
+
+	.m_table__tr--active {
+		background-color: black;
+		color: white;
 	}
 
 }
