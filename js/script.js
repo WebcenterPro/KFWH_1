@@ -288,7 +288,7 @@ function initMap() {
 		infowindow.open(mapCont, markerCont);
 	}
 
-	markerItem.addListener("click", function() {
+	markerCont.addListener("click", function() {
 		infowindow.open(mapCont, markerCont);
 	});
 	/* ========================= */
