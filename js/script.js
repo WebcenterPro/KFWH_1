@@ -284,10 +284,6 @@ function initMap() {
 	/* ========================= */
 
 	/* Маркер в контактах */
-	if (document.getElementById("mapCont")) {
-		infowindow.open(mapCont, markerCont);
-	}
-
 	markerCont.addListener("click", function() {
 		infowindow.open(mapCont, markerCont);
 	});
