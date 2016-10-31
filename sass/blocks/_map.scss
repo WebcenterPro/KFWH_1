@@ -2,6 +2,10 @@
 
 	&__outer {
 		height: 450px;
+
+		&--sm {
+			height: 250px;
+		}
 	}
 
 	&__cont {
@@ -32,13 +36,7 @@
 
 	&__header {
 		color: $color_header;
-		font-size: $fs_head_bigger;
-		line-height: 30px;
-	}
-
-	&__descr {
-		color: $color_dark;
-		font-size: 15px;
-		font-weight: bold;
+		font-size: $fs_standart;
+		line-height: 20px;
 	}
 }

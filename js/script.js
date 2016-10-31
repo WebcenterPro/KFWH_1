@@ -156,55 +156,83 @@ function initMap() {
 		{"elementType": "labels.icon", "stylers": [{"visibility": "off"} ] },
 		{"elementType": "labels.text.fill", "stylers": [{"color": "#616161"} ] },
 		{"elementType": "labels.text.stroke", "stylers": [{"color": "#f5f5f5"} ] },
-		{"featureType": "administrative.land_parcel", "elementType": "labels", "stylers": [{"visibility": "off"} ] },
 		{"featureType": "administrative.land_parcel", "elementType": "labels.text.fill", "stylers": [{"color": "#bdbdbd"} ] },
 		{"featureType": "poi", "elementType": "geometry", "stylers": [{"color": "#eeeeee"} ] },
-		{"featureType": "poi", "elementType": "labels.text", "stylers": [{"visibility": "off"} ] },
 		{"featureType": "poi", "elementType": "labels.text.fill", "stylers": [{"color": "#757575"} ] },
-		{"featureType": "poi.business", "stylers": [{"visibility": "off"} ] },
 		{"featureType": "poi.park", "elementType": "geometry", "stylers": [{"color": "#e5e5e5"} ] },
-		{"featureType": "poi.park", "elementType": "labels.text", "stylers": [{"visibility": "off"} ] },
 		{"featureType": "poi.park", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"} ] },
 		{"featureType": "road", "elementType": "geometry", "stylers": [{"color": "#ffffff"} ] },
-		{"featureType": "road", "elementType": "geometry.fill", "stylers": [{"color": "#fa2449"} ] },
 		{"featureType": "road.arterial", "elementType": "labels.text.fill", "stylers": [{"color": "#757575"} ] },
 		{"featureType": "road.highway", "elementType": "geometry", "stylers": [{"color": "#dadada"} ] },
-		{"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#fa2449"} ] },
 		{"featureType": "road.highway", "elementType": "labels.text.fill", "stylers": [{"color": "#616161"} ] },
-		{"featureType": "road.local", "elementType": "labels", "stylers": [{"visibility": "off"} ] },
-		{"featureType": "road.local", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"} ] }, {"featureType": "transit.line", "elementType": "geometry", "stylers": [{"color": "#e5e5e5"} ] },
+		{"featureType": "road.local", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"} ] },
+		{"featureType": "transit.line", "elementType": "geometry", "stylers": [{"color": "#e5e5e5"} ] },
 		{"featureType": "transit.station", "elementType": "geometry", "stylers": [{"color": "#eeeeee"} ] },
 		{"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#c9c9c9"} ] },
 		{"featureType": "water", "elementType": "labels.text.fill", "stylers": [{"color": "#9e9e9e"} ] }
-
-	], {
-		name: 'Custom Style'
-	});
+		], {
+			name: 'Custom Style'
+		});
 
 	var customMapTypeId = 'custom_style';
 	var warehouse = {lat: 59.740616, lng: 30.526411};
-	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 14,
-		center: warehouse,
-		scrollwheel: false,
-		mapTypeControl: false,
-		streetViewControl: false,
-		mapTypeControlOptions: {
-			mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
-		}
-	});
 
-	map.mapTypes.set(customMapTypeId, customMapType);
-	map.setMapTypeId(customMapTypeId);
+	/* Карты */
+	if (document.getElementById("map")) {
+		var map = new google.maps.Map(document.getElementById('map'), { //В каталоге
+			zoom: 14,
+			center: warehouse,
+			scrollwheel: false,
+			mapTypeControl: false,
+			streetViewControl: false,
+			mapTypeControlOptions: {
+				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+			}
+		});
+
+		map.mapTypes.set(customMapTypeId, customMapType);
+		map.setMapTypeId(customMapTypeId);
+	}
+
+	if (document.getElementById("mapItem")) {
+		var mapItem = new google.maps.Map(document.getElementById('mapItem'), { //В карточке объекта
+			zoom: 14,
+			center: warehouse,
+			scrollwheel: false,
+			mapTypeControl: false,
+			streetViewControl: false,
+			mapTypeControlOptions: {
+				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+			}
+		});
+
+		mapItem.mapTypes.set(customMapTypeId, customMapType);
+		mapItem.setMapTypeId(customMapTypeId);
+	}
+
+	if (document.getElementById("mapCont")) {
+		var mapCont = new google.maps.Map(document.getElementById('mapCont'), { //В контактах
+			zoom: 14,
+			center: warehouse,
+			scrollwheel: false,
+			mapTypeControl: false,
+			streetViewControl: false,
+			mapTypeControlOptions: {
+				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+			}
+		});
+
+		mapCont.mapTypes.set(customMapTypeId, customMapType);
+		mapCont.setMapTypeId(customMapTypeId);
+	}
+	/* ===== */
 
 	var contentString = '<div id="content">'+
 	'<div id="siteNotice">'+
 	'</div>'+
-	'<h1 class="map__header">Складской комплекс "АКМ Логистик 2"</h1>'+
-	'<div>'+
-	'<h4 class="map__descr">Поселок Шушары, на первой линии Московского ш.</h4>'+
-	'<p>К аренде представлено встроенное складское помещение в логистическом комплексе «АКМ Лоджистик 2» класса «А», расположенное  '+
-	'в пос. Шушары, на первой линии Московского ш., в 4 км от КАД.</p>'+
+	'<h1 class="map__header" id="firstHeading">Складской комплекс "АКМ Логистик 2"</h1>'+
+	'<div id="bodyContent">'+
+
 	'</div>'+
 	'</div>';
 
@@ -215,7 +243,8 @@ function initMap() {
 
 	var image = 'img/beachflag.png';
 
-	var marker1 = new google.maps.Marker({
+	/* Маркеры */
+	var marker1 = new google.maps.Marker({ //В каталоге
 		position: warehouse,
 		map: map,
 		icon: image,
@@ -223,11 +252,48 @@ function initMap() {
 		id: 'markerCard-1'
 	});
 
+	var markerItem = new google.maps.Marker({ //В карточке объекта
+		position: warehouse,
+		map: mapItem,
+		icon: image,
+		title: 'Склад',
+		id: 'markerItem'
+	});
+
+	var markerCont = new google.maps.Marker({ //В контактах
+		position: warehouse,
+		map: mapCont,
+		icon: image,
+		title: 'Склад',
+		id: 'markerCont'
+	});
+	/* ======= */
+
 	var lastWindowSize = window.innerWidth;
 	var $cont = $(".map__outer");
 	var $map = $(".map");
 
-	/* Клик по маркеру */
+	/* Маркер в карточке объекта */
+	if (document.getElementById("mapItem")) {
+		infowindow.open(mapItem, markerItem);
+	}
+
+	markerItem.addListener("click", function() {
+		infowindow.open(mapItem, markerItem);
+	});
+	/* ========================= */
+
+	/* Маркер в контактах */
+	if (document.getElementById("mapCont")) {
+		infowindow.open(mapCont, markerCont);
+	}
+
+	markerItem.addListener("click", function() {
+		infowindow.open(mapCont, markerCont);
+	});
+	/* ========================= */
+
+	/* Клик по маркеру в каталоге */
 	marker1.addListener('click', function() {
 		lastWindowSize = window.innerWidth;
 		infowindow.open(map, marker1);

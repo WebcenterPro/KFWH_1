@@ -1,6 +1,10 @@
 .unit_right {
 	background-color: $color_footer;
 
+	&::after {
+		@extend %clearfix;
+	}
+
 	&__img {
 		display: block;
 		color: $color_bright;
@@ -30,6 +34,13 @@
 			@extend %triangle_right;
 			z-index: 1;
 		}
+
+		&--bright {
+
+			&::before {
+				border-left-color: $color_bright;
+			}
+		}
 	}
 
 	&__link {
@@ -44,8 +55,9 @@
 		margin-bottom: 0;
 	}
 
-	&::after {
-		@extend %clearfix;
+	&--bright {
+		background-color: $color_bright;
+		border: 1px solid $color_footer;
 	}
 }
 
@@ -60,30 +72,56 @@
 		&__content {
 			width: 100%;
 
+			&::before {
+				border-color: $color_footer;
+			}
+
+			&--bright {
+
+				&::before {
+					border-color: $color_bright;
+				}
+			}
+
 			&--top {
 
 				&::before {
-					top: -50px;
+					top: -30px;
 					left: 40px;
 					right: initial;
 					border-left: 20px solid transparent;
 					border-right: 20px solid transparent;
-					border-bottom: 30px solid $color_footer;
+					border-top: 0;
+					border-bottom-width: 30px;
 				}
 			}
 
 			&--bottom {
 
 				&::before {
-					bottom: -50px;
+					bottom: -30px;
 					left: 40px;
 					top: initial;
 					width: 0;
 					border-left: 20px solid transparent;
 					border-right: 20px solid transparent;
-					border-top: 30px solid $color_footer;
+					border-bottom: 0;
+					border-top-width: 30px;
 				}
 			}
+		}
+
+		&--bright {
+			border-right: 0;
+		}
+	}
+}
+
+@media (max-width: $bp_sm_max) {
+	.unit_right {
+
+		&--bright {
+			border-left: 0;
 		}
 	}
 }

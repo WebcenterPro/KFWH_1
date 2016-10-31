@@ -823,6 +823,9 @@ a:hover, a:focus {
 .unit_right__content::before {
   z-index: 1;
 }
+.unit_right__content--bright::before {
+  border-left-color: #FFF;
+}
 .unit_right__link {
   text-decoration: none;
 }
@@ -831,6 +834,10 @@ a:hover, a:focus {
 }
 .unit_right__p {
   margin-bottom: 0;
+}
+.unit_right--bright {
+  background-color: #FFF;
+  border: 1px solid #f4f4f4;
 }
 
 @media (max-width: 991px) {
@@ -843,22 +850,38 @@ a:hover, a:focus {
   .unit_right__content {
     width: 100%;
   }
+  .unit_right__content::before {
+    border-color: #f4f4f4;
+  }
+  .unit_right__content--bright::before {
+    border-color: #FFF;
+  }
   .unit_right__content--top::before {
-    top: -50px;
+    top: -30px;
     left: 40px;
     right: initial;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 30px solid #f4f4f4;
+    border-top: 0;
+    border-bottom-width: 30px;
   }
   .unit_right__content--bottom::before {
-    bottom: -50px;
+    bottom: -30px;
     left: 40px;
     top: initial;
     width: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 30px solid #f4f4f4;
+    border-bottom: 0;
+    border-top-width: 30px;
+  }
+  .unit_right--bright {
+    border-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .unit_right--bright {
+    border-left: 0;
   }
 }
 .unit_top {
@@ -1449,6 +1472,9 @@ a:hover, a:focus {
 .map__outer {
   height: 450px;
 }
+.map__outer--sm {
+  height: 250px;
+}
 .map__cont {
   width: 100%;
   height: 100%;
@@ -1473,13 +1499,8 @@ a:hover, a:focus {
 }
 .map__header {
   color: #FA2449;
-  font-size: 26px;
-  line-height: 30px;
-}
-.map__descr {
-  color: #424242;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .sort {
