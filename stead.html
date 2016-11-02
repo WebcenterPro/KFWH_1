@@ -14,8 +14,13 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/magnific-popup.min.js"></script>
+
+	<!-- Этот скрипт НЕ НУЖЕН на других страницах -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gYQ3c1LGzyWyLN65QSTM7mtIHu_dNcA&signed_in=true&callback=initMap" async defer></script>
+	<!-- ======================================== -->
+
 	<script src="js/script.js"></script>
-	<title>Избранное | Knight Frank</title>
+	<title>Земельный участок | Knight Frank</title>
 </head>
 <body>
 
@@ -112,7 +117,7 @@
 	<div class="bread hidden-xs">
 		<ul class="bread__cont breadcrumb container-fluid">
 			<li class="bread__item"><a class="bread__link" href="#">Главная</a></li>
-			<li class="bread__item active">Избранное</li>
+			<li class="bread__item active">Земельный участок</li>
 			<li class="print_btn"></li>
 			<li class="viewed_btn"><a class="viewed_btn__link" href="viewed.html"></a></li>
 		</ul>
@@ -122,47 +127,227 @@
 		<div class="main__cont container-fluid">
 
 			<!-- MAIN HEAD -->
-			<div class="main__row main__spacing row">
-				<h1 class="main__h1">Избранное</h1>
+			<div class="main__row main__row--marg_neg main__spacing row">
+
+				<!-- BACK -->
+				<div class="main__col col-md-3">
+					<a class="back" href="#"><span class="back__arrow glyphicon glyphicon-chevron-left"></span>Назад к результатам</a>
+				</div>
+
+				<!-- SHORT_CONT INTEREST -->
+				<div class="main__col col-md-9">
+					<div class="short_cont">
+						<a class="short_cont__short" href="shortlist.html">Избранное (2)</a>
+						<a class="short_cont__comp" href="compare.html">Сравнение (2)</a>
+					</div>
+					<div class="interest">
+						<span class="interest__title">Интересует этот объект?</span>
+						<button class="interest__btn button button--resp btn" data-toggle="modal" data-target="#purchaseModal">Заказать звонок</button>
+					</div>
+
+				</div>
 			</div>
 
-			<!-- MAIN_TOPIC -->
-			<div class="main_topic">
-				<p class="main_topic__p">У вас в избранном <span>2</span> объекта</p>
+			<!-- OWL ITEM_IMG -->
+			<div class="main__row row hidden-print">
+
+				<div class="owl">
+					<div class="stead_img"></div>
+					<div class="stead_img"></div>
+					<div class="stead_img"></div>
+				</div>
+
+				<div class="icon_short"></div>
+				<div class="icon_comp"></div>
+			</div>
+
+			<!-- CONTENT -->
+			<div class="main__row text row">
+
+				<!-- HEAD -->
+				<div class="main__col main__spacing col-sm-12 col-md-8">
+					<h1>Первая линия озера Красавица, земельный участок для жилой застройки</h1>
+				</div>
+
+				<!-- ASIDE CHARACT -->
+				<div class="main__col main__col--right main__spacing col-sm-12 col-md-4">
+					<div class="main__row row">
+
+						<div class="main__col aside aside--bor_right col-sm-6 col-md-12">
+							<div class="charact">
+								<span class="charact__left">Тип объекта:</span>
+								<span class="charact__right">земельный участок</span>
+							</div>
+							<div class="charact">
+								<span class="charact__left">Категория земель:</span>
+								<span class="charact__right">земли промышленного назначения</span>
+							</div>
+							<div class="charact">
+								<span class="charact__left">Разрешённое использование:</span>
+								<span class="charact__right">под строительство складских комплексов</span>
+							</div>
+							<div class="charact">
+								<span class="charact__left">Общая площадь:</span>
+								<span class="charact__right">70 Га</span>
+							</div>
+							<div class="charact">
+								<span class="charact__left">Юридический адрес:</span>
+								<span class="charact__right">собственность</span>
+							</div>
+							<div class="charact">
+								<span class="charact__left">Тип сделки:</span>
+								<span class="charact__right">продажа, аренда, Build-to-suit</span>
+							</div>
+						</div>
+
+						<div class="main__col aside col-sm-6 col-md-12">
+							<div class="charact">
+								<h2 class="charact__title">Коммерческие условия:</h2>
+							</div>
+							<div class="charact">
+								<span class="charact__left">Стоимость продажи:</span>
+								<span class="charact__right">4 700 <span class="charact__rub rub"></span> за 1 кв. м.</span>
+							</div>
+							<div class="charact">
+								<span class="charact__left">НДС:</span>
+								<span class="charact__right">не облагается</span>
+							</div>
+							<div class="charact">
+								<span class="charact__left">Стоимость аренды:</span>
+								<span class="charact__right">не сдаётся</span>
+							</div>
+							<div class="charact">
+								<span class="charact__left">Минимальная площадь продажи:</span>
+								<span class="charact__right">0.5 Га</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TEXT -->
+				<div class="main__col main__spacing col-sm-12 col-md-8">
+					<h2>Транспортная доступность</h2>
+					<ul>
+						<li>Направление - Юг</li>
+						<li>Расстояние до КАД - 10 км</li>
+						<li>Расстояние до ЗСД - 5 км</li>
+						<li>Расстояние до Москвы - 2 000 км</li>
+						<li>Расстояние до порта - 10 км</li>
+					</ul>
+					<h2>Характеристики объекта:</h2>
+					<ul>
+						<li>Вода - на участке</li>
+						<li>Водоотведение - на участке</li>
+						<li>Газ - отсутствует</li>
+						<li>Канализация - построена, центральная</li>
+						<li>Подъездная дорога - построена</li>
+					</ul>
+					<h2>Описание:</h2>
+					<p>Расположен в элитном коттеджном поселке "Золотые пески" на первой линии Финского залива. Это удивительно живописное место.</p>
+					<p>Участок ровный, правильной формы, покрыт сосновым лесом и с него открывается удивительный вид на искрящуюся под лучами солнца гладь Финского залива. Прямо с участка выход на песчаный пляж залива. Инженерная нифраструктура включает в себя: электроснабжение, централизованное водоснабжение из артезианских скважин, магистральное газоснабжение.</p>
+					<p>Собственность! Земли населённых пунктов. Для ведения дачного хозяйства.</p>
+				</div>
+			</div>
+
+			<!-- ADV -->
+			<div class="main__row main__row--border_bot main__row--bot_indent main__spacing row">
+				<div class="main__col main__col--marg_bot col-md-12">
+					<h2 class="main__h2">Основные преимущества:</h2>
+				</div>
+				<div class="main__col col-md-4 col-sm-6">
+					<span class="adv adv--1">Наличие инженерных коммуникаций</span>
+					<span class="adv adv--2">Build-to-suit</span>
+				</div>
+				<div class="main__col col-md-4 col-sm-6">
+					<span class="adv adv--3">Подходит для строительства складов</span>
+					<span class="adv adv--4">Близко к КАД</span>
+				</div>
+				<div class="main__col col-md-4 col-sm-6">
+					<span class="adv adv--5">Подходит для строительства производств</span>
+				</div>
+			</div>
+
+			<!-- CARD HEAD -->
+			<div class="main__row main__spacing row">
+				<h3 class="main__h3">Похожие объекты</h3>
 			</div>
 
 			<!-- CARD -->
+			<div class="main__row main__row--border_bot main__row--over_vis main__row--bot_indent row">
+				<article class="main__col card col-md-4 col-sm-6" id="card-1">
+					<div class="card__img card__img--img_one">
+						<a class="card__img_link" href="#"></a>
+						<div class="icon_short"></div>
+						<div class="icon_comp"></div>
+					</div>
+					<div class="card__content">
+						<h3 class="main__h3 card__head"><a class="card__link" href="#">Молодёжное, земельный участок под промышленную застройку</a></h3>
+						<p class="card__p">Общая площадь: 30 000 м<sup>2</sup></p>
+						<p class="card__p">Класс: А</p>
+						<p class="card__p">Район: Пушкинский р-н</p>
+						<p class="card__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
+						<a class="card__more" href="#">Узнать больше</a>
+					</div>
+				</article>
+				<article class="main__col card col-md-4 col-sm-6">
+					<div class="card__img card__img--img_one">
+						<a class="card__img_link" href="#"></a>
+						<div class="icon_short"></div>
+						<div class="icon_comp"></div>
+					</div>
+					<div class="card__content">
+						<h3 class="main__h3 card__head"><a class="card__link" href="#">Молодёжное, земельный участок под промышленную застройку</a></h3>
+						<p class="card__p">Общая площадь: 30 000 м<sup>2</sup></p>
+						<p class="card__p">Класс: А</p>
+						<p class="card__p">Район: Пушкинский р-н</p>
+						<p class="card__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
+						<a class="card__more" href="#">Узнать больше</a>
+					</div>
+				</article>
+				<article class="main__col card col-md-4 col-sm-6">
+					<div class="card__img card__img--img_one">
+						<a class="card__img_link" href="#"></a>
+						<div class="icon_short"></div>
+						<div class="icon_comp"></div>
+					</div>
+					<div class="card__content">
+						<h3 class="main__h3 card__head"><a class="card__link" href="#">Молодёжное, земельный участок под промышленную застройку</a></h3>
+						<p class="card__p">Общая площадь: 30 000 м<sup>2</sup></p>
+						<p class="card__p">Класс: А</p>
+						<p class="card__p">Район: Пушкинский р-н</p>
+						<p class="card__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
+						<a class="card__more" href="#">Узнать больше</a>
+					</div>
+				</article>
+			</div>
+
+			<!-- CONTACTS -->
 			<div class="main__row row">
-				<article class="main__col card col-md-4 col-sm-6">
-					<div class="card__img card__img--img_one">
-						<a class="card__img_link" href="#"></a>
-						<div class="icon_short icon_short--selected"></div>
-						<div class="icon_comp"></div>
+
+				<!-- FORM_CALL -->
+				<div class="main__col main__col--marg_bot main__col--pad_right main__spacing col-md-8">
+					<h3 class="main__h3 main__h3--marg_bot">Заказать звонок</h3>
+					<form class="form_call">
+						<div class="form_call__group form-group">
+							<input class="input form-control" type="text" id="call1" placeholder="Имя">
+						</div>
+						<div class="form_call__group form-group">
+							<input class="input form-control" type="phone" id="call2" placeholder="Телефон">
+						</div>
+						<button class="button button--resp btn" type="submit">Заказать звонок</button>
+					</form>
+				</div>
+
+				<!-- MAN -->
+				<div class="main__col man col-md-4">
+					<div class="man__cont">
+						<img class="man__img" src="img/recall_1.png">
+						<h3 class="main__h3 man__name">Иванов Иван</h3>
+						<p class="man__post">Руководитель департамента складской недвижимости</p>
+						<p class="man__phone">+7 (950) 000 00-00</p>
+						<p class="man__email">email@mail.com</p>
 					</div>
-					<div class="card__content">
-						<h3 class="main__h3 card__head"><a class="card__link" href="#">Молодёжное, земельный участок под промышленную застройку</a></h3>
-						<p class="card__p">Общая площадь: 30 000 м<sup>2</sup></p>
-						<p class="card__p">Класс: А</p>
-						<p class="card__p">Район: Пушкинский р-н</p>
-						<p class="card__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
-						<a class="card__more" href="#">Узнать больше</a>
-					</div>
-				</article>
-				<article class="main__col card col-md-4 col-sm-6">
-					<div class="card__img card__img--img_one">
-						<a class="card__img_link" href="#"></a>
-						<div class="icon_short icon_short--selected"></div>
-						<div class="icon_comp"></div>
-					</div>
-					<div class="card__content">
-						<h3 class="main__h3 card__head"><a class="card__link" href="#">Молодёжное, земельный участок под промышленную застройку</a></h3>
-						<p class="card__p">Общая площадь: 30 000 м<sup>2</sup></p>
-						<p class="card__p">Класс: А</p>
-						<p class="card__p">Район: Пушкинский р-н</p>
-						<p class="card__p">Арендная ставка:  50 000 руб/м<sup>2</sup></p>
-						<a class="card__more" href="#">Узнать больше</a>
-					</div>
-				</article>
+				</div>
 			</div>
 
 		</div>

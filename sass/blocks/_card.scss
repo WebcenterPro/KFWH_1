@@ -39,18 +39,17 @@
 		}
 	}
 
+	&__head {
+		min-height: 120px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $color_hr;
+		margin-bottom: 15px;
+	}
+
 	&__link {
 		color: $color_header;
 		text-decoration: none;
 		display: inline-block;
-		height: 50px;
-	}
-
-	&__descr {
-		@extend .unit_left__p;
-		padding-bottom: 20px;
-		border-bottom: 1px solid $color_hr;
-		margin-bottom: 15px;
 	}
 
 	&__p {

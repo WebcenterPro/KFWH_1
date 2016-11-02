@@ -299,10 +299,12 @@ function initMap() {
 		}
 		var $card = $("#card-1").clone();
 		$card
-		.removeClass("card col-md-4 col-sm-6")
-		.addClass("col-sm-5 col-md-4")
-		.attr("id", "currentMapItem")
-		.css("opacity", 0)
+			.removeClass("card col-md-4 col-sm-6")
+			.addClass("col-sm-5 col-md-4")
+			.attr("id", "currentMapItem")
+			.css("opacity", 0)
+			.find(".icon_short, .icon_comp")
+			.remove()
 		;
 		
 		if (window.innerWidth > 767) {
